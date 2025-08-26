@@ -339,8 +339,10 @@ $data-05: #E02D72;
 $data-06: #FCAB28;
 $data-07: #42B5DC;
 
-$primary: $blue !default;
-$secondary: $gray-600 !default;
+// $primary: $blue !default;
+$primary: #EF6400 ;
+// $secondary: $gray-600 !default;
+$secondary: #2A7775;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
