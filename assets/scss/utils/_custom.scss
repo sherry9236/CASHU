@@ -84,13 +84,7 @@ $utilities: (
     )
   )
 );
-// 覆蓋 Bootstrap 預設變數（要放在 bootstrap 之前）
-$border-radius: .375rem;
-$border-radius-sm: .25rem;
-$border-radius-lg: .5rem;
-$border-radius-xl: .75rem;
-$border-radius-xxl: 2rem;
-$border-radius-pill: 50rem;
+
 
 // 額外新增自訂圓角
 $border-radius-m: .75rem;
