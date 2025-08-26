@@ -947,6 +947,9 @@ $input-btn-border-width: var(--#{$prefix}border-width) !default;
 // For each of Bootstrap's buttons, define text, background, and border color.
 
 // scss-docs-start btn-variables
+$btn-padding-y-sm: 0.59375rem;  // 9.5px / 16
+$btn-padding-y-lg: 0.78125rem;  // 12.5px / 16
+
 $btn-color: var(--#{$prefix}body-color) !default;
 $btn-padding-y: $input-btn-padding-y !default;
 $btn-padding-x: $input-btn-padding-x !default;
