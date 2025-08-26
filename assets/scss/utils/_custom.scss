@@ -84,3 +84,22 @@ $utilities: (
     )
   )
 );
+// 覆蓋 Bootstrap 預設變數（要放在 bootstrap 之前）
+$border-radius: .375rem;
+$border-radius-sm: .25rem;
+$border-radius-lg: .5rem;
+$border-radius-xl: .75rem;
+$border-radius-xxl: 2rem;
+$border-radius-pill: 50rem;
+
+// 額外新增自訂圓角
+$border-radius-m: .75rem;
+$border-radius-ml: 1rem;
+$border-radius-l: 1.25rem;
+$border-radius-rounded: 6.25rem;
+
+// 擴充 class
+.rounded-m  { border-radius: $border-radius-m !important; }
+.rounded-ml { border-radius: $border-radius-ml !important; }
+.rounded-l  { border-radius: $border-radius-l !important; }
+.rounded-rd { border-radius: $border-radius-rounded !important; }
