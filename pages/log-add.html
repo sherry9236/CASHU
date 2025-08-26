@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    <title>新增紀錄-CASHU</title>
+</head>
+
+<body>
+    <div class="mobile-frame bg-white">
+        <%- include('./layout/header'); -%>
+            <div class="container-fluid" style="padding-bottom: 109px">
+                <main>
+                    <div class="py-4 d-flex justify-content-between align-items-center">
+                        <i data-lucide="chevron-left" class="icon-40 p-3"></i>
+                        <span class="header-2 fw-bold">新增紀錄</span>
+                        <i data-lucide="chevron-right" class="icon-40 p-3 icon-transparent"></i>
+                    </div>
+                    <div class="position-relative">
+                        <input type="text" id="consult_datetime" class="form-control py-4 px-5" readonly />
+                        <span id="calendar_icon" class="position-absolute top-50 end-0 translate-middle-y me-5"
+                            style="cursor: pointer">
+                            <i data-lucide="calendar"></i>
+                        </span>
+                    </div>
+
+                    <!--支出/收入/轉帳-->
+                    <div class="addrecord">
+                        <ul class="nav nav-underline border-bottom text-center" id="account-tab" role="tablist">
+                            <li class="nav-item tab-three">
+                                <a class="nav-link active" id="expenseAmount-tab" data-bs-toggle="tab"
+                                    href="#expenseAmount" role="tab" aria-controls="expenseAmount"
+                                    aria-selected="true">支出</a>
+                            </li>
+                            <li class="nav-item tab-three">
+                                <a class="nav-link" id="passengers-tab" data-bs-toggle="tab" href="#passengers"
+                                    role="tab" aria-controls="passengers" aria-selected="false">收入</a>
+                            </li>
+                            <li class="nav-item tab-three">
+                                <a class="nav-link" id="passengers-tab" data-bs-toggle="tab" href="#passengers"
+                                    role="tab" aria-controls="passengers" aria-selected="false">轉帳</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="expenseAmount" role="tabpanel"
+                                aria-labelledby="expenseAmount-tab" tabindex="0">
+                                <section class="py-5 d-flex align-items-center flex-column">
+                                    <div class="categoy-icon category-icon-xl mb-4">
+                                        <img src="/assets/images/Category/icon-category-food-breakfast-48.svg"
+                                            alt="早餐icon" class="" />
+                                    </div>
+                                    <p>早餐 <i data-lucide="pencil" class="icon-15 ms-2"></i></p>
+                                </section>
+                                <!--input-->
+                                <section>
+                                    <ul class="row custom-gap mb-4">
+                                        <li class="col-6 pe-4 mb-7">
+                                            <input type="text" id="name" class="form-control input-select"
+                                                placeholder="名稱" style="height: 44px" />
+                                        </li>
+                                        <li class="col-6 mb-7">
+                                            <input type="text" id="amount" class="form-control" inputmode="none"
+                                                placeholder="$0" readonly style="height: 44px" />
+                                        </li>
+                                        <li class="col-6 pe-4">
+                                            <div class="position-relative">
+                                                <button type="button"
+                                                    class="btn btn-outline-neutral-300 text-neutral-900 input-select w-100 text-start rounded-m  d-flex align-items-center"
+                                                    id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                    aria-expanded="false" style="height: 44px">
+                                                    現金
+                                                    <span id="calendar_icon"
+                                                        class="position-absolute top-50 end-0 translate-middle-y me-5"
+                                                        style="cursor: pointer">
+                                                        <i data-lucide="chevron-right" class="text-neutral-300"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li class="col-6">
+                                            <div class="position-relative">
+                                                <button type="button"
+                                                    class="btn btn-outline-neutral-300 text-neutral-900 input-select w-100 text-start rounded-m  d-flex align-items-center"
+                                                    id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                    aria-expanded="false" style="height: 44px">
+                                                    生活開銷
+                                                    <span id="calendar_icon"
+                                                        class="position-absolute top-50 end-0 translate-middle-y me-5"
+                                                        style="cursor: pointer">
+                                                        <i data-lucide="chevron-right" class="text-neutral-300"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="form-floating">
+                                        <textarea class="form-control rounded-m " placeholder="Leave a comment here"
+                                            id="floatingTextarea2" style="height: 200px; resize: none"></textarea>
+                                        <label for="floatingTextarea2">請輸入備註</label>
+                                    </div>
+                                </section>
+                            </div>
+
+                            <!--收入-->
+                            <div class="tab-pane fade frequent-traveler" id="expenseAmount" role="tabpanel"
+                                aria-labelledby="expenseAmount-tab" tabindex="0"></div>
+                        </div>
+                    </div>
+
+                    <!--底部彈開按鈕+計算機-->
+                    <!-- Offcanvas -->
+                    <div class="offcanvas-bottom mobile-frame" id="calculator">
+                        <!-- 部分展開 -->
+                        <div class="partial-view" id="partialView">
+                            <div class="expand-handle"></div>
+                            <div class="d-flex gap-4 align-items-center">
+                                <button type="button"
+                                    class="btn btn-outline-primary rounded-pill flex-grow-1 d-flex align-items-center justify-content-center"
+                                    onclick="event.stopPropagation(); voiceFunction()" style="height: 44px">
+                                    <i data-lucide="mic"></i>
+                                </button>
+                                <button type="button"
+                                    class="btn btn-outline-primary rounded-pill flex-grow-1 d-flex align-items-center justify-content-center"
+                                    onclick="event.stopPropagation(); qrFunction()" style="height: 44px">
+                                    <i data-lucide="qr-code" class="align-middle"></i>
+                                </button>
+                                <button type="button"
+                                    class="btn btn-primary rounded-pill d-flex align-items-center justify-content-center"
+                                    style="width: 165.5px; height: 44px"
+                                    onclick="event.stopPropagation(); saveFunction()">
+                                    儲存
+                                </button>
+                            </div>
+                            <%- include('./layout/footer'); -%>
+                        </div>
+
+                        <!-- 完全展開 -->
+                        <div class="calculator-full" id="calculatorFull">
+                            <div class="calculator-header gap-4 mb-4">
+                                <button type="button" class="btn btn-outline-primary rounded-pill">
+                                    語音記帳
+                                </button>
+                                <button type="button" class="btn btn-outline-primary rounded-pill">
+                                    發票記帳
+                                </button>
+                            </div>
+
+                            <div class="calculator-grid">
+                                <button class="calc-btn number" onclick="inputNumber('7')">
+                                    7
+                                </button>
+                                <button class="calc-btn number" onclick="inputNumber('8')">
+                                    8
+                                </button>
+                                <button class="calc-btn number" onclick="inputNumber('9')">
+                                    9
+                                </button>
+                                <button class="calc-btn operator" onclick="inputOperator('÷')">
+                                    <img src="/assets/images/keyboard/Type=Divide.svg" alt="Divide"
+                                        class="object-fit-cover" />
+                                </button>
+                                <button class="calc-btn function" onclick="clearAll()">
+                                    AC
+                                </button>
+
+                                <button class="calc-btn number" onclick="inputNumber('4')">
+                                    4
+                                </button>
+                                <button class="calc-btn number" onclick="inputNumber('5')">
+                                    5
+                                </button>
+                                <button class="calc-btn number" onclick="inputNumber('6')">
+                                    6
+                                </button>
+                                <button class="calc-btn operator" onclick="inputOperator('×')">
+                                    <img src="/assets/images/keyboard/Type=Multiply.svg" alt="Multiply"
+                                        class="object-fit-cover" />
+                                </button>
+                                <button class="calc-btn function" onclick="backspace()">
+                                    <img src="/assets/images/keyboard/Type=Backspace.svg" alt="Backspace"
+                                        class="object-fit-cover" />
+                                </button>
+
+                                <button class="calc-btn number" onclick="inputNumber('1')">
+                                    1
+                                </button>
+                                <button class="calc-btn number" onclick="inputNumber('2')">
+                                    2
+                                </button>
+                                <button class="calc-btn number" onclick="inputNumber('3')">
+                                    3
+                                </button>
+                                <button class="calc-btn operator" onclick="inputOperator('-')">
+                                    <img src="/assets/images/keyboard/Type=Minus.svg" alt="Minus"
+                                        class="object-fit-cover" />
+                                </button>
+                                <button class="calc-btn function subheader-2" onclick="memory()">
+                                    再記
+                                </button>
+
+                                <button class="calc-btn number" onclick="inputNumber('00')">
+                                    00
+                                </button>
+                                <button class="calc-btn number" onclick="inputNumber('0')">
+                                    0
+                                </button>
+                                <button class="calc-btn operator" onclick="inputOperator('.')">
+                                    .
+                                </button>
+                                <button class="calc-btn operator" onclick="inputOperator('+')">
+                                    <img src="/assets/images/keyboard/Type=Plus.svg" alt="Plus"
+                                        class="object-fit-cover" />
+                                </button>
+                                <button class="calc-btn equals" onclick="calculate()">
+                                    <i data-lucide="check"></i>
+                                </button>
+                                <%- include('./layout/footer'); -%>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+    </div>
+    <script type="module" src="../main.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- 月曆的js -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            lucide.createIcons();
+
+            const today = new Date();
+            const yyyy = today.getFullYear();
+            const mm = String(today.getMonth() + 1);
+            const dd = String(today.getDate());
+            const todayFormatted = `${yyyy}/${mm}/${dd}`;
+
+            const fp = flatpickr("#consult_datetime", {
+                dateFormat: "Y/m/d",
+                defaultDate: todayFormatted,
+                allowInput: false,
+            });
+
+            document.querySelectorAll(".calendar_icon").forEach((el) => {
+                el.addEventListener("click", () => {
+                    fp.open();
+                });
+            });
+        });
+    </script>
+    <!-- 月曆的js -->
+
+    <!--計算機-->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const amountInput = document.getElementById("amount");
+            const offcanvas = document.getElementById("calculator");
+            const partialView = document.getElementById("partialView");
+            const calculatorFull = document.getElementById("calculatorFull");
+            let isExpanded = false;
+
+            // 🚀 確保載入頁面時不會自動 focus
+            amountInput.blur();
+
+            let currentInput = "0",
+                operator = "",
+                previousInput = "",
+                shouldResetDisplay = false;
+
+            // 展開/收合計算機
+            function expandCalculator() {
+                offcanvas.classList.add("expanded");
+                partialView.classList.add("hidden");
+                calculatorFull.classList.add("active");
+                offcanvas.style.height = "334px";
+                isExpanded = true;
+                amountInput.classList.add("focused");
+            }
+
+            function collapseCalculator() {
+                offcanvas.classList.remove("expanded");
+                partialView.classList.remove("hidden");
+                calculatorFull.classList.remove("active");
+                offcanvas.style.height = "106px";
+                isExpanded = false;
+                amountInput.classList.remove("focused");
+            }
+
+            // 事件監聽器
+            amountInput.addEventListener("click", (e) => {
+                e.stopPropagation();
+                expandCalculator();
+            });
+
+            amountInput.addEventListener("mousedown", (e) => {
+                e.preventDefault();
+                document.activeElement.blur();
+                expandCalculator();
+            });
+
+            partialView.addEventListener("click", (e) => {
+                e.stopPropagation();
+                expandCalculator();
+            });
+
+            document.addEventListener("click", (e) => {
+                if (!offcanvas.contains(e.target) && isExpanded) collapseCalculator();
+            });
+
+            offcanvas.addEventListener("click", (e) => e.stopPropagation());
+
+            // --- 計算機功能 ---
+            function updateInput() {
+                amountInput.value = "$" + currentInput;
+            }
+
+            function inputNumber(num) {
+                let value = currentInput.replace("$", "");
+                if (shouldResetDisplay || value === "0") {
+                    currentInput = num;
+                    shouldResetDisplay = false;
+                } else {
+                    currentInput += num;
+                }
+                updateInput();
+            }
+
+            function inputOperator(op) {
+                if (operator && !shouldResetDisplay) calculate();
+                previousInput = currentInput.replace("$", "");
+                operator = op;
+                shouldResetDisplay = true;
+            }
+
+            function calculate() {
+                if (!operator || shouldResetDisplay) return;
+                let prev = parseFloat(previousInput),
+                    current = parseFloat(currentInput.replace("$", "")),
+                    result = 0;
+                switch (operator) {
+                    case "+":
+                        result = prev + current;
+                        break;
+                    case "-":
+                        result = prev - current;
+                        break;
+                    case "×":
+                        result = prev * current;
+                        break;
+                    case "÷":
+                        result = prev / current;
+                        break;
+                }
+                currentInput = result.toString();
+                operator = "";
+                previousInput = "";
+                shouldResetDisplay = true;
+                updateInput();
+            }
+
+            function clearAll() {
+                currentInput = "0";
+                operator = "";
+                previousInput = "";
+                shouldResetDisplay = false;
+                updateInput();
+            }
+
+            function backspace() {
+                currentInput =
+                    currentInput.length > 1 ? currentInput.slice(0, -1) : "0";
+                updateInput();
+            }
+
+            function memory() {
+                alert("再記: " + currentInput);
+            }
+
+            window.inputNumber = inputNumber;
+            window.inputOperator = inputOperator;
+            window.calculate = calculate;
+            window.clearAll = clearAll;
+            window.backspace = backspace;
+            window.memory = memory;
+
+            window.voiceFunction = () => alert("語音");
+            window.qrFunction = () => alert("QR");
+            window.saveFunction = () => alert("儲存");
+
+            updateInput(); // 初始化 $0
+
+            // --- 拖曳手勢控制計算機 ---
+            let startY = 0;
+            let startHeight = 0;
+            const minHeight = 106;
+            const maxHeight = 334;
+            let isDragging = false;
+
+            offcanvas.addEventListener("touchstart", (e) => {
+                if (e.touches.length !== 1) return;
+                isDragging = true;
+                startY = e.touches[0].clientY;
+                startHeight = offcanvas.offsetHeight;
+            });
+
+            offcanvas.addEventListener("touchmove", (e) => {
+                if (!isDragging) return;
+                const deltaY = startY - e.touches[0].clientY;
+                let newHeight = startHeight + deltaY;
+
+                if (newHeight > maxHeight) newHeight = maxHeight;
+                if (newHeight < minHeight) newHeight = minHeight;
+
+                offcanvas.style.height = newHeight + "px";
+
+                if (newHeight > (minHeight + maxHeight) / 2) {
+                    partialView.classList.add("hidden");
+                    calculatorFull.classList.add("active");
+                    amountInput.classList.add("focused");
+                    isExpanded = true;
+                } else {
+                    partialView.classList.remove("hidden");
+                    calculatorFull.classList.remove("active");
+                    amountInput.classList.remove("focused");
+                    isExpanded = false;
+                }
+            });
+
+            offcanvas.addEventListener("touchend", () => {
+                isDragging = false;
+                if (offcanvas.offsetHeight > (minHeight + maxHeight) / 2) {
+                    expandCalculator();
+                } else {
+                    collapseCalculator();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

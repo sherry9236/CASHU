@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    <title>支出類別-CASHU</title>
+</head>
+
+<body>
+    <div class="mobile-frame bg-white position-relative">
+        <%- include('./layout/header'); -%>
+            <div class="container-fluid" style="padding-bottom: 109px">
+                <main class="px-2">
+                    <div class="py-4 d-flex justify-content-between align-items-center">
+                        <i data-lucide="chevron-left" class="icon-40 p-3"></i>
+                        <span class="header-2 fw-bold">選擇類別</span>
+                        <i data-lucide="chevron-right" class="icon-40 p-3 icon-transparent"></i>
+                    </div>
+                    <div class="accordion accordion-flush mb-4" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed text-neutral-500" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    飲食
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <ul class="list-group mt-2">
+                                        <li class="list-group-item list-group-item-action">
+                                            <div class="d-flex align-items-center">
+                                                <sapn class="categoy-icon categoy-icon-s me-4">
+                                                    <img src="/assets/images/Category/icon-category-food-breakfast-48.svg"
+                                                        alt="早餐icon" class="text-neutral-950" />
+                                                </sapn>
+                                                <p>早餐</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    Accordion Item #2
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    Placeholder content for this accordion, which is intended to
+                                    demonstrate the <code>.accordion-flush</code> class. This is
+                                    the second item's accordion body. Let's imagine this being
+                                    filled with some actual content.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                    aria-controls="flush-collapseThree">
+                                    Accordion Item #3
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    Placeholder content for this accordion, which is intended to
+                                    demonstrate the <code>.accordion-flush</code> class. This is
+                                    the third item's accordion body. Nothing more exciting
+                                    happening here in terms of content, but just filling up the
+                                    space to make it look, at least at first glance, a bit more
+                                    representative of how this would look in a real-world
+                                    application.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="d-flex align-items-center">
+                        <span
+                            class="border-dashed-neutral rounded-circle d-inline-flex justify-content-center align-items-center me-4"
+                            style="width: 44px; height: 44px">
+                            <i data-lucide="plus" class="icon-16"></i> </span>新增類別
+                    </a>
+                </main>
+            </div>
+            <%- include('./layout/footer'); -%>
+    </div>
+    <script type="module" src="../main.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

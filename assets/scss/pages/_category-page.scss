@@ -1,0 +1,40 @@
+/* 移除點擊後（active）的背景色 */
+.accordion-button:not(.collapsed) {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    /* 移除陰影 */
+}
+
+/* 移除 focus 後的外框 */
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+/* 保持展開時也有分隔線 */
+.accordion-button {
+    border-bottom: 1px solid $neutral-100;
+    /* Bootstrap 預設灰線 */
+}
+
+.accordion-body {
+    padding: 0;
+    margin: 0 -12px;
+}
+
+.list-group-item:last-child {
+    border-radius: 0;
+}
+
+.accordion-body ul>li {
+    border: none;
+    /* 沒有框線 */
+    transition: background-color 0.2s;
+    cursor: pointer;
+
+}
+
+.list-group-item-action:not(.active):hover,
+.list-group-item-action:not(.active):focus {
+    background-color: $primary-50;
+    /* hover 時的底色 */
+}
