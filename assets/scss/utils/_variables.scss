@@ -339,8 +339,10 @@ $data-05: #E02D72;
 $data-06: #FCAB28;
 $data-07: #42B5DC;
 
-$primary: $blue !default;
-$secondary: $gray-600 !default;
+// $primary: $blue !default;
+$primary: #EF6400;
+// $secondary: $gray-600 !default;
+$secondary:#2A7775;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
@@ -659,12 +661,12 @@ $border-color-translucent: rgba($black, .175) !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius: .375rem !default;
-$border-radius-sm: .25rem !default;
-$border-radius-lg: .5rem !default;
-$border-radius-xl: 1rem !default;
-$border-radius-xxl: 2rem !default;
-$border-radius-pill: 50rem !default;
+$border-radius: 100rem;
+$border-radius-sm: .25rem;
+$border-radius-lg: .5rem;
+$border-radius-xl: .75rem;
+$border-radius-xxl: 2rem;
+$border-radius-pill: 50rem;
 // scss-docs-end border-radius-variables
 // fusv-disable
 $border-radius-2xl: $border-radius-xxl !default; // Deprecated in v5.3.0
@@ -981,8 +983,8 @@ $btn-link-focus-shadow-rgb: to-rgb(mix(color-contrast($link-color), $link-color,
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius: var(--#{$prefix}border-radius) !default;
-$btn-border-radius-sm: var(--#{$prefix}border-radius-sm) !default;
-$btn-border-radius-lg: var(--#{$prefix}border-radius-lg) !default;
+$btn-border-radius-sm: var(--#{$prefix}border-radius-sm) ;
+$btn-border-radius-lg: var(--#{$prefix}border-radius-lg) ;
 
 $btn-transition: color .15s ease-in-out,
   background-color .15s ease-in-out,

@@ -84,3 +84,15 @@ $utilities: (
     )
   )
 );
+
+// 額外新增自訂圓角
+$border-radius-m: .75rem;
+$border-radius-ml: 1rem;
+$border-radius-l: 1.25rem;
+$border-radius-rounded: 6.25rem;
+
+// 擴充 class
+.rounded-m  { border-radius: $border-radius-m !important; }
+.rounded-ml { border-radius: $border-radius-ml !important; }
+.rounded-l  { border-radius: $border-radius-l !important; }
+.rounded-rd { border-radius: $border-radius-rounded !important; }
