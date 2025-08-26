@@ -1,7 +1,15 @@
+
+// 1. Bootstrap functions
 @import "../../node_modules/bootstrap/scss/functions";
+// 2. 你的變數覆寫（可以放 utilities 或 custom）
+
 @import './utils/variables';
+@import "./utils/custom"; // ← 新增這裡，放自訂 utilities map
+
+// 3. Bootstrap 全部
 @import "../../node_modules/bootstrap";
 
+// 4. 其他樣式
 @import './base/base';
 @import './components/mobile-frame';
 @import './layout/header.scss';
