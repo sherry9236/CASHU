@@ -94,3 +94,19 @@ $border-radius-rounded: 100rem;
 .rounded-m  { border-radius: $border-radius-m !important; }
 .rounded-l  { border-radius: $border-radius-l !important; }
 .rounded-rd { border-radius: $border-radius-rounded !important; }
+
+/* 垂直漸層 */
+.bg-gradient-vertical {
+  background: linear-gradient(to bottom, #FFF3DE, #D6F1ED);
+}
+
+/* 水平漸層 */
+.bg-gradient-horizontal {
+  background: linear-gradient(to right, #FFF3DE, #D6F1ED);
+}
+
+// container 左右 padding
+$container-padding-x: 32px;
+
+// gutter 預設值
+$grid-gutter-width: 12px;
