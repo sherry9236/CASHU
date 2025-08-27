@@ -23,3 +23,18 @@ ul {
     list-style: none;
     padding-left: 0;
 }
+
+button,
+input,
+a {
+    -webkit-appearance: none;
+    /* 移除預設樣式 */
+    -webkit-tap-highlight-color: transparent;
+    /* 移除點擊藍色 */
+}
+
+button:focus,
+button:active {
+    outline: none;
+    box-shadow: none;
+}
