@@ -13,12 +13,13 @@
   --bs-btn-hover-color: #fff;          // hover 字色
   --bs-btn-active-color: #fff;         // active 字色
   --bs-btn-disabled-color: #fff;       // disabled 字色
+
   --bs-btn-bg: #EF6400;          // 預設背景色 
   --bs-btn-hover-bg: #CC4C02;    // hover 背景色 
   --bs-btn-active-bg:#CC4C02;   // active 背景色 
   --bs-btn-disabled-bg: #EF640060; // disabled 背景色 
-}
 
+}
 .btn-outline-primary {
   --bs-btn-color: #EF6400;         // 預設字色（icon 也會跟著這個顏色）
   --bs-btn-hover-color:#CC4C02;      // hover 字色
@@ -45,5 +46,6 @@
   --bs-btn-hover-border-color: transparent;     //邊框設為透明
   --bs-btn-active-border-color: transparent;     // 邊框設為透明 
   --bs-btn-disabled-border-color: transparent;  //邊框設為透明 
+
 }
 
