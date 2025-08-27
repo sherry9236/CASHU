@@ -1,0 +1,156 @@
+/* === Offcanvas 基本樣式 === */
+.offcanvas-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 106px;
+  /* 部分展開 */
+  transition: height 0.3s ease;
+  z-index: 1050;
+  background: #FFF8EC;
+}
+
+.offcanvas-bottom.expanded {
+  height: 334px;
+  /* 完全展開 */
+}
+
+
+/* 部分展開 */
+.partial-view {
+  display: flex;
+  /* 預設顯示 */
+  flex-direction: column;
+  /* 依照你的內容排版 */
+  background: #FFF8EC;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.partial-view.hidden {
+  display: none;
+  /* 隱藏部分視圖 */
+}
+
+
+
+
+.save-btn {
+  background: #ff6b35;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 25px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+.expand-handle {
+  width: 35px;
+  height: 5px;
+  background: #B0B0B0;
+  border-radius: 2px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.trigger-btn-area:hover .expand-handle {
+  background: #ff6b35;
+}
+
+/* 完全展開 */
+.calculator-full {
+  display: none;
+  padding: 20px;
+  background: #fff8f5;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.calculator-full.active {
+  display: block;
+}
+
+.calculator-header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 20px;
+  margin: 0 auto;
+  max-width: 311px;
+}
+
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  max-width: 311px;
+  margin: 0 auto;
+
+}
+
+.calc-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.calc-btn.number {
+  background: $primary-200;
+
+  :hover {
+    background: $primary-300;
+  }
+}
+
+.calc-btn.number:hover {
+  background: $primary-300;
+}
+
+.calc-btn.operator,
+.calc-btn.function {
+  background: $primary-300;
+
+}
+
+.calc-btn.operator:hover,
+.calc-btn.function:hover {
+  background: $primary-400;
+}
+
+.calc-btn.equals {
+  background: $primary-600;
+  color: white;
+
+}
+
+.calc-btn.equals:hover {
+  background: $primary-700;
+}
+
+/* 部分視圖隱藏 */
+.hidden {
+  display: none !important;
+}
+
+/* 完整計算機預設隱藏 */
+.calculator-full {
+  display: none;
+}
+
+/* 展開後顯示完整計算機 */
+.calculator-full.active {
+  display: block;
+}
