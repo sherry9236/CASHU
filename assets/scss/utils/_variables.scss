@@ -340,7 +340,7 @@ $data-06: #FCAB28;
 $data-07: #42B5DC;
 
 // $primary: $blue !default;
-$primary: #EF6400 ;
+$primary: #EF6400;
 // $secondary: $gray-600 !default;
 $secondary: #2A7775;
 $success: $green !default;
@@ -635,13 +635,13 @@ $container-max-widths: (
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns: 12 !default;
-$grid-gutter-width: 1.5rem !default;
+$grid-gutter-width: 0.75rem !default;
 $grid-row-columns: 6 !default;
 
 // Container padding
 
-$container-padding-x: $grid-gutter-width !default;
-
+$container-padding-x: 32px;
+//$container-padding-x: $grid-gutter-width !default;
 
 // Components
 //
@@ -674,7 +674,8 @@ $border-radius-2xl: $border-radius-xxl !default; // Deprecated in v5.3.0
 
 // scss-docs-start box-shadow-variables
 // $box-shadow: 0 .5rem 1rem rgba($black, .15) !default;
-$box-shadow: 0 2px 10px rgba($black, 0.15);
+$box-shadow: 0 2px 10px rgba($black, 0.15
+);
 $box-shadow-sm: 0 .125rem .25rem rgba($black, .075) !default;
 $box-shadow-lg: 0 1rem 3rem rgba($black, .175) !default;
 $box-shadow-inset: inset 0 1px 2px rgba($black, .075) !default;
@@ -742,7 +743,10 @@ $font-family-monospace: SFMono-Regular,
   monospace !default;
 // stylelint-enable value-keyword-case
 //$font-family-base: var(--#{$prefix}font-sans-serif) !default;
-$font-family-base: "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;
+$font-family-base: "Noto Sans TC",
+  "Helvetica Neue",
+  Arial,
+  sans-serif;
 $font-family-code: var(--#{$prefix}font-monospace) !default;
 
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
@@ -953,8 +957,8 @@ $input-btn-border-width: var(--#{$prefix}border-width) !default;
 // For each of Bootstrap's buttons, define text, background, and border color.
 
 // scss-docs-start btn-variables
-$btn-padding-y-sm: 0.59375rem;  // 9.5px / 16
-$btn-padding-y-lg: 0.78125rem;  // 12.5px / 16
+$btn-padding-y-sm: 0.59375rem; // 9.5px / 16
+$btn-padding-y-lg: 0.78125rem; // 12.5px / 16
 
 $btn-color: var(--#{$prefix}body-color) !default;
 $btn-padding-y: $input-btn-padding-y !default;
@@ -989,8 +993,9 @@ $btn-link-focus-shadow-rgb: to-rgb(mix(color-contrast($link-color), $link-color,
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius: var(--#{$prefix}border-radius) !default;
-$btn-border-radius-sm: var(--#{$prefix}border-radius-sm) ;
-$btn-border-radius-lg: var(--#{$prefix}border-radius-lg) ;
+$btn-border-radius-sm: var(--#{$prefix}border-radius-sm
+);
+$btn-border-radius-lg: var(--#{$prefix}border-radius-lg);
 
 $btn-transition: color .15s ease-in-out,
   background-color .15s ease-in-out,
@@ -1049,7 +1054,8 @@ $input-disabled-bg: var(--#{$prefix}secondary-bg) !default;
 $input-disabled-border-color: null !default;
 
 $input-color: var(--#{$prefix}body-color) !default;
-$input-border-color: var(--#{$prefix}border-color) !default;
+//$input-border-color: var(--#{$prefix}border-color) !default;
+$input-border-color: $neutral-300;
 $input-border-width: $input-btn-border-width !default;
 $input-box-shadow: var(--#{$prefix}box-shadow-inset) !default;
 
@@ -1063,7 +1069,8 @@ $input-focus-bg: $input-bg !default;
 $input-focus-border-color: #EF6400;
 $input-focus-color: $input-color !default;
 $input-focus-width: $input-btn-focus-width !default;
-$input-focus-box-shadow: $input-btn-focus-box-shadow !default;
+//$input-focus-box-shadow: $input-btn-focus-box-shadow !default;
+$input-focus-box-shadow: 0 0 1.3px 1px #FFC56D;
 
 $input-placeholder-color: var(--#{$prefix}secondary-color) !default;
 $input-plaintext-color: var(--#{$prefix}body-color) !default;

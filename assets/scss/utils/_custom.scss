@@ -1,88 +1,51 @@
 $utilities: (
-  "display-1": (
-    property: font-size,
+  "display-1": (property: font-size,
     class: display-1,
-    values: (
-      null: 2.5rem
-    )
-  ), // ← 這裡加逗號
-  "display-2": (
-    property: font-size,
+    values: (null: 2.5rem)),
+  // ← 這裡加逗號
+  "display-2": (property: font-size,
     class: display-2,
-    values: (
-      null: 2rem
-    )
-  ), // ← 這裡加逗號
-  "header-1": (
-    property: font-size,
+    values: (null: 2rem)),
+  // ← 這裡加逗號
+  "header-1": (property: font-size,
     class: header-1,
-    values: (
-      null: 1.5rem
-    )
-  ), // ← 這裡加逗號
-  "header-2": (
-    property: font-size,
+    values: (null: 1.5rem)),
+  // ← 這裡加逗號
+  "header-2": (property: font-size,
     class: header-2,
-    values: (
-      null: 1.25rem
-    )
-  ), // ← 這裡加逗號
-  "header-3": (
-    property: font-size,
+    values: (null: 1.25rem)),
+  // ← 這裡加逗號
+  "header-3": (property: font-size,
     class: header-3,
-    values: (
-      null: 1rem
-    )
-  ), // ← 這裡加逗號
-  "header-4": (
-    property: font-size,
+    values: (null: 1rem)),
+  // ← 這裡加逗號
+  "header-4": (property: font-size,
     class: header-4,
-    values: (
-      null: 0.875rem
-    )
-  ), // ← 這裡加逗號
-  "subheader-1": (
-    property: font-size,
+    values: (null: 0.875rem)),
+  // ← 這裡加逗號
+  "subheader-1": (property: font-size,
     class: subheader-1,
-    values: (
-      null: 1rem
-    )
-  ), // ← 這裡加逗號
-  "subheader-2": (
-    property: font-size,
+    values: (null: 1rem)),
+  // ← 這裡加逗號
+  "subheader-2": (property: font-size,
     class: subheader-2,
-    values: (
-      null: 0.875rem
-    )
-  ), // ← 這裡加逗號
-  "body-1": (
-    property: font-size,
+    values: (null: 0.875rem)),
+  // ← 這裡加逗號
+  "body-1": (property: font-size,
     class: body-1,
-    values: (
-      null: 1rem
-    )
-  ), // ← 這裡加逗號
-  "body-2": (
-    property: font-size,
+    values: (null: 1rem)),
+  // ← 這裡加逗號
+  "body-2": (property: font-size,
     class: body-2,
-    values: (
-      null: 0.875rem
-    )
-  ), // ← 這裡加逗號
-  "body-3": (
-    property: font-size,
+    values: (null: 0.875rem)),
+  // ← 這裡加逗號
+  "body-3": (property: font-size,
     class: body-3,
-    values: (
-      null: 0.75rem
-    )
-  ), // ← 這裡加逗號
-  "caption": (
-    property: font-size,
+    values: (null: 0.75rem)),
+  // ← 這裡加逗號
+  "caption": (property: font-size,
     class: caption,
-    values: (
-      null: 0.75rem
-    )
-  )
+    values: (null: 0.75rem))
 );
 
 // 額外新增自訂圓角
@@ -91,9 +54,17 @@ $border-radius-l: 1.25rem;
 $border-radius-rounded: 100rem;
 
 // 擴充 class
-.rounded-m  { border-radius: $border-radius-m !important; }
-.rounded-l  { border-radius: $border-radius-l !important; }
-.rounded-rd { border-radius: $border-radius-rounded !important; }
+.rounded-m {
+  border-radius: $border-radius-m !important;
+}
+
+.rounded-l {
+  border-radius: $border-radius-l !important;
+}
+
+.rounded-rd {
+  border-radius: $border-radius-rounded !important;
+}
 
 /* 垂直漸層 */
 .bg-gradient-vertical {
@@ -105,15 +76,15 @@ $border-radius-rounded: 100rem;
   background: linear-gradient(to right, #FFF3DE, #D6F1ED);
 }
 
-// container 左右 padding
-$container-padding-x: 32px;
 
 // gutter 預設值
 $grid-gutter-width: 12px;
-$grid-gutter-y: 12px; 
+$grid-gutter-y: 12px;
+
 .row {
   --bs-gutter-y: #{$grid-gutter-y};
 }
+
 
 /*input外框效果*/
 input.input-select:focus,
@@ -122,17 +93,18 @@ input.focused,
 textarea.focused {
   border-color: #EF6400;
   box-shadow: 0 0 1.3px 1px #FFC56D;
+  outline: none;
 }
 
 textarea.form-control:focus {
   border-color: #EF6400;
   box-shadow: 0 0 1.3px 1px #FFC56D;
+  outline: none;
 }
+
 
 
 /*灰色虛線*/
 .border-dashed-neutral {
   border: 1px dashed $neutral-300;
 }
-
-
