@@ -10,105 +10,32 @@
 </head>
 
 <body>
-  <div class="container-fluid mobile-frame bg-white vh-100">
-    <%- include('./layout/header'); -%>
-      <!-- <main>
-        <div class="py-4 d-flex justify-content-between align-items-center">
-          <i data-lucide="chevron-left" class="icon-24"></i>
-          選擇類別
-          <i data-lucide="chevron-right" class="icon-24 icon-transparent"></i>
-        </div>
-        <div class="accordion accordion-flush" id="accordionFlushExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingOne">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                飲食
-              </button>
-            </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
-              data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">
-                <ul>
-                  <li>
-                    <section class="d-flex align-items-center">
-                      <div class="categoy-icon categoy-icon-s">
-                        <img src="/assets/images/Category/icon-category-food-breakfast-48.svg" alt="早餐icon" class="" />
-                      </div>
-                      <p>早餐</p>
-                    </section>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                Accordion Item #2
-              </button>
-            </h2>
-            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
-              data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">
-                Placeholder content for this accordion, which is intended to
-                demonstrate the <code>.accordion-flush</code> class. This is the
-                second item's accordion body. Let's imagine this being filled
-                with some actual content.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingThree">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                Accordion Item #3
-              </button>
-            </h2>
-            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
-              data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">
-                Placeholder content for this accordion, which is intended to
-                demonstrate the <code>.accordion-flush</code> class. This is the
-                third item's accordion body. Nothing more exciting happening
-                here in terms of content, but just filling up the space to make
-                it look, at least at first glance, a bit more representative of
-                how this would look in a real-world application.
-              </div>
-            </div>
-          
-        <button type="button" class="btn btn-primary btn-lg-padding lh-lg">Primary </button>
-<button type="button" class="btn btn-secondary shadow">Secondary</button>
-<button type="button" class="btn btn-success shadow">Success</button>
-<button type="button" class="btn btn-danger shadow">Danger</button>
-<button type="button" class="btn btn-warning shadow">Warning</button>
-<button type="button" class="btn btn-info shadow btn-lg-padding lh-sm">Info</button>
-<button type="button" class="btn btn-light shadow btn-sm-padding ">Light</button>
-<button type="button" class="btn btn-dark shadow btn-sm-padding">Dark</button>
-
-        <p class="body-3">請看我有沒有改變</p>
-      </main> -->
+  <div class="container-fluid px-0 mobile-frame bg-white vh-100 ">
+    <div class="fixed-height-308 bg-gradient-vertical">
       <!-- 載入畫面 -->
-      <section id="preloader" class="bg-white">
-        <div class="lodding d-flex flex-column justify-content-center align-items-center  ">
+      <!-- <section id="preloader" class="bg-white"> -->
+         <%- include('./layout/header'); -%>
+        <!-- <div class="lodding d-flex flex-column justify-content-center align-items-center  ">
           <img class="splash-screen " src="/assets/images/gif/splash-screen.gif" alt="">
           <img class="logo" src="/assets/images/Logo/CASHU.png" alt="">
         </div>
-      </section>
-      <button type="button" class="btn btn-sm-padding btn-primary ">Primary</button>
-<button type="button" class="btn btn-secondary btn-lg-padding">Secondary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-outline-primary">Warning</button>
-<button type="button" class="btn btn-secondary">Info</button>
-<button type="button" class="btn btn-secondary">Light</button>
-<button type="button" class="btn btn-primary-lg">Dark</button>
+      </section> -->
+      <!-- 階段二 Lodding-->
+       <section>
+        
+          
 
-<button type="button" class="btn ">Link</button>
-      
+         </div>
+
+       </section>
+
+      <!-- 階段三 進入首頁 -->
+
+
+      </div>
       <%- include('./layout/footer'); -%>
-  </div>
+      
+      </div>
 
   <script type="module" src="../main.js"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
