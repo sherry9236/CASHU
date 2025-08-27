@@ -110,3 +110,8 @@ $container-padding-x: 32px;
 
 // gutter 預設值
 $grid-gutter-width: 12px;
+$grid-gutter-y: 12px; 
+.row {
+  --bs-gutter-y: #{$grid-gutter-y};
+}
+
