@@ -115,3 +115,24 @@ $grid-gutter-y: 12px;
   --bs-gutter-y: #{$grid-gutter-y};
 }
 
+/*input外框效果*/
+input.input-select:focus,
+textarea.input-select:focus,
+input.focused,
+textarea.focused {
+  border-color: #EF6400;
+  box-shadow: 0 0 1.3px 1px #FFC56D;
+}
+
+textarea.form-control:focus {
+  border-color: #EF6400;
+  box-shadow: 0 0 1.3px 1px #FFC56D;
+}
+
+
+/*灰色虛線*/
+.border-dashed-neutral {
+  border: 1px dashed $neutral-300;
+}
+
+
