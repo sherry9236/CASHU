@@ -110,6 +110,14 @@ $utilities: (
     line-height: 1.5)
 );
 
+@each $key, $item in $utilities {
+  .#{map-get($item, class)} {
+    font-size: map-get(map-get($item, values), null);
+    font-weight: if(map-has-key($item, font-weight), map-get($item, font-weight), null);
+    line-height: if(map-has-key($item, line-height), map-get($item, line-height), null);
+  }
+}
+
 h1,
 h2,
 h3,
