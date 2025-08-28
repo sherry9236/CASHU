@@ -16,30 +16,36 @@
     /* Bootstrap 預設灰線 */
 }
 
-.accordion-body {
-    padding: 0;
-    margin: 0 -12px;
-}
-.accordion-button{
-    padding-top:13.5px;
-    padding-bottom:13.5px ;
+
+.accordion-button {
+    padding-top: 13.5px;
+    padding-bottom: 13.5px;
     padding-left: 0;
     padding-right: 0;
     font-size: 14px;
 }
+
 .accordion-button::after {
-  background-size:1rem; /* 比預設 1.25rem 小 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 16px;
-  height: 16px;
+    background-size: 1rem;
+    /* 比預設 1.25rem 小 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
 }
 
 .list-group-item:last-child {
     border-radius: 0;
 }
 
+/*選項往外推滿版*/
+.accordion-body {
+    padding: 0;
+    margin: 0 -16px;
+}
+
+/*選項控制無框線*/
 .accordion-body ul>li {
     border: none;
     /* 沒有框線 */
@@ -48,11 +54,32 @@
 
 }
 
+/*選項hover跟focus底色*/
+.list-group-item-action {
+    color: $neutral-950;
+}
+
+.list-group-item+.list-group-item.active {
+    margin: 0;
+}
+
 .list-group-item-action:not(.active):hover,
 .list-group-item-action:not(.active):focus {
     background-color: $primary-50;
+    outline: none;
+    box-shadow: none;
     /* hover 時的底色 */
 }
+
+.list-group-item-action.active {
+    background-color: $primary-50;
+    color: $neutral-950;
+    border: 0; // 避免 border 寬度變化
+    box-shadow: none;
+}
+
+
+
 
 
 

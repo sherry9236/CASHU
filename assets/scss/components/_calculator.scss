@@ -76,12 +76,12 @@
   display: block;
 }
 
-.calculator-header {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin-bottom: 20px;
-  margin: 0 auto;
-  max-width: 311px;
+.calculator-header button {
+  width: 100%;
+  /* 讓 col-6/col-12 撐滿格子 */
+  border-radius: 25px;
+  /* 保留原本 pill 弧度 */
+  font-weight: bold;
 }
 
 

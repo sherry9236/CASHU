@@ -35,33 +35,34 @@
                   href="#expenseAmount" role="tab" aria-controls="expenseAmount" aria-selected="true">支出</a>
               </li>
               <li class="nav-item tab-three">
-                <a class="nav-link line-height-sm" id="passengers-tab" data-bs-toggle="tab" href="#passengers"
-                  role="tab" aria-controls="passengers" aria-selected="false">收入</a>
+                <a class="nav-link line-height-sm" id="income-tab" data-bs-toggle="tab" href="#income" role="tab"
+                  aria-controls="income-tab" aria-selected="false">收入</a>
               </li>
               <li class="nav-item tab-three">
-                <a class="nav-link line-height-sm" id="passengers-tab" data-bs-toggle="tab" href="#passengers"
-                  role="tab" aria-controls="passengers" aria-selected="false">轉帳</a>
+                <a class="nav-link line-height-sm" id="transfer-money-tab" data-bs-toggle="tab" href="#transfer-money"
+                  role="tab" aria-controls="transfer-money-tab" aria-selected="false">轉帳</a>
               </li>
             </ul>
 
             <div class="tab-content" id="nav-tabContent">
+              <!--支出-->
               <div class="tab-pane fade show active" id="expenseAmount" role="tabpanel"
                 aria-labelledby="expenseAmount-tab" tabindex="0">
                 <section class="py-5 d-flex align-items-center flex-column">
                   <a href="category-page.html" class="categoy-icon category-icon-xl mb-4">
                     <img src="/assets/images/Category/icon-category-food-breakfast-48.svg" alt="早餐icon" class="" />
                   </a>
-                  <p>早餐 <i data-lucide="pencil" class="icon-15 ms-2"></i></p>
+                  <p>早餐<i data-lucide="pencil" class="icon-15 ms-2"></i></p>
                 </section>
                 <!--input-->
                 <section>
-                  <ul class="row mb-4">
-                    <li class="col-6">
+                  <ul class="row mb-4 pt-2">
+                    <li class="col-6  py-4">
                       <input type="text" id="name" class="form-control input-select h-44" placeholder="名稱" />
                     </li>
-                    <li class="col-6">
-                      <input type="text" id="amount" class="form-control h-44" inputmode="none" placeholder="$0"
-                        readonly />
+                    <li class="col-6  py-4">
+                      <input type="text" id="amount" class="form-control h-44 calc-input" inputmode="none"
+                        placeholder="$0" readonly />
                     </li>
                     <li class="col-6">
                       <div class="position-relative">
@@ -99,9 +100,109 @@
               </div>
 
               <!--收入-->
-              <div class="tab-pane fade frequent-traveler" id="expenseAmount" role="tabpanel"
-                aria-labelledby="expenseAmount-tab" tabindex="0"></div>
+              <div class="tab-pane fade" id="income" role="tabpanel" aria-labelledby="income-tab" tabindex="0">
+                <section class="py-5 d-flex align-items-center flex-column">
+                  <a href="category-page.html" class="categoy-icon category-icon-xl mb-4">
+                    <img src="/assets/images/Category/icon-income-salary-48.svg" alt="薪水icon" />
+                  </a>
+                  <p>薪水<i data-lucide="pencil" class="icon-15 ms-2"></i></p>
+                </section>
+                <!--input-->
+                <section>
+                  <ul class="row mb-4 pt-2">
+                    <li class="col-6  py-4">
+                      <input type="text" id="income-name" class="form-control input-select h-44" placeholder="名稱" />
+                    </li>
+                    <li class="col-6  py-4">
+                      <input type="text" id="income-amount" class="form-control h-44 calc-input" inputmode="none"
+                        placeholder="$0" readonly />
+                    </li>
+                    <li class="col-6">
+                      <div class="position-relative">
+                        <button type="button"
+                          class="btn btn-outline-neutral-300 text-neutral-900 input-select w-100 text-start rounded-m d-flex align-items-center h-44"
+                          id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          現金
+                          <span id="calendar_icon" class="position-absolute top-50 end-0 translate-middle-y me-5"
+                            style="cursor: pointer">
+                            <i data-lucide="chevron-right" class="text-neutral-300"></i>
+                          </span>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="col-6">
+                      <div class="position-relative">
+                        <button type="button"
+                          class="btn btn-outline-neutral-300 text-neutral-900 input-select w-100 text-start rounded-m d-flex align-items-center h-44"
+                          id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          生活開銷
+                          <span id="calendar_icon" class="position-absolute top-50 end-0 translate-middle-y me-5"
+                            style="cursor: pointer">
+                            <i data-lucide="chevron-right" class="text-neutral-300"></i>
+                          </span>
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="form-floating">
+                    <textarea class="form-control rounded-m " placeholder="Leave a comment here" id="floatingTextarea2"
+                      style="height: 200px; resize: none"></textarea>
+                    <label for="floatingTextarea2">請輸入備註</label>
+                  </div>
+                </section>
+              </div>
+
+
+              <!--轉帳-->
+              <div class="tab-pane fade" id="transfer-money" role="tabpanel" aria-labelledby="income-tab" tabindex="0">
+
+                <section class="py-5 d-flex justify-content-center">
+                  <div class=" d-flex align-items-center justify-content-between" style="width: 224px;">
+                    <div class="d-flex align-items-center flex-column">
+                      <a href="category-page.html" class="categoy-icon categoy-icon-m mb-3">
+                        <img src="/assets/images/Category/icon-payment-bank-48.svg" alt="銀行icon" />
+                      </a>
+                      <p class="Body-2">台新銀行</p>
+                    </div>
+                    <i data-lucide="arrow-right-left" class="icon-24"></i>
+                    <div class="d-flex align-items-center flex-column">
+                      <a href="category-page.html" class="categoy-icon categoy-icon-m mb-3">
+                        <img src="/assets/images/Category/icon-payment-bank-48.svg" alt="銀行icon" />
+                      </a>
+                      <p class="Body-2">富邦銀行</p>
+                    </div>
+                  </div>
+                </section>
+                <!--input-->
+                <section>
+                  <ul class="row mb-4 pt-2">
+                    <li class="col-6">
+                      <label for="Out-Acc" class="form-label">轉出金額</label>
+                      <input type="text" id="Out-Acc" class="form-control h-44 calc-input" inputmode="none"
+                        placeholder="$0" readonly />
+                    </li>
+                    <li class="col-6">
+                      <label for="In-Acc" class="form-label">轉入金額</label>
+                      <input type="text" id="In-Acc" class="form-control h-44 calc-input" inputmode="none"
+                        placeholder="$0" readonly />
+                    </li>
+
+                    <li class="col-12  py-4">
+                      <input type="text" id="transfer-name" class="form-control input-select h-44" placeholder="名稱" />
+                    </li>
+
+
+                  </ul>
+                  <div class="form-floating">
+                    <textarea class="form-control rounded-m " placeholder="Leave a comment here" id="floatingTextarea2"
+                      style="height: 200px; resize: none"></textarea>
+                    <label for="floatingTextarea2">請輸入備註</label>
+                  </div>
+                </section>
+              </div>
+
             </div>
+
           </div>
 
           <!--底部彈開按鈕+計算機-->
@@ -132,13 +233,23 @@
 
             <!-- 完全展開 -->
             <div class="calculator-full" id="calculatorFull">
-              <div class="calculator-header gap-4 mb-4">
-                <button type="button" class="btn btn-outline-primary rounded-pill fw-bold">
-                  語音記帳
-                </button>
-                <button type="button" class="btn btn-outline-primary rounded-pill fw-bold">
-                  發票記帳
-                </button>
+              <!-- Header 按鈕 -->
+              <div class="calculator-header row  mb-4">
+                <!-- 語音記帳 -->
+                <div class="col-6 voice-col">
+                  <button type="button" class="btn btn-outline-primary rounded-pill fw-bold w-100"
+                    onclick="voiceFunction()">
+                    語音記帳
+                  </button>
+                </div>
+
+                <!-- 發票記帳 -->
+                <div class="col-6 invoice-col">
+                  <button type="button" class="btn btn-outline-primary rounded-pill fw-bold w-100"
+                    onclick="qrFunction()">
+                    發票記帳
+                  </button>
+                </div>
               </div>
 
               <div class="calculator-grid">
@@ -203,7 +314,7 @@
                   <img src="/assets/images/keyboard/Type=Plus.svg" alt="Plus" class="object-fit-cover" />
                 </button>
                 <button class="calc-btn equals" onclick="calculate()">
-                  <a href="log-add.html">
+                  <a href="add-result.html">
                     <i data-lucide="check"></i></a>
                 </button>
                 <%- include('./layout/footer'); -%>
@@ -246,28 +357,30 @@
   <!--計算機-->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const amountInput = document.getElementById("amount");
       const offcanvas = document.getElementById("calculator");
       const partialView = document.getElementById("partialView");
       const calculatorFull = document.getElementById("calculatorFull");
       let isExpanded = false;
 
-      // 🚀 確保載入頁面時不會自動 focus
-      amountInput.blur();
+      let activeInput = null;
+      let currentInput = "0", operator = "", previousInput = "", shouldResetDisplay = false;
 
-      let currentInput = "0",
-        operator = "",
-        previousInput = "",
-        shouldResetDisplay = false;
+      const singleInputIds = ["Out-Acc", "In-Acc", "income-amount", "transfer-money", "income"];
+      const singleTabIds = ["income", "transfer-money"];
 
-      // 展開/收合計算機
-      function expandCalculator() {
+      // --- 展開計算機 ---
+      function expandCalculator(input = null) {
+        if (input) activeInput = input;
+
         offcanvas.classList.add("expanded");
         partialView.classList.add("hidden");
         calculatorFull.classList.add("active");
         offcanvas.style.height = "334px";
+        offcanvas.style.transition = "height 0.2s";
         isExpanded = true;
-        amountInput.classList.add("focused");
+        if (activeInput) activeInput.classList.add("focused");
+
+        updateHeaderButtons();
       }
 
       function collapseCalculator() {
@@ -275,25 +388,66 @@
         partialView.classList.remove("hidden");
         calculatorFull.classList.remove("active");
         offcanvas.style.height = "106px";
+        offcanvas.style.transition = "height 0.2s";
         isExpanded = false;
-        amountInput.classList.remove("focused");
+        if (activeInput) activeInput.classList.remove("focused");
+        activeInput = null;
       }
 
-      // 事件監聽器
-      amountInput.addEventListener("click", (e) => {
-        e.stopPropagation();
-        expandCalculator();
-      });
+      // --- 更新 header 按鈕 ---
+      function updateHeaderButtons() {
+        const header = calculatorFull.querySelector(".calculator-header");
+        const voiceCol = header.querySelector(".voice-col");
+        const invoiceCol = header.querySelector(".invoice-col");
 
-      amountInput.addEventListener("mousedown", (e) => {
-        e.preventDefault();
-        document.activeElement.blur();
-        expandCalculator();
+        // 判斷是 input 或 tab
+        let singleMode = false;
+
+        if (activeInput && singleInputIds.includes(activeInput.id)) {
+          singleMode = true;
+        } else {
+          const activeTab = document.querySelector('#account-tab .nav-link.active');
+          if (activeTab) {
+            const tabId = activeTab.getAttribute('href').replace('#', '');
+            if (singleTabIds.includes(tabId)) singleMode = true;
+          }
+        }
+
+        if (singleMode) {
+          voiceCol.classList.remove("col-6");
+          voiceCol.classList.add("col-12");
+          invoiceCol.style.display = "none";
+        } else {
+          voiceCol.classList.remove("col-12");
+          voiceCol.classList.add("col-6");
+          invoiceCol.style.display = "block";
+        }
+      }
+
+      // --- 更新 input 顯示 ---
+      function updateInput() {
+        if (activeInput) activeInput.value = "$" + currentInput;
+      }
+
+      // --- 綁定 calc-input ---
+      document.querySelectorAll(".calc-input").forEach(input => {
+        input.blur();
+
+        input.addEventListener("click", (e) => {
+          e.stopPropagation();
+          expandCalculator(input);
+        });
+
+        input.addEventListener("mousedown", (e) => {
+          e.preventDefault();
+          document.activeElement.blur();
+          expandCalculator(input);
+        });
       });
 
       partialView.addEventListener("click", (e) => {
         e.stopPropagation();
-        expandCalculator();
+        expandCalculator(activeInput);
       });
 
       document.addEventListener("click", (e) => {
@@ -302,11 +456,14 @@
 
       offcanvas.addEventListener("click", (e) => e.stopPropagation());
 
-      // --- 計算機功能 ---
-      function updateInput() {
-        amountInput.value = "$" + currentInput;
-      }
+      // --- 監聽 Tab 切換 ---
+      document.querySelectorAll('#account-tab .nav-link').forEach(tab => {
+        tab.addEventListener('shown.bs.tab', (e) => {
+          updateHeaderButtons();
+        });
+      });
 
+      // --- 計算功能 ---
       function inputNumber(num) {
         let value = currentInput.replace("$", "");
         if (shouldResetDisplay || value === "0") {
@@ -331,18 +488,10 @@
           current = parseFloat(currentInput.replace("$", "")),
           result = 0;
         switch (operator) {
-          case "+":
-            result = prev + current;
-            break;
-          case "-":
-            result = prev - current;
-            break;
-          case "×":
-            result = prev * current;
-            break;
-          case "÷":
-            result = prev / current;
-            break;
+          case "+": result = prev + current; break;
+          case "-": result = prev - current; break;
+          case "×": result = prev * current; break;
+          case "÷": result = prev / current; break;
         }
         currentInput = result.toString();
         operator = "";
@@ -352,44 +501,33 @@
       }
 
       function clearAll() {
-        currentInput = "0";
-        operator = "";
-        previousInput = "";
-        shouldResetDisplay = false;
+        currentInput = "0"; operator = ""; previousInput = ""; shouldResetDisplay = false;
         updateInput();
       }
 
       function backspace() {
-        currentInput =
-          currentInput.length > 1 ? currentInput.slice(0, -1) : "0";
+        currentInput = currentInput.length > 1 ? currentInput.slice(0, -1) : "0";
         updateInput();
       }
 
-      function memory() {
-        alert("再記: " + currentInput);
-      }
+      function memory() { alert("再記: " + currentInput); }
 
+      // --- 全域方法 ---
       window.inputNumber = inputNumber;
       window.inputOperator = inputOperator;
       window.calculate = calculate;
       window.clearAll = clearAll;
       window.backspace = backspace;
       window.memory = memory;
-
       window.voiceFunction = () => alert("語音");
       window.qrFunction = () => alert("QR");
-      window.saveFunction = () => {
-        window.location.href = "add-result.html";
-      };
+      window.saveFunction = () => { window.location.href = "add-result.html"; };
 
-      updateInput(); // 初始化 $0
+      updateInput();
 
-      // --- 拖曳手勢控制計算機 ---
-      let startY = 0;
-      let startHeight = 0;
-      const minHeight = 106;
-      const maxHeight = 334;
-      let isDragging = false;
+      // --- 拖曳手勢 ---
+      let startY = 0, startHeight = 0, isDragging = false;
+      const minHeight = 106, maxHeight = 334;
 
       offcanvas.addEventListener("touchstart", (e) => {
         if (e.touches.length !== 1) return;
@@ -407,22 +545,24 @@
         if (newHeight < minHeight) newHeight = minHeight;
 
         offcanvas.style.height = newHeight + "px";
+        offcanvas.style.transition = "";
 
         if (newHeight > (minHeight + maxHeight) / 2) {
           partialView.classList.add("hidden");
           calculatorFull.classList.add("active");
-          amountInput.classList.add("focused");
           isExpanded = true;
+          updateHeaderButtons();
         } else {
           partialView.classList.remove("hidden");
           calculatorFull.classList.remove("active");
-          amountInput.classList.remove("focused");
           isExpanded = false;
         }
       });
 
       offcanvas.addEventListener("touchend", () => {
         isDragging = false;
+        offcanvas.style.transition = "height 0.2s";
+
         if (offcanvas.offsetHeight > (minHeight + maxHeight) / 2) {
           expandCalculator();
         } else {
@@ -431,6 +571,11 @@
       });
     });
   </script>
+
+
+
+
+
 </body>
 
 </html>
