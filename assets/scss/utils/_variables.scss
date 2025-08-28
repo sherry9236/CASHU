@@ -771,12 +771,18 @@ $line-height-base: 1.5 !default;
 $line-height-sm: 1.2 !default;
 $line-height-lg: 2 !default;
 
-$h1-font-size: $font-size-base * 2.5 !default;
-$h2-font-size: $font-size-base * 2 !default;
-$h3-font-size: $font-size-base * 1.5 !default;
-$h4-font-size: $font-size-base * 1.25 !default;
-$h5-font-size: $font-size-base !default;
-$h6-font-size: $font-size-base * 0.875 !default;
+// $h1-font-size: $font-size-base * 2.5 !default;
+$h1-font-size: $font-size-base * 1.5 ; //24px
+// $h2-font-size: $font-size-base * 2 !default;
+$h2-font-size: $font-size-base * 1.25; //20px
+// $h3-font-size: $font-size-base * 1.5 !default;
+$h3-font-size: $font-size-base * 1.125; //18px
+// $h4-font-size: $font-size-base * 1.25 !default;
+$h4-font-size: $font-size-base * 1; //16px
+// $h5-font-size: $font-size-base !default;
+$h5-font-size: $font-size-base * 0.875; //14px
+// $h6-font-size: $font-size-base * 0.875 !default;
+$h6-font-size: $font-size-base * 0.75 ; //12px
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -801,16 +807,18 @@ $headings-color: inherit !default;
 
 // scss-docs-start display-headings
 $display-font-sizes: (
-  1: 5rem,
-  2: 4.5rem,
-  3: 4rem,
-  4: 3.5rem,
-  5: 3rem,
-  6: 2.5rem) !default;
+  1: 2.5rem,//40px
+  2: 2rem,//32px
+  3: 1.5rem,//24px
+  4: 1.125rem,//18px
+  5: 1rem,//16px
+  6: 0.875rem //14px
+  ) !default;
 
 $display-font-family: null !default;
 $display-font-style: null !default;
-$display-font-weight: 300 !default;
+// $display-font-weight: 300 !default;
+$display-font-weight: 700;
 $display-line-height: $headings-line-height !default;
 // scss-docs-end display-headings
 
