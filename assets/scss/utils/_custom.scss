@@ -1,52 +1,140 @@
 $utilities: (
-  "display-1": (property: font-size,
-    class: display-1,
-    values: (null: 2.5rem)),
-  // ← 這裡加逗號
-  "display-2": (property: font-size,
-    class: display-2,
-    values: (null: 2rem)),
-  // ← 這裡加逗號
-  "header-1": (property: font-size,
-    class: header-1,
-    values: (null: 1.5rem)),
-  // ← 這裡加逗號
-  "header-2": (property: font-size,
-    class: header-2,
-    values: (null: 1.25rem)),
-  // ← 這裡加逗號
-  "header-3": (property: font-size,
-    class: header-3,
-    values: (null: 1rem)),
-  // ← 這裡加逗號
-  "header-4": (property: font-size,
-    class: header-4,
-    values: (null: 0.875rem)),
-  // ← 這裡加逗號
-  "subheader-1": (property: font-size,
+  // "display-1": (
+  //   property: (
+  //   font-size,
+  //   ),
+  //   class: display-1,
+  //   values: (
+  //     null: 
+  //       2.5rem  // font-size: 40px
+  //  )
+  // ), // ← 這裡加逗號
+  // "display-2": (
+  //   property: (
+  //   font-size,
+  //   ),
+  //   class: display-2,
+  //   values: (
+  //     null: 2rem //32px
+  //   )
+  // ), // ← 這裡加逗號
+  // "header-1": (
+  //   property: font-size,
+  //   class: header-1,
+  //   values: (
+  //     null: 1.5rem //24px
+  //   )
+  // ), // ← 這裡加逗號
+  // "header-2": (
+  //   property: font-size,
+  //   class: header-2,
+  //   values: (
+  //     null: 1.25rem //20px
+  //   )
+  // ), // ← 這裡加逗號
+  // "header-3": (
+  //   property: font-size,
+  //   class: header-3,
+  //   values: (
+  //     null: 1rem  //16px
+  //   )
+  // ), // ← 這裡加逗號
+  // "header-4": (
+  //   property: font-size,
+  //   class: header-4,
+  //   values: (
+  //     null: 0.875rem //14px
+  //   )
+  // ), // ← 這裡加逗號
+  //   "header-5": (
+  //   property: font-size,
+  //   class: header-5,
+  //   values: (
+  //     null: 0.875rem //14px
+  //   )
+  // ), // ← 這裡加逗號
+  "subheader-1": (
+    property: font-size,
     class: subheader-1,
-    values: (null: 1rem)),
-  // ← 這裡加逗號
-  "subheader-2": (property: font-size,
+    values: (
+      null: 1.25rem //20px
+    ),
+    font-weight: 500,
+    line-height: 1.2
+  ), // ← 這裡加逗號
+  "subheader-2": (
+    property: font-size,
     class: subheader-2,
-    values: (null: 0.875rem)),
-  // ← 這裡加逗號
-  "body-1": (property: font-size,
+    values: (
+      null: 1.125rem //18px
+    ),
+    font-weight: 500,
+    line-height: 1.2
+  ), // ← 這裡加逗號
+    "subheader-3": (
+    property: font-size,
+    class: subheader-3,
+    values: (
+      null: 1rem //16px
+    ),
+    font-weight: 500,
+    line-height: 1.2
+  ), // ← 這裡加逗號
+    "subheader-4": (
+    property: font-size,
+    class: subheader-4,
+    values: (
+      null: 0.875rem //14px
+    ),
+    font-weight: 500,
+    line-height: 1.2
+  ), // ← 這裡加逗號
+  "body-1": (
+    property: font-size,
     class: body-1,
-    values: (null: 1rem)),
-  // ← 這裡加逗號
-  "body-2": (property: font-size,
+    values: (
+      null: 1rem  //16px
+    ),
+    font-weight: 400,
+    line-height: 1.5
+  ), // ← 這裡加逗號
+  "body-2": (
+    property: font-size,
     class: body-2,
-    values: (null: 0.875rem)),
-  // ← 這裡加逗號
-  "body-3": (property: font-size,
+    values: (
+      null: 0.875rem //14px
+    ),
+    font-weight: 400,
+    line-height: 1.5
+  ), // ← 這裡加逗號
+  "body-3": (
+    property: font-size,
     class: body-3,
-    values: (null: 0.75rem)),
-  // ← 這裡加逗號
-  "caption": (property: font-size,
+    values: (
+      null: 0.75rem //12px
+    ),
+    font-weight: 400,
+    line-height: 1.5
+  ), // ← 這裡加逗號
+  "caption": (
+    property: font-size,
     class: caption,
-    values: (null: 0.75rem))
+    values: (
+      null: 0.75rem //12px
+    ),
+    font-weight: 400,
+    line-height: 1.5
+  )
 );
+h1, h2, h3, h4 {
+  font-weight: $font-weight-bold;
+  line-height: 1.2; // 自訂數值
+}
+h5, h6 {
+  font-weight: $font-weight-bold;
+  line-height: 1.5; // 自訂數值
+}
+
 
 // 額外新增自訂圓角
 $border-radius-m: .75rem;
