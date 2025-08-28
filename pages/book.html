@@ -20,3 +20,155 @@
 
                             <h2 class="header-2 fw-bold line-height-sm">帳本</h2>
                         </div>
+                        <ul class="nav nav-pills mb-3 bg-inactive-background" id="pills-tab" role="tablist">
+                         <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#" type="button" role="tab" aria-controls="pills-home" aria-selected="true">日</button>
+                         </li>
+                         <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#book-mouth" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">月</button>
+                         </li>
+                         <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">年</button>
+                         </li>
+                         <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">自訂</button>
+                         </li>
+                        </ul>
+                         <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="book-mouth" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
+                         <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+                          <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+                             </div>
+                        <ul class="d-flex bg-inactive-background">
+                            <li class="inactive-background badge rounded-pill bg-inactive-background text-neutral-950 me-3 ">日</li>
+                            <li class="badge rounded-pill bg-selected-background text-neutral-950 me-3">月</li>
+                            <li class="badge rounded-pill bg-inactive-background text-neutral-950 me-3">年</li>
+                            <li class="badge rounded-pill bg-inactive-background text-neutral-950 me-3">自訂</li>
+                        </ul>
+                        
+                        <div class="addrecord">
+            <ul class="nav nav-underline border-bottom text-center" id="account-tab" role="tablist">
+              <li class="nav-item tab-three">
+                <a class="nav-link active line-height-sm" id="expenseAmount-tab" data-bs-toggle="tab"
+                  href="#expenseAmount" role="tab" aria-controls="expenseAmount" aria-selected="true">明細</a>
+              </li>
+              <li class="nav-item tab-three">
+                <a class="nav-link line-height-sm" id="income-tab" data-bs-toggle="tab" href="#income" role="tab"
+                  aria-controls="income-tab" aria-selected="false">類別</a>
+              </li>
+              <li class="nav-item tab-three">
+                <a class="nav-link line-height-sm" id="transfer-money-tab" data-bs-toggle="tab" href="#transfer-money"
+                  role="tab" aria-controls="transfer-money-tab" aria-selected="false">趨勢</a>
+              </li>
+            </ul>
+
+            <div class="tab-content" id="nav-tabContent">
+              <!--支出-->
+              <div class="tab-pane fade show active" id="expenseAmount" role="tabpanel"
+                aria-labelledby="expenseAmount-tab" tabindex="0">
+                <p class="text-neutral-500 body-2 py-3 mt-3">2025/07/03</p>
+                        <ul class=" mt-2 ">
+                            <li class=" mb-3 ">
+                                <a href="#" class="d-block py-3 active">
+                                    <div class="d-flex align-items-center">
+                                        <sapn
+                                            class="categoy-icon categoy-icon-m me-4 d-flex align-items-center justify-content-center">
+                                            <img src="/assets/images/Category/icon-category-food-breakfast-32.svg"
+                                                alt="早餐icon" class="text-neutral-950" />
+                                        </sapn>
+                                        <div>
+                                            <p class="mb-3">麵包</p>
+                                            <span>
+                                                <span
+                                                    class="badge rounded-pill bg-primary-200 py-2 px-3 me-3 text-neutral-950 body-2 fw-normal">現金</span><span
+                                                    class="badge rounded-pill bg-primary-200 py-2 px-3 text-neutral-950 body-2 fw-normal">生活開銷</span></span>
+                                        </div>
+                                        <p class=" ms-auto line-height-sm fw-medium">$ 200</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class=" mb-3 ">
+                                <a href="#" class="d-block py-3">
+                                    <div class="d-flex align-items-center">
+                                        <sapn
+                                            class="categoy-icon categoy-icon-m me-4 d-flex align-items-center justify-content-center">
+                                            <img src="/assets/images/Category/icon-category-food-lunch-32.svg"
+                                                alt="早餐icon" class="text-neutral-950" />
+                                        </sapn>
+                                        <div>
+                                            <p class="mb-3">藏壽司</p>
+                                            <span>
+                                                <span
+                                                    class="badge rounded-pill bg-primary-200 py-2 px-3 me-3 text-neutral-950 body-2 fw-normal">現金</span><span
+                                                    class="badge rounded-pill bg-primary-200 py-2 px-3 text-neutral-950 body-2 fw-normal">生活開銷</span></span>
+                                        </div>
+                                        <p class=" ms-auto line-height-sm fw-medium">$ 800</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class=" mb-3 ">
+                                <a href="#" class="d-block py-3">
+                                    <div class="d-flex align-items-center">
+                                        <sapn
+                                            class="categoy-icon categoy-icon-m me-4 d-flex align-items-center justify-content-center">
+                                            <img src="/assets/images/Category/icon-category-food-beverage-32.svg"
+                                                alt="麻古茶坊icon" class="text-neutral-950" />
+                                        </sapn>
+                                        <div>
+                                            <p class="mb-3">麻古茶坊</p>
+                                            <span>
+                                                <span
+                                                    class="badge rounded-pill bg-primary-200 py-2 px-3 me-3 text-neutral-950 body-2 fw-normal">FlyGo</span><span
+                                                    class="badge rounded-pill bg-primary-200 py-2 px-3 text-neutral-950 body-2 fw-normal">生活開銷</span></span>
+                                        </div>
+                                        <p class=" ms-auto line-height-sm fw-medium">$ 200</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="text-neutral-500 body-2 py-3">2025/07/02</p>
+                        <ul class=" mt-2 ">
+                            <li class=" mb-3 ">
+                                <a href="#" class="d-block py-3">
+                                    <div class="d-flex align-items-center">
+                                        <sapn
+                                            class="categoy-icon categoy-icon-m me-4 d-flex align-items-center justify-content-center">
+                                            <img src="/assets/images/Category/icon-category-food-beverage-32.svg"
+                                                alt="麻古茶坊icon" class="text-neutral-950" />
+                                        </sapn>
+                                        <div>
+                                            <p class="mb-3">機械鍵盤</p>
+                                            <span>
+                                                <span
+                                                    class="badge rounded-pill bg-primary-200 py-2 px-3 me-3 text-neutral-950 body-2 fw-normal">富邦 J 卡</span><span
+                                                    class="badge rounded-pill bg-primary-200 py-2 px-3 text-neutral-950 body-2 fw-normal">生活開銷</span></span>
+                                        </div>
+                                        <p class=" ms-auto line-height-sm fw-medium">$ 3,000</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+              </div>
+
+              <!--收入-->
+              <div class="tab-pane fade" id="income" role="tabpanel" aria-labelledby="income-tab" tabindex="0">
+                
+              </div>
+
+
+              <!--轉帳-->
+              <div class="tab-pane fade" id="transfer-money" role="tabpanel" aria-labelledby="income-tab" tabindex="0">
+
+                
+              </div>
+
+            </div>
+
+          </div>
+
+                </main>
+            </div>
+    </div>
+    <script type="module" src="../main.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</body>
