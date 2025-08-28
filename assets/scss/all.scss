@@ -9,6 +9,7 @@
 // 4. 自訂變數
 @import "./utils/custom";
 // ← 新增這裡，放自訂 utilities map
+@import "bootstrap/scss/utilities/api";
 
 // 5. 其他樣式
 @import './base/base';
