@@ -24,3 +24,13 @@
     height: 77px;
     border-radius: 12px;
 }
+.book-expenses{
+    border-radius: 12px 0 0 12px;
+    border: 1.5px solid $primary-600;
+}
+.book-income{
+    border-radius: 0 12px 12px 0;
+    border-top: 1.5px solid $neutral-500;
+    border-right: 1.5px solid $neutral-500;
+    border-bottom: 1.5px solid $neutral-500;
+}
