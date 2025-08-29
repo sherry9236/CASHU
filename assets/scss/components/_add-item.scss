@@ -1,15 +1,15 @@
-.add-result-item {
+.add-item {
     margin: 0 -16px;
 
 
 }
 
-.add-result-item:not(.active):hover,
-.add-result-item:not(.active):focus {
+.add-item:not(.active):hover,
+.add-item:not(.active):focus {
     background-color: $primary-50;
     /* hover 時的底色 */
 }
 
-.add-result-item .active {
+.add-item .active {
     background-color: $primary-50;
 }
