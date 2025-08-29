@@ -13,6 +13,7 @@
     height: 174px;
     margin-bottom: 10px;
 }
+// 提醒
 .logo{
     width: 113px;
     height: 29px;
@@ -40,4 +41,52 @@
     padding-bottom: 12px;
     padding-left: 16px;
     }
+}
+// 價格圓餅圖
+.accordion{
+--bs-accordion-border-color: none;
+}
+.accordion-body{
+    margin: 0 !important;
+}
+.accordion-button::after{
+    background-size: 2.25rem  !important;
+    margin-top: -20px;
+    background-image: url(/assets/images/index-img/Button.png) !important;
+    width: 36px !important;
+    height: 36px !important;
+}
+.accordion-button:not(.collapsed) {
+    --bs-accordion-active-color: none;
+}
+.monthly-expenses{
+    padding-right: 39.5px;
+}
+.carousel-indicators [data-bs-target] {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    margin-right: 8 !important;
+    background-color: #7FCDC6;
+}
+.container {.carousel-indicators {
+  position: static !important;
+  margin-right: 0 !important;
+  margin-bottom: 0 !important;
+  margin-left: 0 !important;
+}}
+
+.carousel-control-next-icon{
+    background-image: none;
+}
+.carousel-control-prev-icon {
+    background-image: none;
+}
+// 右下左陰影
+.shadow-3sides {
+  box-shadow: 1px 5px 6px -1px rgba(0, 0, 0, 0.15);
+}   
+//  今日任務
+.reward{
+    padding-right: 1px;
 }
