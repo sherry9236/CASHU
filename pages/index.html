@@ -11,6 +11,7 @@
 
 <body>
   <div class="container-fluid px-0 mobile-frame bg-white vh-100 ">
+       
     <div class="fixed-height-308 bg-gradient-vertical">
       <!-- 載入畫面 -->
       <!-- <section id="preloader" class="bg-white"> -->
@@ -56,36 +57,116 @@
          <!-- 價格圓餅圖 -->
          <section>
           <div class="container">
-          <div class="accordion border-radius-xl" id="accordionPanelsStayOpenExample">
+          <div class="accordion border-radius-xl" id="accordionExample">
             <!-- 頂 -->
             <div class="accordion-item shadow ">
             <h2 class="accordion-header p-5">
               <button class="accordion-button border-0 py-0" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                <p>本月結餘</p>
-                <h1>$ 45,500</h1>
+                <div>
+                <p class="subheader-4 text-neutral-400">本月結餘</p>
+                <h1 class="h1 text-eutral-950">$ 45,500</h1>
+                </div>
               </button>
             </h2>
-            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-              <div class="accordion-body px-8">
-                <strong>This is the first item’s accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-              </div>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse  container">
+              <div  class="accordion-body d-flex justify-content-center container flex-column">
+              <div id="carouselExampleIndicators" class="carousel ">
+  <div class="carousel-inner ">
+    <div class="carousel-item active d-flex justify-content-center">
+      <img src="/assets/images/index-img/Pie-chart.png" class="d-block " alt="Pie-chart">
+    </div>
+    <div class="carousel-item d-flex justify-content-center">
+      <img src="/assets/images/index-img/Pie-chart.png" class="d-block" alt="Pie-chart">
+    </div>
+  </div>
+</div>
+  <div class="carousel-indicators">
+    <button type="button " data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button " data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+  </div>
+    
             </div>
           </div>
           <!--  -->
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-               Accordion Item #3
-            </h2>
+          <div class="accordion-item shadow-3sides container">
+            <p class="accordion-header ">
+              <div class=" d-flex  py-5 border-top">
+               <div class="d-flex monthly-expenses border-end">
+              <img class="me-3" src="/assets/images/index-img/moneyout-Icon.png" alt="本月總支出">
+                 <div >
+                <p class="body-3 text-neutral-400">本月總支出</p>
+                <p class="h4 text-eutral-950">$ 7,500</p>
+                </div>
+                </div>
+                 <div class="d-flex ps-5">
+              <img class="me-3" src="/assets/images/index-img/money-in-Icon.png" alt="本月總收入">
+                 <div>
+                <p class="body-3 text-neutral-400">本月總收入</p>
+                <p class="h4 text-eutral-950">$ 54,000</p>
+                </div>
+                </div>
+                </div>
+              </p>
             <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-              </div>
+              
             </div>
           </div>
         </div>
         </div>
         </section>
+        <!-- 今日任務 -->
+        <section>
+          <div class="container py-6 ">
+            <div class="d-flex justify-content-between mb-5 ">
+            <h2 class="h4 mb-0">今日任務</h2>
+            <a class="body-2 d-flex align-items-center " href="#">查看更多 <img src="/assets/images/index-img/next-Icon.png" alt=""></a>
+            </div>
+          <div class="card shadow border-0 mb-5">
+  <div class="card-body  ">
+    <h5 class="card-title h4">記帳一筆</h5>
+    <p class="card-text body-2 mb-4 text-neutral-900">記錄每一筆支出，養成每日記帳的好習慣，讓金錢流向更清楚，財務管理更輕鬆！</p>
+    <div class="d-flex justify-content-between ">
+      <div class="d-flex justify-content-center align-items-center">
+        <img  class="reward" src="/assets/images/adorn/Reward.png" alt="Reward">
+        <p class="h4 mb-0 text-secondary"><span class="p-1">+</span><span>200</span></p>
+      </div>
+    <a href="#" class="btn btn-outline-primary rounded-pill btn-sm-padding subheader-4">參加挑戰</a>
+  </div>
+  </div>  
+</div>
 
+<div class="card shadow border-0 mb-5">
+  <div class="card-body  ">
+    <h5 class="card-title h4">打開 APP 看看</h5>
+    <p class="card-text body-2 mb-4 text-neutral-900">每天開一次 APP，看看帳本有沒有變胖～理財習慣就從這一步開始！</p>
+    <div class="d-flex justify-content-between ">
+      <div class="d-flex justify-content-center align-items-center">
+        <img  class="reward" src="/assets/images/adorn/Reward.png" alt="Reward">
+        <p class="h4 mb-0 text-secondary"><span class="p-1">+</span><span>100</span></p>
+      </div>
+    <a href="#" class="btn btn-outline-primary rounded-pill btn-sm-padding subheader-4 " disabled>已完成</a>
+  </div>
+  </div>  
+</div>
+
+<div class="card shadow border-0 ">
+  <div class="card-body  ">
+    <h5 class="card-title h4">連續記帳挑戰第 365 天</h5>
+    <p class="card-text body-2 mb-4 text-neutral-900">達成連續記帳挑戰第 365 天！再 15 天即可解鎖專屬勳章！🏅</p>
+    <div class="d-flex justify-content-between ">
+      <div class="d-flex justify-content-center align-items-center">
+        <img  class="reward" src="/assets/images/adorn/Reward.png" alt="Reward">
+        <p class="h4 mb-0 text-secondary"><span class="p-1">+</span><span>50</span></p>
+      </div>
+    <a href="#" class="btn btn-outline-primary rounded-pill btn-sm-padding subheader-4" disabled>已完成</a>
+  </div>
+  </div>  
+</div>
+
+
+
+</div>
+        </section>
 
 
         </main>
@@ -94,6 +175,7 @@
 
        </section>
 
+      </div>
       </div>
       <%- include('./layout/footer'); -%>
   </div>ˋ
