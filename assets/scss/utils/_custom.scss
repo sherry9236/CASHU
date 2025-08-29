@@ -53,79 +53,63 @@ $utilities: (
   //     null: 0.875rem //14px
   //   )
   // ), // ← 這裡加逗號
-  "subheader-1": (
-    property: font-size,
+  "subheader-1": (property: font-size,
     class: subheader-1,
-    values: (
-      null: 1.25rem //20px
+    values: (null: 1.25rem //20px
     ),
     font-weight: 500,
-    line-height: 1.2
-  ), // ← 這裡加逗號
-  "subheader-2": (
-    property: font-size,
+    line-height: 1.2),
+  // ← 這裡加逗號
+  "subheader-2": (property: font-size,
     class: subheader-2,
-    values: (
-      null: 1.125rem //18px
+    values: (null: 1.125rem //18px
     ),
     font-weight: 500,
-    line-height: 1.2
-  ), // ← 這裡加逗號
-    "subheader-3": (
-    property: font-size,
+    line-height: 1.2),
+  // ← 這裡加逗號
+  "subheader-3": (property: font-size,
     class: subheader-3,
-    values: (
-      null: 1rem //16px
+    values: (null: 1rem //16px
     ),
     font-weight: 500,
-    line-height: 1.2
-  ), // ← 這裡加逗號
-    "subheader-4": (
-    property: font-size,
+    line-height: 1.2),
+  // ← 這裡加逗號
+  "subheader-4": (property: font-size,
     class: subheader-4,
-    values: (
-      null: 0.875rem //14px
+    values: (null: 0.875rem //14px
     ),
     font-weight: 500,
-    line-height: 1.2
-  ), // ← 這裡加逗號
-  "body-1": (
-    property: font-size,
+    line-height: 1.2),
+  // ← 這裡加逗號
+  "body-1": (property: font-size,
     class: body-1,
-    values: (
-      null: 1rem  //16px
+    values: (null: 1rem //16px
     ),
     font-weight: 400,
-    line-height: 1.5
-  ), // ← 這裡加逗號
-  "body-2": (
-    property: font-size,
+    line-height: 1.5),
+  // ← 這裡加逗號
+  "body-2": (property: font-size,
     class: body-2,
-    values: (
-      null: 0.875rem //14px
+    values: (null: 0.875rem //14px
     ),
     font-weight: 400,
-    line-height: 1.5
-  ), // ← 這裡加逗號
-  "body-3": (
-    property: font-size,
+    line-height: 1.5),
+  // ← 這裡加逗號
+  "body-3": (property: font-size,
     class: body-3,
-    values: (
-      null: 0.75rem //12px
+    values: (null: 0.75rem //12px
     ),
     font-weight: 400,
-    line-height: 1.5
-  ), // ← 這裡加逗號
-  "caption": (
-    property: font-size,
+    line-height: 1.5),
+  // ← 這裡加逗號
+  "caption": (property: font-size,
     class: caption,
-    values: (
-      null: 0.75rem //12px
+    values: (null: 0.75rem //12px
     ),
     font-weight: 400,
-    line-height: 1.5
-  )
+    line-height: 1.5)
 );
+
 @each $key, $item in $utilities {
   .#{map-get($item, class)} {
     font-size: map-get(map-get($item, values), null);
@@ -133,11 +117,17 @@ $utilities: (
     line-height: if(map-has-key($item, line-height), map-get($item, line-height), null);
   }
 }
-h1, h2, h3, h4 {
+
+h1,
+h2,
+h3,
+h4 {
   font-weight: $font-weight-bold;
   line-height: 1.2; // 自訂數值
 }
-h5, h6 {
+
+h5,
+h6 {
   font-weight: $font-weight-bold;
   line-height: 1.5; // 自訂數值
 }
@@ -202,4 +192,9 @@ textarea.form-control:focus {
 /*灰色虛線*/
 .border-dashed-neutral {
   border: 1px dashed $neutral-300;
+}
+
+/*高度44px*/
+.h-44 {
+  height: 44px;
 }
