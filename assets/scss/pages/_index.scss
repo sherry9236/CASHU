@@ -1,3 +1,8 @@
+.mobile-frame {
+  overflow-x: hidden;
+  position: relative;
+}
+
 
 .lodding{ 
    position: relative;
@@ -89,4 +94,44 @@
 //  今日任務
 .reward{
     padding-right: 1px;
+}
+// 
+.nav-bottom{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1001;
+    .nav-item{
+        width: 64px;
+    }
+    .item-home{
+        margin-right: 3.5px;
+    }
+    .home{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .item-plan{
+        margin-right: 8px;
+    }
+    .plan{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .item-State{
+        margin-right: 8px;
+    }
+    .ledger{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .item-ledger{
+        margin-right: 3.5px;
+    }
+    .assets{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
