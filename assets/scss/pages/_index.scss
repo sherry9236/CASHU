@@ -51,26 +51,24 @@
 }
 
 // 價格圓餅圖
-.index {
-    .accordion {
-        --bs-accordion-border-color: none;
-    }
+.accordion {
+    --bs-accordion-border-color: none;
+}
 
-    .accordion-body {
-        margin: 0 !important;
-    }
+.accordion-body {
+    margin: 0 !important;
+}
 
-    .accordion-button::after {
-        background-size: 2.25rem !important;
-        margin-top: -20px;
-        background-image: url(/assets/images/index-img/Button.png) !important;
-        width: 36px !important;
-        height: 36px !important;
-    }
+.accordion-button::after {
+    background-size: 2.25rem !important;
+    margin-top: -20px;
+    background-image: url(/assets/images/index-img/Button.png) !important;
+    width: 36px !important;
+    height: 36px !important;
+}
 
-    .accordion-button:not(.collapsed) {
-        --bs-accordion-active-color: none;
-    }
+.accordion-button:not(.collapsed) {
+    --bs-accordion-active-color: none;
 }
 
 .monthly-expenses {
