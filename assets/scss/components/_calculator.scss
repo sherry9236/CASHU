@@ -93,7 +93,6 @@
   margin: 0 auto;
   justify-content: center;
   justify-items: center;
-  /* ⭐ 這裡改成 justify-items */
   align-items: center;
 
 }
@@ -230,28 +229,28 @@
 }
 
 .mobile-calculator .calc-btn.number {
-  background: #ffd9b3;
+  background: $primary-200;
 }
 
 .mobile-calculator .calc-btn.number:hover {
-  background: #ffbf80;
+  background: $primary-300;
 }
 
 .mobile-calculator .calc-btn.operator,
 .mobile-calculator .calc-btn.function {
-  background: #ffbf80;
+  background: $primary-300;
 }
 
 .mobile-calculator .calc-btn.operator:hover,
 .mobile-calculator .calc-btn.function:hover {
-  background: #ffa64d;
+  background: $primary-400;
 }
 
 .mobile-calculator .calc-btn.equals {
-  background: #ff6b35;
-  color: #fff;
+  background: $primary-600;
+  color: white;
 }
 
 .mobile-calculator .calc-btn.equals:hover {
-  background: #e65c2c;
+  background: $primary-700;
 }
