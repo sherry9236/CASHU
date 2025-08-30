@@ -1,128 +1,78 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
-    />
-    <title>支出類別-CASHU</title>
-  </head>
 
-  <body>
-    <div
-      class="mobile-frame bg-white position-relative"
-      style="min-height: 100vh"
-    >
-      <%- include('./layout/header'); -%>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <title>支出類別-CASHU</title>
+</head>
+
+<body>
+  <div class="mobile-frame bg-white position-relative" style="min-height: 100vh">
+    <%- include('./layout/header'); -%>
       <div class="container-fluid" style="padding-bottom: 34px">
         <main>
           <div class="py-4 d-flex justify-content-between align-items-center">
-            <a href="log-add.html"
-              ><i data-lucide="chevron-left" class="icon-40 p-3"></i
-            ></a>
+            <a href="log-add.html"><i data-lucide="chevron-left" class="icon-24 text-neutral-600"></i></a>
             <span class="h2 fw-bold">選擇類別</span>
-            <i
-              data-lucide="chevron-right"
-              class="icon-40 p-3 icon-transparent"
-            ></i>
+            <i data-lucide="chevron-right" class="icon-24  icon-transparent"></i>
           </div>
-          <div
-            class="accordion accordion-flush mb-4"
-            id="accordionFlushExample"
-          >
+          <div class="accordion accordion-flush mb-4" id="accordionFlushExample">
             <!--食物-->
             <div class="accordion-item">
               <h2 class="accordion-header" id="flush-headingOne">
-                <button
-                  class="accordion-button text-neutral-500"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#food"
-                  aria-expanded="true"
-                  aria-controls="food"
-                >
+                <button class="accordion-button text-neutral-500" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#food" aria-expanded="true" aria-controls="food">
                   飲食
                 </button>
               </h2>
-              <div
-                id="food"
-                class="accordion-collapse collapse show"
-                aria-labelledby="flush-headingOne"
-                data-bs-parent="#accordionFlushExample"
-              >
+              <div id="food" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
                   <ul class="list-group mt-2 rounded-0">
-                    <li
-                      class="list-group-item list-group-item-action mb-2 active"
-                    >
+                    <li class="list-group-item list-group-item-action mb-2 active">
                       <div class="d-flex align-items-center">
-                        <span
-                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
-                        >
-                          <img
-                            src="/assets/images/Category/icon-category-food-breakfast-24.svg"
-                            alt="早餐icon"
-                            class="text-neutral-950"
-                          />
+                        <span class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center">
+                          <img src="/assets/images/Category/icon-category-food-breakfast-24.svg" alt="早餐icon"
+                            class="text-neutral-950" />
                         </span>
                         <p>早餐</p>
                       </div>
                     </li>
                     <li class="list-group-item list-group-item-action mb-2">
                       <div class="d-flex align-items-center">
-                        <span
-                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
-                        >
-                          <img
-                            src="/assets/images/Category/icon-category-food-lunch-24.svg"
-                            alt="午餐icon"
-                            class="text-neutral-950"
-                          />
+                        <span class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center">
+                          <img src="/assets/images/Category/icon-category-food-lunch-24.svg" alt="午餐icon"
+                            class="text-neutral-950" />
                         </span>
                         <p>午餐</p>
                       </div>
                     </li>
                     <li class="list-group-item list-group-item-action mb-2">
                       <div class="d-flex align-items-center">
-                        <span
-                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
-                        >
-                          <img
-                            src="/assets/images/Category/icon-category-food-dinner-24.svg"
-                            alt="晚餐icon"
-                            class="text-neutral-950"
-                          />
+                        <span class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center">
+                          <img src="/assets/images/Category/icon-category-food-dinner-24.svg" alt="晚餐icon"
+                            class="text-neutral-950" />
                         </span>
                         <p>晚餐</p>
                       </div>
                     </li>
                     <li class="list-group-item list-group-item-action mb-2">
                       <div class="d-flex align-items-center">
-                        <span
-                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
-                        >
-                          <img
-                            src="/assets/images/Category/icon-category-food-dessert-24.svg"
-                            alt="點心icon"
-                            class="text-neutral-950"
-                          />
+                        <span class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center">
+                          <img src="/assets/images/Category/icon-category-food-dessert-24.svg" alt="點心icon"
+                            class="text-neutral-950" />
                         </span>
                         <p>點心</p>
                       </div>
                     </li>
                     <li class="list-group-item list-group-item-action mb-2">
                       <div class="d-flex align-items-center">
-                        <span
-                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
-                        >
-                          <img
-                            src="/assets/images/Category/icon-category-food-beverage-24.svg"
-                            alt="飲料icon"
-                            class="text-neutral-950"
-                          />
+                        <span class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center">
+                          <img src="/assets/images/Category/icon-category-food-beverage-24.svg" alt="飲料icon"
+                            class="text-neutral-950" />
                         </span>
                         <p>飲料</p>
                       </div>
@@ -134,49 +84,29 @@
             <!--購物-->
             <div class="accordion-item">
               <h2 class="accordion-header" id="flush-heading-two">
-                <button
-                  class="accordion-button collapsed text-neutral-500"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#Shopping"
-                  aria-expanded="false"
-                  aria-controls="Shopping"
-                >
+                <button class="accordion-button collapsed text-neutral-500" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#Shopping" aria-expanded="false" aria-controls="Shopping">
                   購物
                 </button>
               </h2>
-              <div
-                id="Shopping"
-                class="accordion-collapse collapse"
-                aria-labelledby="flush-heading-two"
-                data-bs-parent="#accordionFlushExample"
-              >
+              <div id="Shopping" class="accordion-collapse collapse" aria-labelledby="flush-heading-two"
+                data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
                   <ul class="list-group mt-2 rounded-0">
                     <li class="list-group-item list-group-item-action mb-2">
                       <div class="d-flex align-items-center">
-                        <span
-                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
-                        >
-                          <img
-                            src="/assets/images/Category/icon-shopping-cosmetic-24.png"
-                            alt="美妝icon"
-                            class="text-neutral-950"
-                          />
+                        <span class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center">
+                          <img src="/assets/images/Category/icon-shopping-cosmetic-24.png" alt="美妝icon"
+                            class="text-neutral-950" />
                         </span>
                         <p>美妝</p>
                       </div>
                     </li>
                     <li class="list-group-item list-group-item-action mb-2">
                       <div class="d-flex align-items-center">
-                        <span
-                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
-                        >
-                          <img
-                            src="/assets/images/Category/icon-shopping-cloth-24.png"
-                            alt="服飾icon"
-                            class="text-neutral-950"
-                          />
+                        <span class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center">
+                          <img src="/assets/images/Category/icon-shopping-cloth-24.png" alt="服飾icon"
+                            class="text-neutral-950" />
                         </span>
                         <p>服飾</p>
                       </div>
@@ -188,63 +118,38 @@
             <!--家居-->
             <div class="accordion-item">
               <h2 class="accordion-header" id="flush-heading-three">
-                <button
-                  class="accordion-button collapsed text-neutral-500"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#Home"
-                  aria-expanded="false"
-                  aria-controls="Home"
-                >
+                <button class="accordion-button collapsed text-neutral-500" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#Home" aria-expanded="false" aria-controls="Home">
                   家居
                 </button>
               </h2>
-              <div
-                id="Home"
-                class="accordion-collapse collapse"
-                aria-labelledby="flush-heading-three"
-                data-bs-parent="#accordionFlushExample"
-              >
+              <div id="Home" class="accordion-collapse collapse" aria-labelledby="flush-heading-three"
+                data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
                   <ul class="list-group mt-2 rounded-0">
                     <li class="list-group-item list-group-item-action mb-2">
                       <div class="d-flex align-items-center">
-                        <span
-                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
-                        >
-                          <img
-                            src="/assets/images/Category/icon-home-rent-24.png"
-                            alt="房租icon"
-                            class="text-neutral-950"
-                          />
+                        <span class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center">
+                          <img src="/assets/images/Category/icon-home-rent-24.png" alt="房租icon"
+                            class="text-neutral-950" />
                         </span>
                         <p>房租</p>
                       </div>
                     </li>
                     <li class="list-group-item list-group-item-action mb-2">
                       <div class="d-flex align-items-center">
-                        <span
-                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
-                        >
-                          <img
-                            src="/assets/images/Category/icon-home-water_bill-24.png"
-                            alt="水電icon"
-                            class="text-neutral-950"
-                          />
+                        <span class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center">
+                          <img src="/assets/images/Category/icon-home-water_bill-24.png" alt="水電icon"
+                            class="text-neutral-950" />
                         </span>
                         <p>水電</p>
                       </div>
                     </li>
                     <li class="list-group-item list-group-item-action mb-2">
                       <div class="d-flex align-items-center">
-                        <span
-                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
-                        >
-                          <img
-                            src="/assets/images/Category/icon-home-cleaning_supplies-24.png"
-                            alt="清潔用品icon"
-                            class="text-neutral-950"
-                          />
+                        <span class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center">
+                          <img src="/assets/images/Category/icon-home-cleaning_supplies-24.png" alt="清潔用品icon"
+                            class="text-neutral-950" />
                         </span>
                         <p>清潔用品</p>
                       </div>
@@ -256,49 +161,29 @@
             <!--交通-->
             <div class="accordion-item">
               <h2 class="accordion-header" id="flush-heading-four">
-                <button
-                  class="accordion-button collapsed text-neutral-500"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#traffic"
-                  aria-expanded="false"
-                  aria-controls="traffic"
-                >
+                <button class="accordion-button collapsed text-neutral-500" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#traffic" aria-expanded="false" aria-controls="traffic">
                   交通
                 </button>
               </h2>
-              <div
-                id="traffic"
-                class="accordion-collapse collapse"
-                aria-labelledby="flush-heading-four"
-                data-bs-parent="#accordionFlushExample"
-              >
+              <div id="traffic" class="accordion-collapse collapse" aria-labelledby="flush-heading-four"
+                data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
                   <ul class="list-group mt-2 rounded-0">
                     <li class="list-group-item list-group-item-action mb-2">
                       <div class="d-flex align-items-center">
-                        <span
-                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
-                        >
-                          <img
-                            src="/assets/images/Category/icon-transportation-public_transportation-24.png"
-                            alt="通勤icon"
-                            class="text-neutral-950"
-                          />
+                        <span class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center">
+                          <img src="/assets/images/Category/icon-transportation-public_transportation-24.png"
+                            alt="通勤icon" class="text-neutral-950" />
                         </span>
                         <p>通勤</p>
                       </div>
                     </li>
                     <li class="list-group-item list-group-item-action mb-2">
                       <div class="d-flex align-items-center">
-                        <span
-                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
-                        >
-                          <img
-                            src="/assets/images/Category/icon-transportation-gas-24.png"
-                            alt="加油費icon"
-                            class="text-neutral-950"
-                          />
+                        <span class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center">
+                          <img src="/assets/images/Category/icon-transportation-gas-24.png" alt="加油費icon"
+                            class="text-neutral-950" />
                         </span>
                         <p>加油費</p>
                       </div>
@@ -310,49 +195,29 @@
             <!--學習-->
             <div class="accordion-item">
               <h2 class="accordion-header" id="flush-heading-five">
-                <button
-                  class="accordion-button collapsed text-neutral-500"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#learn"
-                  aria-expanded="false"
-                  aria-controls="learn"
-                >
+                <button class="accordion-button collapsed text-neutral-500" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#learn" aria-expanded="false" aria-controls="learn">
                   學習
                 </button>
               </h2>
-              <div
-                id="learn"
-                class="accordion-collapse collapse"
-                aria-labelledby="flush-heading-five"
-                data-bs-parent="#accordionFlushExample"
-              >
+              <div id="learn" class="accordion-collapse collapse" aria-labelledby="flush-heading-five"
+                data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
                   <ul class="list-group mt-2 rounded-0">
                     <li class="list-group-item list-group-item-action mb-2">
                       <div class="d-flex align-items-center">
-                        <span
-                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
-                        >
-                          <img
-                            src="/assets/images/Category/icon-learning-online_course-24.png"
-                            alt="線上課icon"
-                            class="text-neutral-950"
-                          />
+                        <span class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center">
+                          <img src="/assets/images/Category/icon-learning-online_course-24.png" alt="線上課icon"
+                            class="text-neutral-950" />
                         </span>
                         <p>線上課</p>
                       </div>
                     </li>
                     <li class="list-group-item list-group-item-action mb-2">
                       <div class="d-flex align-items-center">
-                        <span
-                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
-                        >
-                          <img
-                            src="/assets/images/Category/icon-learning-book-24.png"
-                            alt="書籍icon"
-                            class="text-neutral-950"
-                          />
+                        <span class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center">
+                          <img src="/assets/images/Category/icon-learning-book-24.png" alt="書籍icon"
+                            class="text-neutral-950" />
                         </span>
                         <p>書籍</p>
                       </div>
@@ -364,49 +229,29 @@
             <!--娛樂-->
             <div class="accordion-item">
               <h2 class="accordion-header" id="flush-heading-six">
-                <button
-                  class="accordion-button collapsed text-neutral-500"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#entertainment"
-                  aria-expanded="false"
-                  aria-controls="entertainment"
-                >
+                <button class="accordion-button collapsed text-neutral-500" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#entertainment" aria-expanded="false" aria-controls="entertainment">
                   娛樂
                 </button>
               </h2>
-              <div
-                id="entertainment"
-                class="accordion-collapse collapse"
-                aria-labelledby="flush-heading-six"
-                data-bs-parent="#accordionFlushExample"
-              >
+              <div id="entertainment" class="accordion-collapse collapse" aria-labelledby="flush-heading-six"
+                data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
                   <ul class="list-group mt-2 rounded-0">
                     <li class="list-group-item list-group-item-action mb-2">
                       <div class="d-flex align-items-center">
-                        <span
-                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
-                        >
-                          <img
-                            src="/assets/images/Category/icon-entertainment-movie-24.png"
-                            alt="電影icon"
-                            class="text-neutral-950"
-                          />
+                        <span class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center">
+                          <img src="/assets/images/Category/icon-entertainment-movie-24.png" alt="電影icon"
+                            class="text-neutral-950" />
                         </span>
                         <p>電影</p>
                       </div>
                     </li>
                     <li class="list-group-item list-group-item-action mb-2">
                       <div class="d-flex align-items-center">
-                        <span
-                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
-                        >
-                          <img
-                            src="/assets/images/Category/icon-entertainment-exhibition-24.png"
-                            alt="展覽icon"
-                            class="text-neutral-950"
-                          />
+                        <span class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center">
+                          <img src="/assets/images/Category/icon-entertainment-exhibition-24.png" alt="展覽icon"
+                            class="text-neutral-950" />
                         </span>
                         <p>展覽</p>
                       </div>
@@ -418,49 +263,29 @@
             <!--醫療-->
             <div class="accordion-item">
               <h2 class="accordion-header" id="flush-heading-seven">
-                <button
-                  class="accordion-button collapsed text-neutral-500"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#medical"
-                  aria-expanded="false"
-                  aria-controls="medical"
-                >
+                <button class="accordion-button collapsed text-neutral-500" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#medical" aria-expanded="false" aria-controls="medical">
                   醫療
                 </button>
               </h2>
-              <div
-                id="medical"
-                class="accordion-collapse collapse"
-                aria-labelledby="flush-heading-seven"
-                data-bs-parent="#accordionFlushExample"
-              >
+              <div id="medical" class="accordion-collapse collapse" aria-labelledby="flush-heading-seven"
+                data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
                   <ul class="list-group mt-2 rounded-0">
                     <li class="list-group-item list-group-item-action mb-2">
                       <div class="d-flex align-items-center">
-                        <span
-                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
-                        >
-                          <img
-                            src="/assets/images/Category/icon-medical-TCM-24.png"
-                            alt="中醫icon"
-                            class="text-neutral-950"
-                          />
+                        <span class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center">
+                          <img src="/assets/images/Category/icon-medical-TCM-24.png" alt="中醫icon"
+                            class="text-neutral-950" />
                         </span>
                         <p>中醫</p>
                       </div>
                     </li>
                     <li class="list-group-item list-group-item-action mb-2">
                       <div class="d-flex align-items-center">
-                        <span
-                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
-                        >
-                          <img
-                            src="/assets/images/Category/icon-medical-western-24.png"
-                            alt="西醫icon"
-                            class="text-neutral-950"
-                          />
+                        <span class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center">
+                          <img src="/assets/images/Category/icon-medical-western-24.png" alt="西醫icon"
+                            class="text-neutral-950" />
                         </span>
                         <p>西醫</p>
                       </div>
@@ -473,31 +298,30 @@
           <a href="#" class="d-flex align-items-center py-3">
             <span
               class="border-dashed-neutral rounded-circle d-inline-flex justify-content-center align-items-center me-4"
-              style="width: 44px; height: 44px"
-            >
-              <i data-lucide="plus" class="icon-16"></i> </span
-            >新增類別
+              style="width: 44px; height: 44px">
+              <i data-lucide="plus" class="icon-16"></i> </span>新增類別
           </a>
         </main>
       </div>
       <%- include('./layout/footer'); -%>
-    </div>
-    <script type="module" src="../main.js"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-      lucide.createIcons();
-    </script>
-    <script>
-      document.querySelectorAll(".list-group-item-action").forEach((item) => {
-        item.addEventListener("click", () => {
-          // 先移除其他 item 的 active
-          document
-            .querySelectorAll(".list-group-item-action")
-            .forEach((i) => i.classList.remove("active"));
-          // 再給自己加上 active
-          item.classList.add("active");
-        });
+  </div>
+  <script type="module" src="../main.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+  <script>
+    document.querySelectorAll(".list-group-item-action").forEach((item) => {
+      item.addEventListener("click", () => {
+        // 先移除其他 item 的 active
+        document
+          .querySelectorAll(".list-group-item-action")
+          .forEach((i) => i.classList.remove("active"));
+        // 再給自己加上 active
+        item.classList.add("active");
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>

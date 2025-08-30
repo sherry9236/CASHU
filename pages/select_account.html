@@ -1,53 +1,35 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
-    />
-    <title>支出類別-CASHU</title>
-  </head>
 
-  <body>
-    <div
-      class="mobile-frame bg-white position-relative"
-      style="min-height: 100vh"
-    >
-      <%- include('./layout/header'); -%>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <title>支出類別-CASHU</title>
+</head>
+
+<body>
+  <div class="mobile-frame bg-white position-relative" style="min-height: 100vh">
+    <%- include('./layout/header'); -%>
       <div class="container-fluid" style="padding-bottom: 34px">
         <main>
           <div class="py-4 d-flex justify-content-between align-items-center">
-            <a href="log-add.html"
-              ><i data-lucide="chevron-left" class="icon-40 p-3"></i
-            ></a>
+            <a href="log-add.html"><i data-lucide="chevron-left" class="icon-24 text-neutral-600"></i></a>
             <span class="h2 fw-bold">選擇帳戶</span>
-            <i
-              data-lucide="chevron-right"
-              class="icon-40 p-3 icon-transparent"
-            ></i>
+            <i data-lucide="chevron-right" class="icon-24  icon-transparent"></i>
           </div>
           <div class="mb-4">
-            <p
-              class="text-neutral-500 body-2 border-solid-neutral-100 mb-3"
-              style="padding: 5.5px 0"
-            >
+            <p class="text-neutral-500 body-2 border-solid-neutral-100 mb-3" style="padding: 5.5px 0">
               現金
             </p>
             <ul class="m-0">
               <li class="add-item">
                 <a href="#" class="d-block py-3 px-5 active">
                   <div class="d-flex align-items-center">
-                    <sapn
-                      class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
-                    >
-                      <img
-                        src="/assets/images/Category/icon-payment-cash-24.svg"
-                        alt="現金icon"
-                        class="text-neutral-950"
-                      />
+                    <sapn class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center">
+                      <img src="/assets/images/Category/icon-payment-cash-24.svg" alt="現金icon"
+                        class="text-neutral-950" />
                     </sapn>
                     <p class="mb-3">現金</p>
                     <p class="ms-auto line-height-sm fw-medium">$ 20,000</p>
@@ -57,25 +39,16 @@
             </ul>
           </div>
           <div class="mb-4">
-            <p
-              class="text-neutral-500 body-2 border-solid-neutral-100 mb-3"
-              style="padding: 5.5px 0"
-            >
+            <p class="text-neutral-500 body-2 border-solid-neutral-100 mb-3" style="padding: 5.5px 0">
               銀行
             </p>
-            <hr class="mb-3 mt-0 border-neutral-100" />
             <ul class="m-0">
               <li class="add-item mb-2">
                 <a href="#" class="d-block py-3 px-5">
                   <div class="d-flex align-items-center">
-                    <sapn
-                      class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
-                    >
-                      <img
-                        src="/assets/images/Category/icon-payment-bank-24.svg"
-                        alt="銀行icon"
-                        class="text-neutral-950"
-                      />
+                    <sapn class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center">
+                      <img src="/assets/images/Category/icon-payment-bank-24.svg" alt="銀行icon"
+                        class="text-neutral-950" />
                     </sapn>
                     <p class="mb-3">台新銀行</p>
                     <p class="ms-auto line-height-sm fw-medium">$ 100,000</p>
@@ -85,14 +58,9 @@
               <li class="add-item mb-2">
                 <a href="#" class="d-block py-3 px-5">
                   <div class="d-flex align-items-center">
-                    <sapn
-                      class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
-                    >
-                      <img
-                        src="/assets/images/Category/icon-payment-bank-24.svg"
-                        alt="銀行icon"
-                        class="text-neutral-950"
-                      />
+                    <sapn class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center">
+                      <img src="/assets/images/Category/icon-payment-bank-24.svg" alt="銀行icon"
+                        class="text-neutral-950" />
                     </sapn>
                     <p class="mb-3">富邦銀行</p>
                     <p class="ms-auto line-height-sm fw-medium">$ 100,000</p>
@@ -102,14 +70,9 @@
               <li class="add-item">
                 <a href="#" class="d-block py-3 px-5">
                   <div class="d-flex align-items-center">
-                    <sapn
-                      class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
-                    >
-                      <img
-                        src="/assets/images/Category/icon-payment-bank-24.svg"
-                        alt="銀行icon"
-                        class="text-neutral-950"
-                      />
+                    <sapn class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center">
+                      <img src="/assets/images/Category/icon-payment-bank-24.svg" alt="銀行icon"
+                        class="text-neutral-950" />
                     </sapn>
                     <p class="mb-3">玉山銀行</p>
                     <p class="ms-auto line-height-sm fw-medium">$ 100,000</p>
@@ -121,32 +84,31 @@
           <a href="#" class="d-flex align-items-center py-3">
             <span
               class="border-dashed-neutral rounded-circle d-inline-flex justify-content-center align-items-center me-4"
-              style="width: 44px; height: 44px"
-            >
-              <i data-lucide="plus" class="icon-16"></i> </span
-            >新增類別
+              style="width: 44px; height: 44px">
+              <i data-lucide="plus" class="icon-16"></i> </span>新增類別
           </a>
         </main>
       </div>
       <%- include('./layout/footer'); -%>
-    </div>
-    <script type="module" src="../main.js"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-      lucide.createIcons();
-    </script>
-    <script>
-      document.querySelectorAll(".add-item a").forEach((link) => {
-        link.addEventListener("click", (e) => {
-          e.preventDefault(); // 防止跳頁
-          // 移除其他 active
-          document
-            .querySelectorAll(".add-item a")
-            .forEach((i) => i.classList.remove("active"));
-          // 加上 active
-          link.classList.add("active");
-        });
+  </div>
+  <script type="module" src="../main.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+  <script>
+    document.querySelectorAll(".add-item a").forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault(); // 防止跳頁
+        // 移除其他 active
+        document
+          .querySelectorAll(".add-item a")
+          .forEach((i) => i.classList.remove("active"));
+        // 加上 active
+        link.classList.add("active");
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>

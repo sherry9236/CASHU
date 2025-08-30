@@ -17,13 +17,13 @@
           <div class="py-4 d-flex justify-content-between align-items-center">
             <i data-lucide="chevron-left" class="icon-24 text-neutral-600"></i>
             <span class="h2 fw-bold">新增紀錄</span>
-            <i data-lucide="chevron-right" class="icon-24 icon-transparent"></i>
+            <i data-lucide="pencil" class="icon-24 text-neutral-600"></i>
           </div>
           <div class="position-relative">
             <input type="text" id="consult_datetime" class="form-control py-4 px-5" readonly />
             <span id="calendar_icon" class="calendar_icon position-absolute top-50 end-0 translate-middle-y me-5"
               style="cursor: pointer">
-              <i data-lucide="calendar" class="text-neutral-300"></i>
+              <i data-lucide="calendar"></i>
             </span>
           </div>
 
@@ -52,13 +52,13 @@
                   <a href="category-page.html" class="categoy-icon category-icon-xl mb-4">
                     <img src="/assets/images/Category/icon-category-food-breakfast-48.svg" alt="早餐icon" class="" />
                   </a>
-                  <p>早餐<i data-lucide="pencil" class="icon-15 ms-2"></i></p>
+                  <p><span>早餐</span><i data-lucide="pencil" class="icon-15 ms-2"></i></p>
                 </section>
                 <!--input-->
                 <section>
                   <ul class="row mb-4 pt-2">
                     <li class="col-6 py-4">
-                      <input type="text" id="name" class="form-control input-select h-44" placeholder="名稱" />
+                      <input type="text" id="expense-name" class="form-control input-select h-44" placeholder="名稱" />
                     </li>
                     <li class="col-6 py-4">
                       <input type="text" id="amount" class="form-control h-44 calc-input text-end" inputmode="none"
@@ -176,12 +176,12 @@
                   <ul class="row mb-4 pt-2">
                     <li class="col-6">
                       <label for="Out-Acc" class="form-label">轉出金額</label>
-                      <input type="text" id="Out-Acc" class="form-control h-44 calc-input text-end" inputmode="none"
+                      <input type="text" id="Out-Acc" class="form-control h-44 calc-input" inputmode="none"
                         placeholder="$0" readonly />
                     </li>
                     <li class="col-6">
                       <label for="In-Acc" class="form-label">轉入金額</label>
-                      <input type="text" id="In-Acc" class="form-control h-44 calc-input text-end" inputmode="none"
+                      <input type="text" id="In-Acc" class="form-control h-44 calc-input" inputmode="none"
                         placeholder="$0" readonly />
                     </li>
 
