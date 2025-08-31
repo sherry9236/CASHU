@@ -12,7 +12,10 @@
   </head>
 
   <body>
-    <div class="mobile-frame bg-white position-relative" style="min-height: 100vh">
+    <div
+      class="mobile-frame bg-white position-relative"
+      style="min-height: 100vh"
+    >
       <%- include('./layout/header'); -%>
       <div class="container-fluid">
         <main>
@@ -44,7 +47,7 @@
               </div>
             </div>
           </section>
-          <section class="py-6">
+          <div class="py-6">
             <div class="card rounded-m overflow-hidden border-0 shadow d-flex">
               <div
                 class="bg-gradient-horizontal p-5 d-flex justify-content-between align-items-center"
@@ -67,229 +70,377 @@
                 </div>
               </div>
               <div class="card-body py-7 p-6">
-                <p class="card-text">
-                  <section class="  mb-8">
-                  <div class=" d-flex justify-content-between mb-6">
-                   <div>
-                  <p class="body-2 text-neutral-400">已存</p>
-                  <p class="h4 text-secondary-600">6209天</p>
-                 </div>
-                    <div>
-                  <p class="body-2 text-neutral-400">已存</p>
-                  <p class="h4">$ 200,000</p>
-                 </div>
+                <div class="card-text">
+                  <div class="mb-8">
+                    <div class="d-flex justify-content-between mb-6">
+                      <div>
+                        <p class="body-2 text-neutral-400">已存</p>
+                        <p class="h4 text-secondary-600">6209天</p>
+                      </div>
+                      <div>
+                        <p class="body-2 text-neutral-400">已存</p>
+                        <p class="h4">$ 200,000</p>
+                      </div>
+                    </div>
+                    <div class="progress rounded-pill" style="height: 12px">
+                      <div
+                        class="progress-bar bg-success"
+                        role="progressbar"
+                        style="width: 7%"
+                        aria-valuenow=" 7"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
                   </div>
-                  <div class="progress rounded-pill" style="height: 12px;">
-                      <div class="progress-bar bg-success " role="progressbar" style="width: 7%" aria-valuenow=" 7" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div></section>
-                      <div class="row">
-                        <div class="col-6">
-                          <a href="#" class="btn btn-outline-primary h-44 d-flex align-items-center justify-content-center rounded-pill h4">取用</a>
-                        </div>
-                         <div class="col-6">
-                          <a href="#" class="btn btn-primary h-44 d-flex align-items-center justify-content-center rounded-pill h4 open-calculator-btn">存入</a>
-                        </div>
-                       </div>
-                </p>
-              
+                  <div class="row">
+                    <div class="col-6">
+                      <a
+                        href="#"
+                        class="btn btn-outline-primary h-44 d-flex align-items-center justify-content-center rounded-pill h4"
+                        >取用</a
+                      >
+                    </div>
+                    <div class="col-6">
+                      <button
+                        type="button"
+                        class="btn btn-primary h-44 d-flex align-items-center justify-content-center rounded-pill h4 open-calculator-btn w-100"
+                      >
+                        存入
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </section>
-<section class="py-5">
-  <h4 class="mb-6">存錢紀錄</h4>
-<ul>
-  <li class="d-flex align-items-center justify-content-between">
-    <div class="d-flex flex-column">
-    <time datetime="2025-07-18" class="body-1 mb-2">2025/07/18</time><p class="body-2 text-neutral-600">手動轉出至現金帳戶</p></div>
-    <p class="text-state-negative-500 subheader-3">-500</p>
-  </li>
-    <li class="d-flex align-items-center justify-content-between">
-    <div class="d-flex flex-column">
-    <time datetime="2025-07-14" class="body-1 mb-2">2025/07/14</time><p class="body-2 text-neutral-600">手動從台新帳戶存入</p></div>
-    <p class="subheader-3">$ 22,200</p>
-  </li>
-     <li class="d-flex align-items-center justify-content-between">
-    <div class="d-flex flex-column">
-    <time datetime="2025-07-10" class="body-1 mb-2">2025/07/10</time><p class="body-2 text-neutral-600">每月10日從台新帳戶定期存入</p></div>
-    <p class="subheader-3">$ 25,000</p>
-  </li>
-</ul>
-</section>
-   <%- include('./layout/footer'); -%>
-          <!-- 按鈕 -->
-         
-
-          <!--底部彈開按鈕+計算機-->
-          <div class="mobile-frame-container">
-            <!-- 新計算機 -->
-            <div class="mobile-calculator" id="calculatorContainer">
-              <div class="calculator-full">
-                <div
-                  class="d-flex justify-content-between align-items-center mb-6"
-                >
-                  <h3>存入結婚基金</h3>
-                  <span class="close-calculator" onclick="closeCalculator()">
-                    <i
-                      data-lucide="x"
-                      class="icon-44 text-neutral-600"
-                      style="padding: 10px"
-                    ></i
-                  ></span>
+          </div>
+          <section class="py-5">
+            <h4 class="mb-6">存錢紀錄</h4>
+            <ul>
+              <li class="d-flex align-items-center justify-content-between">
+                <div class="d-flex flex-column">
+                  <time datetime="2025-07-18" class="body-1 mb-2"
+                    >2025/07/18</time
+                  >
+                  <p class="body-2 text-neutral-600">手動轉出至現金帳戶</p>
                 </div>
-                <div class="calculator-header row mb-4">
-                  <div class="col-12">
-                    <div class="position-relative">
-                      <input
-                        type="text"
-                        id="consult_datetime"
-                        class="form-control py-4 px-5 h-44"
-                        readonly
-                      />
-                      <span
-                        id="calendar_icon"
-                        class="calendar_icon position-absolute top-50 end-0 translate-middle-y me-5"
-                        style="cursor: pointer"
-                      >
-                        <i data-lucide="calendar"></i>
-                      </span>
-                    </div>
-                  </div>
-                  <div class="col-6">
-                    <div class="position-relative">
-                      <a
-                        href="select_account.html"
-                        class="btn btn-outline-neutral-300 input-select w-100 text-start rounded-m d-flex align-items-center h-44 fw-medium"
-                      >
-                        生活開銷
-                        <span
-                          id="calendar_icon"
-                          class="position-absolute top-50 end-0 translate-middle-y me-5"
-                          style="cursor: pointer"
-                        >
-                          <i data-lucide="chevron-right"></i>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-6">
+                <p class="text-state-negative-500 subheader-3">-500</p>
+              </li>
+              <li class="d-flex align-items-center justify-content-between">
+                <div class="d-flex flex-column">
+                  <time datetime="2025-07-14" class="body-1 mb-2"
+                    >2025/07/14</time
+                  >
+                  <p class="body-2 text-neutral-600">手動從台新帳戶存入</p>
+                </div>
+                <p class="subheader-3">$ 22,200</p>
+              </li>
+              <li class="d-flex align-items-center justify-content-between">
+                <div class="d-flex flex-column">
+                  <time datetime="2025-07-10" class="body-1 mb-2"
+                    >2025/07/10</time
+                  >
+                  <p class="body-2 text-neutral-600">
+                    每月10日從台新帳戶定期存入
+                  </p>
+                </div>
+                <p class="subheader-3">$ 25,000</p>
+              </li>
+            </ul>
+          </section>
+        </main>
+        <%- include('./layout/footer'); -%>
+        <!-- 按鈕 -->
+
+        <!--底部彈開按鈕+計算機-->
+        <div class="mobile-frame-container">
+          <!-- 新計算機 -->
+          <div class="mobile-calculator" id="calculatorContainer">
+            <div class="calculator-full">
+              <div
+                class="d-flex justify-content-between align-items-center mb-6"
+              >
+                <h3>存入結婚基金</h3>
+                <span class="close-calculator" onclick="closeCalculator()">
+                  <i
+                    data-lucide="x"
+                    class="icon-44 text-neutral-600"
+                    style="padding: 10px"
+                  ></i>
+                </span>
+              </div>
+              <div class="calculator-header row mb-4">
+                <div class="col-12">
+                  <div class="position-relative">
                     <input
                       type="text"
-                      class="form-control h-44 calc-input text-end"
-                      inputmode="none"
-                      placeholder="$0"
+                      id="consult_datetime"
+                      class="form-control py-4 px-5 h-44"
                       readonly
                     />
+                    <span
+                      id="calendar_icon"
+                      class="calendar_icon position-absolute top-50 end-0 translate-middle-y me-5"
+                      style="cursor: pointer"
+                    >
+                      <i data-lucide="calendar"></i>
+                    </span>
                   </div>
                 </div>
-
-                <div class="calculator-grid">
-                  <button class="calc-btn number" onclick="inputNumber('7')">
-                    7
-                  </button>
-                  <button class="calc-btn number" onclick="inputNumber('8')">
-                    8
-                  </button>
-                  <button class="calc-btn number" onclick="inputNumber('9')">
-                    9
-                  </button>
-                  <button
-                    class="calc-btn operator"
-                    onclick="inputOperator('÷')"
-                  >
-                    <img
-                      src="/assets/images/keyboard/Type=Divide.svg"
-                      alt="Divide"
-                      class="object-fit-cover"
-                    />
-                  </button>
-                  <button class="calc-btn function" onclick="clearAll()">
-                    AC
-                  </button>
-                  <button class="calc-btn number" onclick="inputNumber('4')">
-                    4
-                  </button>
-                  <button class="calc-btn number" onclick="inputNumber('5')">
-                    5
-                  </button>
-                  <button class="calc-btn number" onclick="inputNumber('6')">
-                    6
-                  </button>
-                  <button
-                    class="calc-btn operator"
-                    onclick="inputOperator('×')"
-                  >
-                    <img
-                      src="/assets/images/keyboard/Type=Multiply.svg"
-                      alt="Multiply"
-                      class="object-fit-cover"
-                    />
-                  </button>
-                  <button class="calc-btn function" onclick="backspace()">
-                    <img
-                      src="/assets/images/keyboard/Type=Backspace.svg"
-                      alt="Backspace"
-                      class="object-fit-cover"
-                    />
-                  </button>
-                  <button class="calc-btn number" onclick="inputNumber('1')">
-                    1
-                  </button>
-                  <button class="calc-btn number" onclick="inputNumber('2')">
-                    2
-                  </button>
-                  <button class="calc-btn number" onclick="inputNumber('3')">
-                    3
-                  </button>
-                  <button
-                    class="calc-btn operator"
-                    onclick="inputOperator('-')"
-                  >
-                    <img
-                      src="/assets/images/keyboard/Type=Minus.svg"
-                      alt="Minus"
-                      class="object-fit-cover"
-                    />
-                  </button>
-                  <button
-                    class="calc-btn function subheader-4"
-                    onclick="memory()"
-                  >
-                    再存
-                  </button>
-                  <button class="calc-btn number" onclick="inputNumber('00')">
-                    00
-                  </button>
-                  <button class="calc-btn number" onclick="inputNumber('0')">
-                    0
-                  </button>
-                  <button
-                    class="calc-btn operator"
-                    onclick="inputOperator('.')"
-                  >
-                    .
-                  </button>
-                  <button
-                    class="calc-btn operator"
-                    onclick="inputOperator('+')"
-                  >
-                    <img
-                      src="/assets/images/keyboard/Type=Plus.svg"
-                      alt="Plus"
-                      class="object-fit-cover"
-                    />
-                  </button>
-                  <button class="calc-btn equals" onclick="calculate()">
-                    <a href="add-result.html"> <i data-lucide="check"></i></a>
-                  </button>
+                <div class="col-6">
+                  <div class="position-relative">
+                    <button
+                      type="button"
+                      class="btn btn-outline-neutral-300 input-select w-100 text-start rounded-m d-flex align-items-center h-44 fw-medium"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#offcanvasRight"
+                      aria-controls="offcanvasRight"
+                    >
+                      轉出帳號
+                      <span
+                        class="position-absolute top-50 end-0 translate-middle-y me-5"
+                        style="cursor: pointer"
+                      >
+                        <i data-lucide="chevron-right"></i>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <input
+                    type="text"
+                    class="form-control h-44 calc-input text-end"
+                    inputmode="none"
+                    placeholder="$0"
+                    readonly
+                  />
                 </div>
               </div>
+
+              <div class="calculator-grid">
+                <button class="calc-btn number" onclick="inputNumber('7')">
+                  7
+                </button>
+                <button class="calc-btn number" onclick="inputNumber('8')">
+                  8
+                </button>
+                <button class="calc-btn number" onclick="inputNumber('9')">
+                  9
+                </button>
+                <button class="calc-btn operator" onclick="inputOperator('÷')">
+                  <img
+                    src="/assets/images/keyboard/Type=Divide.svg"
+                    alt="Divide"
+                    class="object-fit-cover"
+                  />
+                </button>
+                <button class="calc-btn function" onclick="clearAll()">
+                  AC
+                </button>
+                <button class="calc-btn number" onclick="inputNumber('4')">
+                  4
+                </button>
+                <button class="calc-btn number" onclick="inputNumber('5')">
+                  5
+                </button>
+                <button class="calc-btn number" onclick="inputNumber('6')">
+                  6
+                </button>
+                <button class="calc-btn operator" onclick="inputOperator('×')">
+                  <img
+                    src="/assets/images/keyboard/Type=Multiply.svg"
+                    alt="Multiply"
+                    class="object-fit-cover"
+                  />
+                </button>
+                <button class="calc-btn function" onclick="backspace()">
+                  <img
+                    src="/assets/images/keyboard/Type=Backspace.svg"
+                    alt="Backspace"
+                    class="object-fit-cover"
+                  />
+                </button>
+                <button class="calc-btn number" onclick="inputNumber('1')">
+                  1
+                </button>
+                <button class="calc-btn number" onclick="inputNumber('2')">
+                  2
+                </button>
+                <button class="calc-btn number" onclick="inputNumber('3')">
+                  3
+                </button>
+                <button class="calc-btn operator" onclick="inputOperator('-')">
+                  <img
+                    src="/assets/images/keyboard/Type=Minus.svg"
+                    alt="Minus"
+                    class="object-fit-cover"
+                  />
+                </button>
+                <button
+                  class="calc-btn function subheader-4"
+                  onclick="memory()"
+                >
+                  再存
+                </button>
+                <button class="calc-btn number" onclick="inputNumber('00')">
+                  00
+                </button>
+                <button class="calc-btn number" onclick="inputNumber('0')">
+                  0
+                </button>
+                <button class="calc-btn operator" onclick="inputOperator('.')">
+                  .
+                </button>
+                <button class="calc-btn operator" onclick="inputOperator('+')">
+                  <img
+                    src="/assets/images/keyboard/Type=Plus.svg"
+                    alt="Plus"
+                    class="object-fit-cover"
+                  />
+                </button>
+                <button class="calc-btn equals" onclick="calculate()">
+                  <a href="add-result.html"> <i data-lucide="check"></i></a>
+                </button>
+              </div>
             </div>
-         
           </div>
-         
-        </main>
+        </div>
+        <div class="side">
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasRight"
+            aria-labelledby="offcanvasRightLabel"
+          >
+            <div class="offcanvas-header"></div>
+            <div class="offcanvas-body">
+              <div
+                class="py-4 d-flex justify-content-between align-items-center"
+              >
+                <button
+                  type="button"
+                  class="btn p-0"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  <i
+                    data-lucide="chevron-left"
+                    class="icon-24 text-neutral-600"
+                  ></i>
+                </button>
+
+                <span class="h2 fw-bold">選擇帳戶</span>
+                <i
+                  data-lucide="chevron-right"
+                  class="icon-24 icon-transparent"
+                ></i>
+              </div>
+              <div class="mb-4">
+                <p
+                  class="text-neutral-500 body-2 border-solid-neutral-100 mb-3"
+                  style="padding: 5.5px 0"
+                >
+                  現金
+                </p>
+                <ul class="m-0">
+                  <li class="add-item">
+                    <a href="#" class="d-block py-3 px-5 active">
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                        >
+                          <img
+                            src="/assets/images/Category/icon-payment-cash-24.svg"
+                            alt="現金icon"
+                            class="text-neutral-950"
+                          />
+                        </span>
+                        <p class="mb-3">現金</p>
+                        <p class="ms-auto line-height-sm fw-medium">$ 20,000</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="mb-4">
+                <p
+                  class="text-neutral-500 body-2 border-solid-neutral-100 mb-3"
+                  style="padding: 5.5px 0"
+                >
+                  銀行
+                </p>
+                <ul class="m-0">
+                  <li class="add-item mb-2">
+                    <a href="#" class="d-block py-3 px-5">
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                        >
+                          <img
+                            src="/assets/images/Category/icon-payment-bank-24.svg"
+                            alt="銀行icon"
+                            class="text-neutral-950"
+                          />
+                        </span>
+                        <p class="mb-3">台新銀行</p>
+                        <p class="ms-auto line-height-sm fw-medium">
+                          $ 100,000
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="add-item mb-2">
+                    <a href="#" class="d-block py-3 px-5">
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                        >
+                          <img
+                            src="/assets/images/Category/icon-payment-bank-24.svg"
+                            alt="銀行icon"
+                            class="text-neutral-950"
+                          />
+                        </span>
+                        <p class="mb-3">富邦銀行</p>
+                        <p class="ms-auto line-height-sm fw-medium">
+                          $ 100,000
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="add-item">
+                    <a href="#" class="d-block py-3 px-5">
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                        >
+                          <img
+                            src="/assets/images/Category/icon-payment-bank-24.svg"
+                            alt="銀行icon"
+                            class="text-neutral-950"
+                          />
+                        </span>
+                        <p class="mb-3">玉山銀行</p>
+                        <p class="ms-auto line-height-sm fw-medium">
+                          $ 100,000
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <a href="#" class="d-flex align-items-center py-3">
+                <span
+                  class="border-dashed-neutral rounded-circle d-inline-flex justify-content-center align-items-center me-4"
+                  style="width: 44px; height: 44px"
+                >
+                  <i data-lucide="plus" class="icon-16"></i> </span
+                >新增類別
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-       
     </div>
     <script type="module" src="../main.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -398,19 +549,17 @@
         console.log("算式:", currentInput, "顯示:", displayValue);
       }
 
-      function voiceFunction() {
-        alert("語音記帳");
-      }
-      function qrFunction() {
-        alert("發票記帳");
-      }
-
       // ======= 點擊外面關閉計算機 =======
       document.addEventListener("click", (e) => {
         const container = document.getElementById("calculatorContainer");
         const btn = document.querySelector(".open-calculator-btn");
+        const offcanvas = document.getElementById("offcanvasRight"); // 取得 offcanvas
 
-        if (!container.contains(e.target) && !btn.contains(e.target)) {
+        if (
+          !container.contains(e.target) &&
+          !btn.contains(e.target) &&
+          !(offcanvas && offcanvas.contains(e.target)) // 如果點擊在 offcanvas 就不要收起
+        ) {
           container.classList.remove("active");
           container
             .querySelector(".calculator-full")
@@ -426,6 +575,48 @@
 
       // 初始顯示 $0
       updateDisplay();
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const sideOffcanvasEl = document.querySelector(".side .offcanvas");
+        if (!sideOffcanvasEl) return;
+
+        const bsSideOffcanvas = new bootstrap.Offcanvas(sideOffcanvasEl);
+
+        // 展開動畫 + scrollTop
+        sideOffcanvasEl.addEventListener("show.bs.offcanvas", () => {
+          sideOffcanvasEl.classList.add("show");
+
+          const mobileFrame = document.querySelector(".mobile-frame");
+          if (mobileFrame) mobileFrame.scrollTop = 0;
+
+          if (!document.querySelector(".offcanvas-backdrop")) {
+            const backdrop = document.createElement("div");
+            backdrop.className = "offcanvas-backdrop fade show";
+            document.body.appendChild(backdrop);
+          }
+        });
+
+        // 關閉動畫
+        sideOffcanvasEl.addEventListener("hide.bs.offcanvas", (e) => {
+          e.preventDefault();
+
+          sideOffcanvasEl.classList.add("hiding");
+          sideOffcanvasEl.classList.remove("show");
+
+          const backdrop = document.querySelector(".offcanvas-backdrop");
+          if (backdrop) backdrop.classList.remove("show");
+
+          setTimeout(() => {
+            sideOffcanvasEl.classList.remove("hiding");
+            sideOffcanvasEl.style.display = "none";
+            sideOffcanvasEl.setAttribute("aria-hidden", "true");
+
+            if (backdrop) backdrop.remove();
+            bsSideOffcanvas._isShown = false;
+          }, 350);
+        });
+      });
     </script>
   </body>
 </html>
