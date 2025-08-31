@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <div class="mobile-frame bg-white">
+  <div class="mobile-frame bg-white position-relative">
     <%- include('./layout/header'); -%>
       <div class="container-fluid" style="padding-bottom: 109px">
         <main>
@@ -50,7 +50,7 @@
                 aria-labelledby="expenseAmount-tab" tabindex="0">
                 <section class="py-5 d-flex align-items-center flex-column">
                   <a href="category-page.html" class="categoy-icon category-icon-xl mb-4">
-                    <img src="/assets/images/Category/icon-category-food-breakfast-48.svg" alt="早餐icon" class="" />
+                    <img src="/assets/images/Category/icon-category-food-breakfast-48.svg" alt="早餐icon"/>
                   </a>
                   <p>早餐<i data-lucide="pencil" class="icon-15 ms-2"></i></p>
                 </section>
@@ -221,7 +221,7 @@
                   儲存
                 </button>
               </div>
-              <%- include('./layout/footer'); -%>
+             
             </div>
 
             <!-- 完全展開 -->
@@ -310,11 +310,11 @@
                 <button class="calc-btn equals" onclick="calculate()">
                   <a href="add-result.html"> <i data-lucide="check"></i></a>
                 </button>
-                <%- include('./layout/footer'); -%>
               </div>
             </div>
-          </div>
+          </div>   
         </main>
+          <%- include('./layout/footer'); -%>
       </div>
   </div>
   <script type="module" src="../main.js"></script>

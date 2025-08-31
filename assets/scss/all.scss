@@ -1,7 +1,7 @@
 // 1. Bootstrap functions
 @import "../../node_modules/bootstrap/scss/functions";
 // 2. 你的變數覆寫（可以放 utilities 或 custom）
-@import './utils/variables';
+@import "./utils/variables";
 
 // 3. Bootstrap 全部
 @import "../../node_modules/bootstrap";
@@ -12,18 +12,19 @@
 @import "bootstrap/scss/utilities/api";
 
 // 5. 其他樣式
-@import './base/base';
-@import './components/mobile-frame';
+@import "./base/base";
+@import "./components/mobile-frame";
 @import "./components/buttons.scss";
-@import './layout/header.scss';
-@import './layout/footer.scss';
+@import "./layout/header.scss";
+@import "./layout/footer.scss";
 
-@import './pages/index.scss';
-@import './pages/log-add.scss';
-@import './pages/category-page.scss';
-@import './utils/icon.scss';
+@import "./pages/index.scss";
+@import "./pages/log-add.scss";
+@import "./pages/category-page.scss";
+@import "./utils/icon.scss";
 
-@import './components/tab';
-@import './components/calculator';
-@import './components/category-icon';
-@import './components/add-item';
+@import "./components/tab";
+@import "./components/calculator";
+@import "./components/category-icon";
+@import "./components/add-item";
+@import "./components/progress";
