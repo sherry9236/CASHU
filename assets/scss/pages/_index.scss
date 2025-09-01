@@ -48,22 +48,24 @@
     }
 }
 // 價格圓餅圖
-.accordion{
---bs-accordion-border-color: none;
-}
-.accordion-body{
-    margin: 0 !important;
-}
-.accordion-button::after{
+.price{
+    .accordion{
+      --bs-accordion-border-color: none;
+    }
+    .accordion-body{
+      margin: 0 !important;
+    }
+    .accordion-button::after{
     background-size: 2.25rem  !important;
     margin-top: -20px;
     background-image: url(/assets/images/index-img/Button.png) !important;
     width: 36px !important;
     height: 36px !important;
-}
-.accordion-button:not(.collapsed) {
-    --bs-accordion-active-color: none;
-}
+    }
+    .accordion-button:not(.collapsed) {
+      --bs-accordion-active-color: none;
+    }
+
 .monthly-expenses{
     padding-right: 39.5px;
 }
@@ -80,6 +82,7 @@
   margin-bottom: 0 !important;
   margin-left: 0 !important;
 }}
+}
 
 .carousel-control-next-icon{
     background-image: none;
@@ -122,6 +125,7 @@
     }
     .item-State{
         margin-right: 8px;
+        
     }
     .ledger{
         padding-left: 10px;
@@ -133,5 +137,32 @@
     .assets{
         padding-left: 10px;
         padding-right: 10px;
+       
     }
+}
+:root {
+  --neutral-200: #{$neutral-200};
+  --neutral-300: #{$neutral-300};
+}
+.nav-link .assets {
+  --icon-200: var(--neutral-200);
+  --icon-300: var(--neutral-300);
+}
+.nav-link.assets:hover {
+  --icon-200: var(--bs-primary) ; // primary 正常色
+  --icon-300: var(--bs-primary-300); 
+  // primary 的深一點顏色 (需現代瀏覽器)
+}
+
+
+.assets-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("/assets/images/index-img/Icon-assets.png") no-repeat center/contain;
+  transition: background 0.3s ease;
+}
+
+.nav-link .assets-icon:hover {
+  background: url("/assets/images/index-img/Icon-assets-active.png") no-repeat center/contain;
 }

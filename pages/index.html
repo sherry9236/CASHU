@@ -14,13 +14,13 @@
        
     <div class="fixed-height-308 bg-gradient-vertical"> 
       <!-- 載入畫面 -->
-      <section id="preloader" class="bg-white">
+      <!-- <section id="preloader" class="bg-white">
          <%- include('./layout/header'); -%>
        <div class="lodding d-flex flex-column justify-content-center align-items-center  "> 
           <img class="splash-screen " src="/assets/images/gif/splash-screen.gif" alt="">
           <img class="logo" src="/assets/images/Logo/CASHU.png" alt="">
         </div>
-      </section>
+      </section> -->
       <!-- 階段二 Lodding-->
        <!-- 上方nav -->
 
@@ -53,6 +53,7 @@
          <!-- 價格圓餅圖 -->
          <section>
           <div class="container">
+            <div class="price">
           <div class="accordion border-radius-xl" id="accordionExample">
             <!-- 頂 -->
             <div class="accordion-item shadow ">
@@ -107,6 +108,7 @@
               
             </div>
           </div>
+        </div>
         </div>
         </div>
         </section>
@@ -187,7 +189,8 @@
                 </li>
                 <li class="nav-item item-assets">
                   <a class="nav-link p-0 text-center" href="#">
-                     <img class="assets d-block" src="/assets/images/index-img/Icon-assets.png" alt="assets">資產</a>
+                  <span class="assets-icon"></span>
+                  資產</a>
                 </li>
               </ul>
           </div>
