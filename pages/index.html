@@ -12,10 +12,10 @@
 <body>
   <div class="container-fluid px-0 mobile-frame bg-white vh-100 ">
        
-    <div class="fixed-height-308 bg-gradient-vertical"> 
+    <div class="fixed-height bg-gradient-vertical"> 
       <!-- 載入畫面 -->
      <!-- <section id="preloader" class="bg-white"> -->
-         <%- include('./layout/header'); -%>
+         
         <!-- <div class="lodding d-flex flex-column justify-content-center align-items-center  "> 
           <img class="splash-screen " src="/assets/images/gif/splash-screen.gif" alt="">
           <img class="logo" src="/assets/images/Logo/CASHU.png" alt="">
@@ -25,9 +25,15 @@
        <!-- 上方nav -->
 
       <!-- 階段三 進入首頁 -->
-
+        <section>
+        <img
+        src="/assets/images/mobile-frame/Status bar.svg"
+        alt="statusbar"
+        class="object-fit-cover fixed-top top-0 start-50 translate-middle-x"
+        style="background-color: #FFF3DE"
+         /></section>
       <section>
-        <nav class="navbar py-0">
+        <nav class="navbar user-nav py-0 ">
   <div class="container ">
     <span class="diamondcollect rounded-pill bg-white neutral-900 border subheader-3 ">
       <img class="pe-2 " src="/assets/images/adorn/Reward.png" alt=""> 9999</span>
@@ -52,7 +58,7 @@
          </section>
          <!-- 價格圓餅圖 -->
          <section>
-          <div class="container">
+          <div class="container ">
             <div class="price">
           <div class="accordion border-radius-xl" id="accordionExample">
             <!-- 頂 -->
@@ -68,7 +74,7 @@
             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse  container">
               <div  class="accordion-body d-flex justify-content-center container flex-column">
               <div id="carouselExampleIndicators" class="carousel ">
-  <div class="carousel-inner ">
+  <div class="carousel-inner  ">
     <div class="carousel-item active d-flex justify-content-center">
       <img src="/assets/images/index-img/Pie-chart.png" class="d-block " alt="Pie-chart">
     </div>
@@ -85,7 +91,7 @@
             </div>
           </div>
           <!--  -->
-          <div class="accordion-item shadow-3sides container">
+          <div class="accordion-item shadow-3sides container bg-white">
             <p class="accordion-header ">
               <div class=" d-flex  py-5 border-top">
                <div class="d-flex monthly-expenses border-end">
@@ -114,7 +120,7 @@
         </section>
         <!-- 今日任務 -->
         <section>
-          <div class="container py-6 ">
+          <div class="container py-6  ">
             <div class="d-flex justify-content-between mb-5 ">
             <h2 class="h4 mb-0">今日任務</h2>
             <a class="body-2 d-flex align-items-center " href="#">查看更多 <img src="/assets/images/index-img/next-Icon.png" alt=""></a>
@@ -147,7 +153,7 @@
   </div>  
 </div>
 
-<div class="card shadow border-0 ">
+<div class="card shadow border-0 mb-10">
   <div class="card-body  ">
     <h5 class="card-title h4">連續記帳挑戰第 365 天</h5>
     <p class="card-text body-2 mb-4 text-neutral-900">達成連續記帳挑戰第 365 天！再 15 天即可解鎖專屬勳章！🏅</p>
@@ -168,18 +174,15 @@
         </main>
         <!-- nav -->
          <nav>
-          <div class="nav-bottom ">
+          <div class="nav-bottom pt-3 ">
             <ul class="nav justify-content-center  ">
                 <li class="nav-item item-home">
-                  <a class="nav-link active p-0 text-center"  href="#">
-                   <img class="home d-block" src="/assets/images/index-img/Icon-home.png" alt="home"> 首頁
-                  </a>
-                  <span class="ledger-icon">首頁</span></a>  
+                  <a class="nav-link active p-0 text-center "  href="#">
+                  <span class="Icon-home"></span><span class="d-block body-2 home ">首頁</span></a>  
                 </li>
                 <li class="nav-item item-plan">
                   <a class="nav-link p-0 text-center" href="#">
-                     <img class="plan d-block" src="/assets/images/index-img/Icon-plan.png" alt="plan">計畫</a>
-                     <span class="ledger-icon">計畫</span></a>  
+                  <span class="Icon-plan"></span><span class="d-block body-2 plan ">計畫</span></a>  
                 </li>
                 <li class="nav-item item-State">
                   <a class="nav-link p-0 " href="#">
@@ -187,11 +190,11 @@
                 </li>
                 <li class="nav-item item-ledger">
                   <a class="nav-link p-0 text-center" href="#">
-                  <span class="ledger-icon">帳本</span></a>  
+                  <span class="ledger-icon"></span><span class="d-block body-2 ledger">帳本</span></a>  
                 </li>
                 <li class="nav-item item-assets">
                   <a class="nav-link p-0 text-center" href="#">
-                  <span class="assets-icon"></span><span class="d-block">資產</span></a>
+                  <span class="assets-icon"></span><span class="d-block body-2 assets">資產</span></a>
                 </li>
               </ul>
           </div>
