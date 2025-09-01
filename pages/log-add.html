@@ -106,12 +106,6 @@
                       src="/assets/images/Category/icon-category-food-breakfast-48.svg"
                       alt="早餐icon"
                     />
-                    <span
-                      class="position-absolute top-50 end-0 translate-middle-y me-5"
-                      style="cursor: pointer"
-                    >
-                      <i data-lucide="chevron-right"></i>
-                    </span>
                   </button>
                   <p>早餐<i data-lucide="pencil" class="icon-15 ms-2"></i></p>
                 </section>
@@ -121,7 +115,7 @@
                     <li class="col-6 py-4">
                       <input
                         type="text"
-                        id="name"
+                        id="category-name"
                         class="form-control input-select h-44"
                         placeholder="名稱"
                       />
@@ -1293,6 +1287,66 @@
           }
         });
       });
+    </script>
+    <!--測欄展開-->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const sideOffcanvasEl = document.querySelector(".side .offcanvas");
+        if (!sideOffcanvasEl) return;
+
+        const bsSideOffcanvas = new bootstrap.Offcanvas(sideOffcanvasEl);
+
+        // 展開動畫 + scrollTop
+        sideOffcanvasEl.addEventListener("show.bs.offcanvas", () => {
+          sideOffcanvasEl.classList.add("show");
+
+          const mobileFrame = document.querySelector(".mobile-frame");
+          if (mobileFrame) mobileFrame.scrollTop = 0;
+
+          if (!document.querySelector(".offcanvas-backdrop")) {
+            const backdrop = document.createElement("div");
+            backdrop.className = "offcanvas-backdrop fade show";
+            document.body.appendChild(backdrop);
+          }
+        });
+
+        // 關閉動畫
+        sideOffcanvasEl.addEventListener("hide.bs.offcanvas", (e) => {
+          e.preventDefault();
+
+          sideOffcanvasEl.classList.add("hiding");
+          sideOffcanvasEl.classList.remove("show");
+
+          const backdrop = document.querySelector(".offcanvas-backdrop");
+          if (backdrop) backdrop.classList.remove("show");
+
+          setTimeout(() => {
+            sideOffcanvasEl.classList.remove("hiding");
+            sideOffcanvasEl.style.display = "none";
+            sideOffcanvasEl.setAttribute("aria-hidden", "true");
+
+            if (backdrop) backdrop.remove();
+            bsSideOffcanvas._isShown = false;
+          }, 350);
+        });
+      });
+    </script>
+
+    <!--測欄展開項目active-->
+    <script>
+      document
+        .querySelectorAll(".offcanvas-body .list-group-item")
+        .forEach((item) => {
+          item.addEventListener("click", () => {
+            // 移除全部 active
+            document
+              .querySelectorAll(".offcanvas-body .list-group-item")
+              .forEach((i) => i.classList.remove("active"));
+
+            // 加給自己
+            item.classList.add("active");
+          });
+        });
     </script>
   </body>
 </html>

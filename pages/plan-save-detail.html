@@ -623,15 +623,13 @@
 
     <!--測欄展開項目active-->
     <script>
-      document.querySelectorAll(".add-item a").forEach((link) => {
-        link.addEventListener("click", (e) => {
-          e.preventDefault(); // 防止跳頁
-          // 移除其他 active
+      document.querySelectorAll(".offcanvas-body a").forEach((item) => {
+        item.addEventListener("click", (e) => {
+          e.preventDefault(); // 避免 href="#" 讓頁面跳動
           document
-            .querySelectorAll(".add-item a")
+            .querySelectorAll(".offcanvas-body a")
             .forEach((i) => i.classList.remove("active"));
-          // 加上 active
-          link.classList.add("active");
+          item.classList.add("active");
         });
       });
     </script>
