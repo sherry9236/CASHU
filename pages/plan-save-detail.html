@@ -18,7 +18,7 @@
     >
       <%- include('./layout/header'); -%>
       <div class="container-fluid">
-        <main>
+        <main style="padding-top: 50px">
           <div class="py-4 d-flex justify-content-between align-items-center">
             <i data-lucide="chevron-left" class="icon-24 text-neutral-600"></i>
             <span class="h2 fw-bold">存錢計畫</span>
@@ -148,8 +148,9 @@
               </li>
             </ul>
           </section>
+          <%- include('./layout/footer'); -%>
         </main>
-        <%- include('./layout/footer'); -%>
+
         <!-- 按鈕 -->
 
         <!--底部彈開按鈕+計算機-->
@@ -576,6 +577,7 @@
       // 初始顯示 $0
       updateDisplay();
     </script>
+    <!--測欄展開-->
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const sideOffcanvasEl = document.querySelector(".side .offcanvas");
@@ -615,6 +617,21 @@
             if (backdrop) backdrop.remove();
             bsSideOffcanvas._isShown = false;
           }, 350);
+        });
+      });
+    </script>
+
+    <!--測欄展開項目active-->
+    <script>
+      document.querySelectorAll(".add-item a").forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault(); // 防止跳頁
+          // 移除其他 active
+          document
+            .querySelectorAll(".add-item a")
+            .forEach((i) => i.classList.remove("active"));
+          // 加上 active
+          link.classList.add("active");
         });
       });
     </script>
