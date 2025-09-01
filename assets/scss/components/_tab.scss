@@ -28,3 +28,31 @@
     outline: none !important;
     box-shadow: none !important;
 }}
+
+.book{
+.nav-link {
+    color: $neutral-950;
+    transition: color 0.2s ease;
+    /* 滑鼠移入有點動畫感 */
+}
+
+/* 滑鼠移入就變橘色 */
+.nav-link:hover {
+    color: $primary-600;
+    font-weight: 700;
+}
+
+/* 當前 active 狀態 */
+.nav-underline .nav-link.active {
+    border-color: $primary-600;
+    border-width: 2px;
+    color: $primary-600;
+    font-weight: 700;
+}
+
+/* 移除點擊時的黑色 outline / 陰影 */
+.nav-link:focus,
+.nav-link:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}}
