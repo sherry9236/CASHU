@@ -1,10 +1,16 @@
-.lodding {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 99;
+.mobile-frame {
+  overflow-x: hidden;
+  position: relative;
+}
+
+
+.lodding{ 
+   position: relative;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 99;
 }
 
 .splash-screen {
@@ -51,27 +57,23 @@
 }
 
 // 價格圓餅圖
-.accordion {
-    --bs-accordion-border-color: none;
+.accordion{
+--bs-accordion-border-color: none;
 }
-
-.accordion-body {
+.accordion-body{
     margin: 0 !important;
 }
-
-.accordion-button::after {
-    background-size: 2.25rem !important;
+.accordion-button::after{
+    background-size: 2.25rem  !important;
     margin-top: -20px;
     background-image: url(/assets/images/index-img/Button.png) !important;
     width: 36px !important;
     height: 36px !important;
 }
-
 .accordion-button:not(.collapsed) {
     --bs-accordion-active-color: none;
 }
-
-.monthly-expenses {
+.monthly-expenses{
     padding-right: 39.5px;
 }
 
@@ -82,15 +84,12 @@
     margin-right: 8 !important;
     background-color: #7FCDC6;
 }
-
-.container {
-    .carousel-indicators {
-        position: static !important;
-        margin-right: 0 !important;
-        margin-bottom: 0 !important;
-        margin-left: 0 !important;
-    }
-}
+.container {.carousel-indicators {
+  position: static !important;
+  margin-right: 0 !important;
+  margin-bottom: 0 !important;
+  margin-left: 0 !important;
+}}
 
 .carousel-control-next-icon {
     background-image: none;
