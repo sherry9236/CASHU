@@ -106,39 +106,39 @@
     bottom: 0;
     width: 100%;
     z-index: 1001;
-    .nav-item{
-        width: 64px;
-    }
-    .item-home{
-        margin-right: 3.5px;
-    }
-    .home{
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    .item-plan{
-        margin-right: 8px;
-    }
-    .plan{
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    .item-State{
-        margin-right: 8px;
+    // .nav-item{
+    //     width: 64px;
+    // }
+    // .item-home{
+    //     margin-right: 3.5px;
+    // }
+    // .home{
+    //     padding-left: 10px;
+    //     padding-right: 10px;
+    // }
+    // .item-plan{
+    //     margin-right: 8px;
+    // }
+    // .plan{
+    //     padding-left: 10px;
+    //     padding-right: 10px;
+    // }
+    // .item-State{
+    //     margin-right: 8px;
         
-    }
-    .ledger{
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    .item-ledger{
-        margin-right: 3.5px;
-    }
-    .assets{
-        padding-left: 10px;
-        padding-right: 10px;
+    // }
+    // .ledger{
+    //     padding-left: 10px;
+    //     padding-right: 10px;
+    // }
+    // .item-ledger{
+    //     margin-right: 3.5px;
+    // }
+    // .assets{
+    //     padding-left: 10px;
+    //     padding-right: 10px;
        
-    }
+    // }
 }
 :root {
   --neutral-200: #{$neutral-200};
@@ -157,12 +157,21 @@
 
 .assets-icon {
   display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: 44px;
+  height: 43px;
   background: url("/assets/images/index-img/Icon-assets.png") no-repeat center/contain;
   transition: background 0.3s ease;
 }
 
 .nav-link .assets-icon:hover {
   background: url("/assets/images/index-img/Icon-assets-active.png") no-repeat center/contain;
+}
+.nav-bottom{
+  position: fixed;
+  left: 50%; 
+  bottom: 0;
+  width: 376px;
+  background-color: #FFF8EC;
+  transform: translateX(-50%);
+  color: white;
 }
