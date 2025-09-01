@@ -21,20 +21,30 @@ p {
 
 ul {
     list-style: none;
-    padding-left: 0;
-}
+ 	margin: 0;
+	padding: 0;}
 
 button,
 input,
 a {
-    -webkit-appearance: none;
-    /* 移除預設樣式 */
-    -webkit-tap-highlight-color: transparent;
-    /* 移除點擊藍色 */
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  color: inherit;
 }
 
 button:focus,
 button:active {
     outline: none;
     box-shadow: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    /* 移除上下間距 */
 }

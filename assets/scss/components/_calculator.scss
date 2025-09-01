@@ -1,6 +1,5 @@
 /* === Offcanvas 基本樣式 === */
 .offcanvas-bottom {
-
   position: fixed;
   bottom: 0;
   left: 0;
@@ -8,8 +7,8 @@
   height: 106px;
   /* 部分展開 */
   transition: height 0.3s ease;
-  z-index: 1050;
-  background: #FFF8EC;
+  z-index: 10;
+  background: #fff8ec;
 }
 
 .offcanvas-bottom.expanded {
@@ -17,14 +16,13 @@
   /* 完全展開 */
 }
 
-
 /* 部分展開 */
 .partial-view {
   display: flex;
   /* 預設顯示 */
   flex-direction: column;
   /* 依照你的內容排版 */
-  background: #FFF8EC;
+  background: #fff8ec;
   padding: 8px 16px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -34,9 +32,6 @@
   display: none;
   /* 隱藏部分視圖 */
 }
-
-
-
 
 .save-btn {
   background: #ff6b35;
@@ -48,11 +43,10 @@
   cursor: pointer;
 }
 
-
 .expand-handle {
   width: 35px;
   height: 5px;
-  background: #B0B0B0;
+  background: #b0b0b0;
   border-radius: 2px;
   margin: 0 auto;
   margin-bottom: 15px;
@@ -84,7 +78,6 @@
   font-weight: bold;
 }
 
-
 .calculator-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -93,12 +86,8 @@
   margin: 0 auto;
   justify-content: center;
   justify-items: center;
-  /* ⭐ 這裡改成 justify-items */
   align-items: center;
-
 }
-
-
 
 .calc-btn {
   width: 48px;
@@ -129,7 +118,6 @@
 .calc-btn.operator,
 .calc-btn.function {
   background: $primary-300;
-
 }
 
 .calc-btn.operator:hover,
@@ -140,7 +128,6 @@
 .calc-btn.equals {
   background: $primary-600;
   color: white;
-
 }
 
 .calc-btn.equals:hover {
@@ -160,4 +147,98 @@
 /* 展開後顯示完整計算機 */
 .calculator-full.active {
   display: block;
+}
+
+.mobile-calculator {
+  position: absolute;
+  bottom: -100%;
+  left: 50%;
+  /* 水平置中 */
+  transform: translateX(-50%);
+  /* 修正偏移 */
+  width: 375px;
+  /* 或者 max-width: 100% */
+  background-color: #fff;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  transition: bottom 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+    opacity 0.4s ease;
+  opacity: 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.mobile-calculator.active {
+  bottom: 0;
+  /* 滑到可見位置 */
+  opacity: 1;
+  /* 漸入 */
+}
+
+/* 計算機內容 */
+.mobile-calculator .calculator-full {
+  background-color: #fff;
+  /* 和外層同色 */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 12px 32px 52px;
+  display: block;
+  overflow: hidden;
+  /* 確保內容不超出圓角 */
+}
+
+/* 展開顯示 */
+.mobile-calculator .calculator-full.active {
+  display: block;
+}
+
+/* 按鈕網格 */
+.mobile-calculator .calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  justify-items: center;
+  align-items: center;
+  margin-top: 16px;
+}
+
+/* 按鈕樣式 */
+.mobile-calculator .calc-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.mobile-calculator .calc-btn.number {
+  background: $primary-200;
+}
+
+.mobile-calculator .calc-btn.number:hover {
+  background: $primary-300;
+}
+
+.mobile-calculator .calc-btn.operator,
+.mobile-calculator .calc-btn.function {
+  background: $primary-300;
+}
+
+.mobile-calculator .calc-btn.operator:hover,
+.mobile-calculator .calc-btn.function:hover {
+  background: $primary-400;
+}
+
+.mobile-calculator .calc-btn.equals {
+  background: $primary-600;
+  color: white;
+}
+
+.mobile-calculator .calc-btn.equals:hover {
+  background: $primary-700;
 }

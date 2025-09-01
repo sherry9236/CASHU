@@ -193,8 +193,15 @@ textarea.form-control:focus {
 .border-dashed-neutral {
   border: 1px dashed $neutral-300;
 }
+/*灰色線*/
+.border-solid-neutral-100{
+  border-bottom: 1px solid $neutral-100;
+}
 
 /*高度44px*/
 .h-44 {
   height: 44px;
 }
+
+
+// 

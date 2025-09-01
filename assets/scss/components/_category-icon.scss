@@ -1,23 +1,26 @@
 .categoy-icon {
-    background-color: $primary-100;
-    border-radius: 50%;
+  background-color: $primary-100;
+  border-radius: 50%;
+}
+.secondary-icon {
+  background-color: $secondary-50;
+  border-radius: 50%;
 }
 
 .category-icon-xl {
-    padding: 26px;
-    width: 100px;
-    height: 100px;
+  padding: 26px;
+  width: 100px;
+  height: 100px;
 }
 
 .categoy-icon-m {
-    padding: 14px;
-    width: 60px;
-    height: 60px;
+  padding: 14px;
+  width: 60px;
+  height: 60px;
 }
 
-
 .categoy-icon-s {
-    padding: 10px;
-    width: 44px;
-    height: 44px;
+  padding: 10px;
+  width: 44px;
+  height: 44px;
 }
