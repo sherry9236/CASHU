@@ -1,0 +1,88 @@
+[33m22b39a9[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mKate[m[33m, [m[1;31morigin/test2[m[33m, [m[1;31morigin/Kate[m[33m, [m[1;32mtest2[m[33m)[m Merge branch 'Kate' into test2
+[33m795bca5[m 修改下拉選單
+[33m2c2c398[m 修改下拉
+[33mae0a355[m 測欄更新
+[33mf0c43cc[m 側欄更新
+[33m74cc041[m all.scss微調
+[33m43db6b9[m 查看計畫詳情頁面更新/footer更新/icon更新
+[33mc4e955e[m 首頁-將!important包起來
+[33m1522b6a[m 存錢流程計算機
+[33mf0a467b[m 下拉選單CSS調整
+[33mcb3bb19[m 下拉選單CSS調整
+[33m2b654c0[m 計畫詳情＆存入頁面更新
+[33m1134308[m Merge branch 'test2' of https://github.com/sherry9236/CASHU into test2
+[33m33fc2a2[m 細節調整/h1-h2 margin調整
+[33m304ad6c[m 製作首頁
+[33m26b7182[m Merge branch 'test2' of https://github.com/sherry9236/CASHU into test2
+[33mf4bd5be[m 選擇帳戶更新
+[33m7e558e1[m Merge branch 'test2' of https://github.com/sherry9236/CASHU into test2
+[33ma2f2ac9[m html變更
+[33m4da73a4[m 選擇帳戶更新
+[33m33c1836[m 新增選擇帳戶頁
+[33m0bd32d9[m Merge branch 'test2' into Min
+[33mb03fccb[m 計算機更改
+[33m091662b[m 製作首頁
+[33m5d0f782[m 計算機更新
+[33ma241c71[m Merge branch 'test2' of https://github.com/sherry9236/CASHU into test2
+[33mffe5a70[m 在客製化的地方增加文字sass迴圈
+[33m42771cb[m Merge branch 'test2' of https://github.com/sherry9236/CASHU into test2
+[33m77b79cc[m 頁面調整
+[33m7b56e9a[m Merge branch 'Kate' into test2
+[33mab3c646[m[33m ([m[1;32mtest1[m[33m)[m 修改預設文字符合設計稿
+[33m5015771[m 早餐icon修改
+[33m5e84f21[m 支出類別-CASHU-更新內容
+[33m417b5bb[m 首頁新增nav
+[33mf308f69[m 移除手機預設按鈕樣式
+[33m0d432e0[m 月曆icon更新
+[33me86f705[m 間距變數更新
+[33m11d7f90[m Merge branch 'Min' into test2
+[33m4b44586[m 更新手機高度
+[33mebabebb[m Merge branch 'Min' into test2
+[33m7584ab8[m 手機高度
+[33m0f70dcc[m 取消vh
+[33m3b4fc73[m 手機介面高度調整
+[33m27f22a4[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m input效果+灰色虛線
+[33m65c0ba8[m 頁面更新
+[33ma298caa[m gutter-y
+[33mf0b1757[m[33m ([m[1;32mmain[m[33m)[m Merge branch 'Kate'
+[33mb471dff[m // container32px左右各16px // gutter 12px 修改
+[33m5e9df78[m 增加三種狀態按鈕
+[33m68f1886[m Merge branch 'Kate'
+[33m42ab9d2[m[33m ([m[1;31morigin/test1[m[33m)[m 提交
+[33me12a8b8[m 增加三種狀態按鈕
+[33m39eb24f[m 增加三種狀態按鈕
+[33m74465c2[m 在_buttons.scss裡調整btn顏色
+[33mcc14d5f[m 變數base字型更新
+[33m63b6e62[m 合併
+[33ma81343b[m btn-primary-文字白色設定
+[33m6cf316a[m 測試按鈕
+[33m3e31a07[m 首頁開始製作
+[33m31fc81f[m tab更新
+[33m5309515[m 新增紀錄/支出類別更新
+[33m1e38b4d[m 載入gif檔讀取狀態
+[33mbb43d50[m 刪除btn
+[33mf98caaf[m Merge remote-tracking branch 'origin/Kate'
+[33m3bfada4[m primary顏色修改跟secondary顏色修改
+[33m850084a[m 修改line-height// $line-height-sm: 1.25 !default; $line-height-sm: 1.2 !default;
+[33m85cd4f3[m Merge remote-tracking branch 'origin/Kate'
+[33m3a4c983[m 修改$border-radius並加上.btn-sm-padding9.5&.btn-lg-padding12.5
+[33m4d6764e[m Merge remote-tracking branch 'origin/Kate'
+[33m1380bf1[m $border-radius: 1rem !default;以卡片的圓角為主
+[33mbda2fd6[m 新增圓角設定
+[33m477bcde[m 將shadow的變數改為-card-shadow設計稿的變數，因為站為大宗
+[33mcf2e2d2[m index.html確認圓角可做使用
+[33me068a18[m Merge remote-tracking branch 'origin/Kate'
+[33m8e975bf[m 已經將文字修改完成可以使用
+[33m9d726a4[m min變數更新
+[33me16c87c[m 增加變數_custom.scss文字跟設計稿同步
+[33mfbf9dba[m[33m ([m[1;31morigin/sherry[m[33m)[m Merge branch 'main' of https://github.com/sherry9236/CASHU
+[33m56dc8b6[m 更新
+[33mcd9aaf7[m fs-7
+[33m9470e19[m add book
+[33m6ccd273[m Merge branch 'main' of https://github.com/sherry9236/CASHU
+[33me6bc2dd[m 資料夾更新
+[33m30df413[m fs修改
+[33m3e14db2[m 間距變數更新
+[33m61a2c14[m 修改rfs
+[33m1428de0[m 新增顏色
+[33m58d922b[m first commit
