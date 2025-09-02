@@ -339,6 +339,9 @@ $data-05: #E02D72;
 $data-06: #FCAB28;
 $data-07: #42B5DC;
 
+$inactive-background: #F0F0F0;
+$selected-background: #ffffff;
+
 // $primary: $blue !default;
 $primary: #EF6400;
 // $secondary: $gray-600 !default;
@@ -404,6 +407,9 @@ $theme-colors: (
   "data-05": $data-05,
   "data-06": $data-06,
   "data-07": $data-07,
+
+  "inactive-background": $inactive-background,
+  "selected-background": $selected-background,
 
   "primary": $primary,
   "secondary": $secondary,

@@ -18,8 +18,10 @@
 @import "./layout/header";
 @import "./layout/footer";
 
-@import "./pages/index";
-@import "./pages/category-page";
+@import './pages/index.scss';
+@import './pages/category-page.scss';
+@import './utils/icon.scss';
+@import './pages/book.scss';
 @import "./utils/icon";
 
 @import "./components/tab";

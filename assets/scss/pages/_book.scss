@@ -1,0 +1,36 @@
+.book-date{
+    padding: 5.5px 29px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+.book-mouth{
+    padding: 5.5px 29px;
+    line-height: 1.5;
+}
+.book-year{
+    padding: 5.5px 29px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+.book-mine{
+    padding: 5.5px 22px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+.book-i{
+    padding: 13px;
+}
+.book-offcanvas{
+    height: 77px;
+    border-radius: 12px;
+}
+.book-expenses{
+    border-radius: 12px 0 0 12px;
+    border: 1.5px solid $primary-600;
+}
+.book-income{
+    border-radius: 0 12px 12px 0;
+    border-top: 1.5px solid $neutral-500;
+    border-right: 1.5px solid $neutral-500;
+    border-bottom: 1.5px solid $neutral-500;
+}
