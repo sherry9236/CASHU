@@ -14,7 +14,7 @@
   <body>
     <div class="mobile-frame bg-white position-relative">
       <%- include('./layout/header'); -%>
-      <div class="container-fluid">
+      <div class="container-fluid" style="padding-bottom: 106px">
         <main style="padding-top: 50px">
           <div class="py-4 d-flex justify-content-between align-items-center">
             <i data-lucide="chevron-left" class="icon-24 text-neutral-600"></i>
@@ -310,7 +310,6 @@
             id="offcanvasRight"
             aria-labelledby="offcanvasRightLabel"
           >
-            <div class="offcanvas-header"></div>
             <div class="offcanvas-body">
               <div
                 class="py-4 d-flex justify-content-between align-items-center"
@@ -440,6 +439,47 @@
         </div>
       </div>
     </div>
+    <nav>
+      <div class="nav-bottom pt-3">
+        <ul class="nav justify-content-center">
+          <li class="nav-item item-home">
+            <a class="nav-link p-0 text-center" href="index.html">
+              <span class="Icon-home"></span
+              ><span class="d-block body-2 home">首頁</span></a
+            >
+          </li>
+          <li class="nav-item item-plan">
+            <a
+              class="nav-link p-0 text-center active current-page"
+              href="plan-save-detail.html"
+            >
+              <span class="Icon-plan"></span
+              ><span class="d-block body-2 plan">計畫</span></a
+            >
+          </li>
+          <li class="nav-item item-State">
+            <a class="nav-link p-0" href="log-add.html">
+              <img
+                class="d-block"
+                src="/assets/images/index-img/State-Default.png"
+                alt="State-Default"
+            /></a>
+          </li>
+          <li class="nav-item item-ledger">
+            <a class="nav-link p-0 text-center" href="book.html">
+              <span class="ledger-icon"></span
+              ><span class="d-block body-2 ledger">帳本</span></a
+            >
+          </li>
+          <li class="nav-item item-assets">
+            <a class="nav-link p-0 text-center" href="#">
+              <span class="assets-icon"></span
+              ><span class="d-block body-2 assets">資產</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
     <script type="module" src="../main.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -627,6 +667,19 @@
             .querySelectorAll(".offcanvas-body a")
             .forEach((i) => i.classList.remove("active"));
           item.classList.add("active");
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const currentPath = window.location.pathname; // 取得目前網址路徑
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        navLinks.forEach((link) => {
+          // 如果 a 的 href 包含目前的 path，就加 active
+          if (currentPath.includes(link.getAttribute("href"))) {
+            link.classList.add("active");
+          }
         });
       });
     </script>
