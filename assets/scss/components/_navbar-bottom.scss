@@ -1,0 +1,131 @@
+.nav-bottom{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1001;
+  .nav-link {
+    color: $neutral-500;   // 預設文字顏色
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $primary-600; // hover 文字顏色
+    }
+  }
+ .nav-item{
+        width: 64px;
+    }
+    .item-home{
+        margin-right: 3.5px;
+    }
+    .Icon-home{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .item-plan{
+        margin-right: 8px;
+    }
+    .Icon-plan{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .item-State{
+        margin-right: 8px;
+        
+}
+    .ledger-icon{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .item-ledger{
+        margin-right: 3.5px;
+    }
+    .assets-icon{
+        padding-left: 10px;
+        padding-right: 10px;
+       
+    }
+    }
+:root {
+  --neutral-200: #{$neutral-200};
+  --neutral-300: #{$neutral-300};
+}
+.nav-link .assets {
+  --icon-200: var(--neutral-200);
+  --icon-300: var(--neutral-300);
+}
+.nav-link.assets:hover {
+  --icon-200: var(--bs-primary) ; // primary 正常色
+  --icon-300: var(--bs-primary-300); 
+  // primary 的深一點顏色 (需現代瀏覽器)
+}
+.Icon-home {
+  display: inline-block;
+   width: 44px;
+  height: 43px;
+  background: url("/assets/images/index-img/Icon-home.png") no-repeat center/contain;
+  transition: background 0.3s ease;
+}
+.nav-link .Icon-home:hover {
+  background: url("/assets/images/index-img/Icon-home-active.png") no-repeat center/contain;
+}
+.nav-link.active .Icon-home {
+  background: url("/assets/images/index-img/Icon-home-active.png") no-repeat center/contain;
+}
+.Icon-plan {
+  display: inline-block;
+   width: 44px;
+  height: 43px;
+  background: url("/assets/images/index-img/Icon-plan.png") no-repeat center/contain;
+  transition: background 0.3s ease;
+}
+.nav-link .Icon-plan:hover {
+  background: url("/assets/images/index-img/Icon-plan-active.png") no-repeat center/contain;
+}
+.nav-link.active .Icon-plan{
+  background: url("/assets/images/index-img/Icon-plan-active.png") no-repeat center/contain;
+}
+.ledger-icon {
+  display: inline-block;
+   width: 44px;
+  height: 43px;
+  background: url("/assets/images/index-img/Icon-ledger.png") no-repeat center/contain;
+  transition: background 0.3s ease;
+}
+.nav-link .ledger-icon:hover {
+  background: url("/assets/images/index-img/Icon-ledger-active.png") no-repeat center/contain;
+}
+.nav-link.active .ledger-icon {
+  background: url("/assets/images/index-img/Icon-ledger-active.png") no-repeat center/contain;
+}
+.assets-icon {
+  display: inline-block;
+   width: 44px;
+  height: 43px;
+  background: url("/assets/images/index-img/Icon-assets.png") no-repeat center/contain;
+  transition: background 0.3s ease;
+}
+.nav-link .assets-icon:hover {
+  background: url("/assets/images/index-img/Icon-assets-active.png") no-repeat center/contain;
+}
+.nav-link.active .assets-icon{
+  background: url("/assets/images/index-img/Icon-assets-active.png") no-repeat center/contain;
+}
+.nav-bottom{
+  position: fixed;
+  left: 50%; 
+  bottom: 0;
+  width: 375px;
+  background-color: #FFF8EC;
+  transform: translateX(-50%);
+  color: white;
+  padding-bottom: 21px;
+  .home,
+  .plan,
+  .ledger,
+  .assets {
+    margin-top: -7px;
+  }
+}
+

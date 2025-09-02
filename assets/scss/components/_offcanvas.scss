@@ -1,3 +1,7 @@
+  .side .offcanvas{
+    z-index: 2500;
+  }
+  
   @include media-breakpoint-up(md) {
 /* 初始狀態 */
 .side .offcanvas {

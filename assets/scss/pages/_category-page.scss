@@ -18,6 +18,10 @@
         /* Bootstrap 預設灰線 */
     }
 
+    .accordion-button.collapsed {
+  border-bottom-width: 0px; /* 收合時的線條粗細 */
+}
+
 
     .accordion-button {
         padding-top: 13.5px;
