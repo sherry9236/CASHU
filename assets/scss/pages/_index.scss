@@ -1,7 +1,3 @@
-.mobile-frame {
-  overflow-y: auto;
-  position: relative;
-}
 
 .user-nav{
   margin-top: 50px;
@@ -198,6 +194,9 @@
 .nav-link .Icon-home:hover {
   background: url("/assets/images/index-img/Icon-home-active.png") no-repeat center/contain;
 }
+.nav-link.active .Icon-home {
+  background: url("/assets/images/index-img/Icon-home-active.png") no-repeat center/contain;
+}
 .Icon-plan {
   display: inline-block;
    width: 44px;
@@ -206,6 +205,9 @@
   transition: background 0.3s ease;
 }
 .nav-link .Icon-plan:hover {
+  background: url("/assets/images/index-img/Icon-plan-active.png") no-repeat center/contain;
+}
+.nav-link.active .Icon-plan{
   background: url("/assets/images/index-img/Icon-plan-active.png") no-repeat center/contain;
 }
 .ledger-icon {
@@ -218,6 +220,9 @@
 .nav-link .ledger-icon:hover {
   background: url("/assets/images/index-img/Icon-ledger-active.png") no-repeat center/contain;
 }
+.nav-link.active .ledger-icon {
+  background: url("/assets/images/index-img/Icon-ledger-active.png") no-repeat center/contain;
+}
 .assets-icon {
   display: inline-block;
    width: 44px;
@@ -226,6 +231,9 @@
   transition: background 0.3s ease;
 }
 .nav-link .assets-icon:hover {
+  background: url("/assets/images/index-img/Icon-assets-active.png") no-repeat center/contain;
+}
+.nav-link.active .assets-icon{
   background: url("/assets/images/index-img/Icon-assets-active.png") no-repeat center/contain;
 }
 .nav-bottom{
@@ -244,5 +252,6 @@
     margin-top: -7px;
   }
 }
+
 
 
