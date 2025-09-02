@@ -150,8 +150,10 @@
   display: block;
 }
 
+
+
 .mobile-calculator {
-  position: absolute;
+  position: fixed;
   bottom: -100%;
   left: 50%;
   /* 水平置中 */
@@ -166,6 +168,7 @@
   opacity: 0;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  z-index: 2000;
 }
 
 .mobile-calculator.active {
