@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <div class="container-fluid px-0 mobile-frame bg-white vh-100 ">
+  <div class="container-fluid px-0 mobile-frame position-relative overflow-y-auto bg-white vh-100 scroll-hidden">
        
     <div class="fixed-height bg-gradient-vertical"> 
         <section>
@@ -21,6 +21,7 @@
         style="background-color: #FFF3DE"
          /></section>
       <section >
+        
         <nav class="navbar user-nav py-0">
   <div class="container ">
     <span class="diamondcollect rounded-pill bg-white neutral-900 border subheader-3 ">
@@ -108,26 +109,25 @@
         </section>
         <!-- 今日任務 -->
         <section>
-          <div class="container py-6  ">
+          <div class="container py-6  mb-11">
             <div class="d-flex justify-content-between mb-5 ">
-            <h2 class="h4 mb-0">今日任務</h2>
-            <a class="body-2 d-flex align-items-center " href="#">查看更多 <img src="/assets/images/index-img/next-Icon.png" alt=""></a>
+              <h2 class="h4 mb-0">今日任務</h2>
+              <a class="body-2 d-flex align-items-center text-neutral-500" href="#">查看更多 <img src="/assets/images/index-img/next-Icon.png" alt=""></a>
             </div>
-          <div class="card shadow border-0 mb-5">
-  <div class="card-body  ">
-    <h5 class="card-title h4">今日任務全數完成</h5>
-    <p class="card-text body-2 mb-4 text-neutral-900">你真是記帳特派員第一名✨別忘了明天繼續打卡任務！</p>
-    <div class="d-flex justify-content-between ">
-    <button class="btn btn-outline-primary rounded-pill btn-sm-padding subheader-4">參加挑戰</button>
-  </div>
-  </div>  
-</div>
-
-
-
-
-
-</div>
+            <div class="card shadow border-0 mb-11">
+                <div class="card-body row my-6 py-0">
+                  <div class="card-finish py-12 m-0">
+                    <h5 class="card-title h2 text-center mb-3 text-neutral-950">今日任務全數完成 <img src="/assets/images/adorn/Vector.png" alt=""></h5>
+                    <p class="card-text body-1 text-neutral-400 text-center mt-0">
+                    <span>你真是記帳特派員第一名✨</span><br>
+                    <span>別忘了明天繼續打卡任務！</span></p>
+                  </div>
+                  <div class="d-flex justify-content-between p-0">
+                    <button class="btn col-12 btn-outline-primary rounded-pill btn-sm-padding h4 px-0 pt-4 ">前往更多挑戰</button>
+                  </div>
+                </div>  
+            </div>
+          </div>
         </section>
         </main>
         <!-- nav -->
@@ -165,7 +165,7 @@
       </div>
       </div>
       <%- include('./layout/footer'); -%>
-  </div>ˋ
+  </div>
 
 
   <script type="module" src="../main.js"></script>

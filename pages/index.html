@@ -10,16 +10,17 @@
 </head>
 
 <body>
-  <div class="container-fluid px-0 mobile-frame position-relative overflow-y-auto  bg-white vh-100 ">
+  <div class="container-fluid px-0 mobile-frame position-relative overflow-y-auto bg-white vh-100 scroll-hidden">
        
     <div class="fixed-height bg-gradient-vertical"> 
+     
       <!-- 載入畫面 -->
-     <!-- <section id="preloader" class="bg-white"> -->
-        <!-- <div class="lodding d-flex flex-column justify-content-center align-items-center  "> 
+     <section id="preloader" class="bg-white">
+        <div class="lodding d-flex flex-column justify-content-center align-items-center  "> 
           <img class="splash-screen " src="/assets/images/gif/splash-screen.gif" alt="">
           <img class="logo" src="/assets/images/Logo/CASHU.png" alt="">
         </div>
-      </section>--> 
+      </section> 
       <!-- 階段二 Lodding-->
        <!-- 上方nav -->
 
@@ -122,7 +123,7 @@
           <div class="container py-6  ">
             <div class="d-flex justify-content-between mb-5 ">
             <h2 class="h4 mb-0">今日任務</h2>
-            <a class="body-2 d-flex align-items-center " href="#">查看更多 <img src="/assets/images/index-img/next-Icon.png" alt=""></a>
+            <a class="body-2 d-flex align-items-center text-neutral-500 " href="#">查看更多 <img src="/assets/images/index-img/next-Icon.png" alt=""></a>
             </div>
           <div class="card shadow border-0 mb-5">
   <div class="card-body  ">
@@ -152,7 +153,7 @@
   </div>  
 </div>
 
-<div class="card shadow border-0 mb-10">
+<div class="card shadow border-0 mb-11">
   <div class="card-body  ">
     <h5 class="card-title h4">連續記帳挑戰第 365 天</h5>
     <p class="card-text body-2 mb-4 text-neutral-900">達成連續記帳挑戰第 365 天！再 15 天即可解鎖專屬勳章！🏅</p>
@@ -220,8 +221,10 @@
 
       </div>
       </div>
+       
       <%- include('./layout/footer'); -%>
-  </div>ˋ
+  </div>
+ 
 
 
   <script type="module" src="../main.js"></script>
@@ -229,7 +232,7 @@
   <script>
     lucide.createIcons();
   </script>
-          <script>
+  <script>
       document.addEventListener("DOMContentLoaded", () => {
         const currentPath = window.location.pathname; // 取得目前網址路徑
         const navLinks = document.querySelectorAll(".nav-link");
@@ -242,6 +245,37 @@
         });
       });
     </script>
+
+     <script>
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+
+    // 先加淡出 class
+    preloader.classList.add("fade-out");
+
+    // 動畫結束後移除元素（避免佔 DOM）
+    preloader.addEventListener("transitionend", () => {
+      preloader.remove();
+    });
+  });
+</script> 
+<script>
+  window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+
+  // 延遲 3 秒後執行淡出
+  setTimeout(() => {
+    preloader.classList.add("fade-out");
+
+    // 等淡出動畫結束再移除
+    preloader.addEventListener("transitionend", () => {
+      preloader.remove();
+    });
+  }, 2000); // 2000 毫秒 = 2 秒
+});
+</script>
+
+
 </body>
 
 </html>
