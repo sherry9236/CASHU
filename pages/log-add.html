@@ -21,7 +21,10 @@
         <main class="log-add">
           <div class="py-4 d-flex justify-content-between align-items-center">
             <a href="index.html">
-              <i data-lucide="chevron-left" class="icon-24 text-neutral-600"></i>
+              <i
+                data-lucide="chevron-left"
+                class="icon-24 text-neutral-600"
+              ></i>
             </a>
             <span class="h2 fw-bold">新增紀錄</span>
             <i data-lucide="chevron-right" class="icon-24 icon-transparent"></i>
@@ -30,8 +33,9 @@
             <input
               type="text"
               id="consult_datetime"
-              class="form-control py-4 px-5"
+              class="form-control py-4 px-5 h-44 subheader-3"
               readonly
+              inputmode="none"
             />
             <span
               id="calendar_icon"
@@ -97,32 +101,36 @@
                 tabindex="0"
               >
                 <section class="py-5 d-flex align-items-center flex-column">
-                  <button
+                  <!-- <button
                     type="button"
                     class="categoy-icon category-icon-xl mb-4 border-0"
                     data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasRight"
                     aria-controls="offcanvasRight"
+                  ></button>-->
+                  <a
+                    href="category-page.html"
+                    class="categoy-icon category-icon-xl mb-4 border-0"
                   >
                     <img
                       src="/assets/images/Category/icon-category-food-breakfast-48.svg"
                       alt="早餐icon"
-                    />
-                  </button>
+                  /></a>
+
                   <p>早餐<i data-lucide="pencil" class="icon-15 ms-2"></i></p>
                 </section>
                 <!--input-->
                 <section>
                   <ul class="row mb-4 pt-2">
-                    <li class="col-6 py-4">
+                    <li class="col-6">
                       <input
                         type="text"
                         id="category-name"
-                        class="form-control input-select h-44"
+                        class="form-control input-select h-44 text-neutral-300"
                         placeholder="名稱"
                       />
                     </li>
-                    <li class="col-6 py-4">
+                    <li class="col-6">
                       <input
                         type="text"
                         id="amount"
@@ -141,7 +149,7 @@
                           現金
                           <span
                             id="calendar_icon"
-                            class="position-absolute top-50 end-0 translate-middle-y me-5"
+                            class="position-absolute top-50 end-0 translate-middle-y me-5 text-neutral-300"
                             style="cursor: pointer"
                           >
                             <i data-lucide="chevron-right"></i>
@@ -155,10 +163,10 @@
                           type="button"
                           class="btn btn-outline-neutral-300 input-select w-100 text-start rounded-m d-flex align-items-center h-44 fw-medium"
                         >
-                          生活開銷
+                          預設文字
                           <span
                             id="calendar_icon"
-                            class="position-absolute top-50 end-0 translate-middle-y me-5"
+                            class="position-absolute top-50 end-0 translate-middle-y me-5 text-neutral-300"
                             style="cursor: pointer"
                           >
                             <i data-lucide="chevron-right"></i>
@@ -188,10 +196,7 @@
                 tabindex="0"
               >
                 <section class="py-5 d-flex align-items-center flex-column">
-                  <a
-                    href="category-page.html"
-                    class="categoy-icon category-icon-xl mb-4"
-                  >
+                  <a href="#" class="categoy-icon category-icon-xl mb-4">
                     <img
                       src="/assets/images/Category/icon-income-salary-48.svg"
                       alt="薪水icon"
@@ -202,7 +207,7 @@
                 <!--input-->
                 <section>
                   <ul class="row mb-4 pt-2">
-                    <li class="col-6 py-4">
+                    <li class="col-6">
                       <input
                         type="text"
                         id="income-name"
@@ -210,7 +215,7 @@
                         placeholder="名稱"
                       />
                     </li>
-                    <li class="col-6 py-4">
+                    <li class="col-6">
                       <input
                         type="text"
                         id="income-amount"
@@ -224,12 +229,12 @@
                       <div class="position-relative">
                         <a
                           href="#"
-                          class="inline-block btn btn-outline-neutral-300 input-select w-100 text-start rounded-m d-flex align-items-center h-44 fw-medium"
+                          class="inline-block btn text-neutral-900 btn-outline-neutral-300 input-select w-100 text-start rounded-m d-flex align-items-center h-44 fw-medium"
                         >
-                          現金
+                          台新銀行
                           <span
                             id="calendar_icon"
-                            class="position-absolute top-50 end-0 translate-middle-y me-5"
+                            class="position-absolute top-50 end-0 translate-middle-y me-5 text-neutral-300"
                             style="cursor: pointer"
                           >
                             <i data-lucide="chevron-right"></i>
@@ -243,10 +248,10 @@
                           type="button"
                           class="btn btn-outline-neutral-300 input-select w-100 text-start rounded-m d-flex align-items-center h-44 fw-medium"
                         >
-                          生活開銷
+                          選擇計畫
                           <span
                             id="calendar_icon"
-                            class="position-absolute top-50 end-0 translate-middle-y me-5"
+                            class="position-absolute top-50 end-0 translate-middle-y me-5 text-neutral-300"
                             style="cursor: pointer"
                           >
                             <i data-lucide="chevron-right"></i>
@@ -327,7 +332,7 @@
                       />
                     </li>
 
-                    <li class="col-12 py-4">
+                    <li class="col-12 pb-4">
                       <input
                         type="text"
                         id="transfer-name"
@@ -391,7 +396,7 @@
                 <div class="col-6 voice-col">
                   <button
                     type="button"
-                    class="btn btn-outline-primary rounded-pill fw-bold w-100"
+                    class="btn btn-outline-primary rounded-pill fw-bold w-100 h-44 d-flex align-items-center justify-content-center"
                     onclick="voiceFunction()"
                   >
                     語音記帳
@@ -402,7 +407,7 @@
                 <div class="col-6 invoice-col">
                   <button
                     type="button"
-                    class="btn btn-outline-primary rounded-pill fw-bold w-100"
+                    class="btn btn-outline-primary rounded-pill fw-bold w-100 h-44 d-flex align-items-center justify-content-center"
                     onclick="qrFunction()"
                   >
                     發票記帳
@@ -427,7 +432,10 @@
                     class="object-fit-cover"
                   />
                 </button>
-                <button class="calc-btn function" onclick="clearAll()">
+                <button
+                  class="calc-btn function subheader-2"
+                  onclick="clearAll()"
+                >
                   AC
                 </button>
 
@@ -484,7 +492,10 @@
                 <button class="calc-btn number" onclick="inputNumber('0')">
                   0
                 </button>
-                <button class="calc-btn operator" onclick="inputOperator('.')">
+                <button
+                  class="calc-btn number d-flex justify-content-center align-items-center"
+                  onclick="inputOperator('.')"
+                >
                   .
                 </button>
                 <button class="calc-btn operator" onclick="inputOperator('+')">
@@ -502,7 +513,7 @@
           </div>
         </main>
 
-        <div class="side">
+        <!-- <div class="side">
           <div
             class="offcanvas offcanvas-end"
             tabindex="-1"
@@ -517,7 +528,7 @@
                   <a href="log-add.html"
                     ><i data-lucide="chevron-left" class="icon-40 p-3"></i
                   ></a>
-                  <span class="header-2 fw-bold line-height-sm">選擇類別</span>
+                  <span class="h2">選擇類別</span>
                   <i
                     data-lucide="chevron-right"
                     class="icon-40 p-3 icon-transparent"
@@ -527,11 +538,11 @@
                   class="accordion accordion-flush mb-4"
                   id="accordionFlushExample"
                 >
-                  <!--食物-->
+                 
                   <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingOne">
                       <button
-                        class="accordion-button text-neutral-500"
+                        class="accordion-button body-2"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#food"
@@ -539,6 +550,9 @@
                         aria-controls="food"
                       >
                         飲食
+                        <span class="accordion-icon ms-auto">
+                          <i data-lucide="chevron-down"></i>
+                        </span>
                       </button>
                     </h2>
                     <div
@@ -633,7 +647,7 @@
                       </div>
                     </div>
                   </div>
-                  <!--購物-->
+                 
                   <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-heading-two">
                       <button
@@ -645,6 +659,9 @@
                         aria-controls="Shopping"
                       >
                         購物
+                        <span class="accordion-icon ms-auto">
+                          <i data-lucide="chevron-down"></i>
+                        </span>
                       </button>
                     </h2>
                     <div
@@ -691,7 +708,7 @@
                       </div>
                     </div>
                   </div>
-                  <!--家居-->
+                
                   <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-heading-three">
                       <button
@@ -703,6 +720,9 @@
                         aria-controls="Home"
                       >
                         家居
+                        <span class="accordion-icon ms-auto">
+                          <i data-lucide="chevron-down"></i>
+                        </span>
                       </button>
                     </h2>
                     <div
@@ -765,7 +785,7 @@
                       </div>
                     </div>
                   </div>
-                  <!--交通-->
+               
                   <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-heading-four">
                       <button
@@ -777,6 +797,9 @@
                         aria-controls="traffic"
                       >
                         交通
+                        <span class="accordion-icon ms-auto">
+                          <i data-lucide="chevron-down"></i>
+                        </span>
                       </button>
                     </h2>
                     <div
@@ -823,7 +846,7 @@
                       </div>
                     </div>
                   </div>
-                  <!--學習-->
+             
                   <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-heading-five">
                       <button
@@ -835,6 +858,9 @@
                         aria-controls="learn"
                       >
                         學習
+                        <span class="accordion-icon ms-auto">
+                          <i data-lucide="chevron-down"></i>
+                        </span>
                       </button>
                     </h2>
                     <div
@@ -881,7 +907,7 @@
                       </div>
                     </div>
                   </div>
-                  <!--娛樂-->
+           
                   <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-heading-six">
                       <button
@@ -893,6 +919,9 @@
                         aria-controls="entertainment"
                       >
                         娛樂
+                        <span class="accordion-icon ms-auto">
+                          <i data-lucide="chevron-down"></i>
+                        </span>
                       </button>
                     </h2>
                     <div
@@ -939,7 +968,7 @@
                       </div>
                     </div>
                   </div>
-                  <!--醫療-->
+                
                   <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-heading-seven">
                       <button
@@ -951,6 +980,9 @@
                         aria-controls="medical"
                       >
                         醫療
+                        <span class="accordion-icon ms-auto">
+                          <i data-lucide="chevron-down"></i>
+                        </span>
                       </button>
                     </h2>
                     <div
@@ -999,17 +1031,42 @@
                   </div>
                 </div>
                 <a href="#" class="d-flex align-items-center py-3">
-                  <span
-                    class="border-dashed-neutral rounded-circle d-inline-flex justify-content-center align-items-center me-4"
-                    style="width: 44px; height: 44px"
+                  <svg
+                    width="44"
+                    height="44"
+                    viewBox="0 0 44 44"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="me-4"
                   >
-                    <i data-lucide="plus" class="icon-16"></i> </span
-                  >新增類別
+                    <circle
+                      cx="22"
+                      cy="22"
+                      r="21"
+                      stroke="#B0B0B0"
+                      stroke-width="1"
+                      stroke-dasharray="4 4"
+                    />
+                    <foreignObject x="0" y="0" width="44" height="44">
+                      <div
+                        style="
+                          width: 100%;
+                          height: 100%;
+                          display: flex;
+                          justify-content: center;
+                          align-items: center;
+                        "
+                      >
+                        <i data-lucide="plus" class="icon-16"></i>
+                      </div>
+                    </foreignObject>
+                  </svg>
+                  新增類別
                 </a>
               </div>
             </div>
           </div>
-        </div>
+        </div>-->
         <%- include('./layout/footer'); -%>
       </div>
     </div>
@@ -1017,28 +1074,60 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- 月曆的js -->
+
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
+        // 初始化 Lucide icon
         lucide.createIcons();
 
+        // 取得今天日期
         const today = new Date();
         const yyyy = today.getFullYear();
-        const mm = String(today.getMonth() + 1);
-        const dd = String(today.getDate());
+        const mm = String(today.getMonth() + 1).padStart(2, "0");
+        const dd = String(today.getDate()).padStart(2, "0");
         const todayFormatted = `${yyyy}/${mm}/${dd}`;
 
+        // 初始化 flatpickr
         const fp = flatpickr("#consult_datetime", {
           dateFormat: "Y/m/d",
           defaultDate: todayFormatted,
           allowInput: false,
+          disableMobile: true,
+          clickOpens: false, // ❌ 禁止點 input 自動打開
         });
 
-        document.querySelectorAll(".calendar_icon").forEach((el) => {
-          el.addEventListener("click", () => {
+        // 移除 Flatpickr 插入的 icon
+        const autoIcon = document.querySelector(
+          ".flatpickr-input ~ .flatpickr-icon, .flatpickr-calendar-button"
+        );
+        if (autoIcon) autoIcon.remove();
+
+        // 點擊 input 或 icon 開關日曆
+        const toggleCalendar = (e) => {
+          e.preventDefault(); // 防止 input focus
+          if (fp.isOpen) {
+            fp.close();
+          } else {
             fp.open();
-          });
-        });
+          }
+        };
+
+        // 綁定事件
+        const inputEl = document.querySelector("#consult_datetime");
+        const iconEls = document.querySelectorAll(".calendar_icon");
+
+        inputEl.addEventListener("mousedown", toggleCalendar); // 用 mousedown 防止 focus
+        inputEl.addEventListener("focus", (e) => e.target.blur()); // 強制 blur，避免鍵盤彈出
+        iconEls.forEach((el) => el.addEventListener("click", toggleCalendar));
+      });
+      const inputEl = document.querySelector("#consult_datetime");
+
+      inputEl.addEventListener("mousedown", (e) => {
+        e.preventDefault();
+        inputEl.classList.add("is-active");
+        setTimeout(() => inputEl.classList.remove("is-active"), 200); // 點擊後0.2秒移除
+        toggleCalendar(e);
       });
     </script>
     <!-- 月曆的js -->
@@ -1349,6 +1438,14 @@
             item.classList.add("active");
           });
         });
+    </script>
+
+    <!--手風琴下拉箭頭-->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // 初始化所有 Lucide Icons
+        lucide.createIcons();
+      });
     </script>
   </body>
 </html>

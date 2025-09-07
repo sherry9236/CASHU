@@ -5,7 +5,7 @@ $utilities: (
   //   ),
   //   class: display-1,
   //   values: (
-  //     null: 
+  //     null:
   //       2.5rem  // font-size: 40px
   //  )
   // ), // ← 這裡加逗號
@@ -53,68 +53,108 @@ $utilities: (
   //     null: 0.875rem //14px
   //   )
   // ), // ← 這裡加逗號
-  "subheader-1": (property: font-size,
-    class: subheader-1,
-    values: (null: 1.25rem //20px
+  "subheader-1":
+    (
+      property: font-size,
+      class: subheader-1,
+      values: (
+        null: 1.25rem //20px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+      ),
+      font-weight: 500,
+      line-height: 1.2,
     ),
-    font-weight: 500,
-    line-height: 1.2),
   // ← 這裡加逗號
-  "subheader-2": (property: font-size,
-    class: subheader-2,
-    values: (null: 1.125rem //18px
+  "subheader-2":
+    (
+      property: font-size,
+      class: subheader-2,
+      values: (
+        null: 1.125rem //18px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+      ),
+      font-weight: 500,
+      line-height: 1.2,
     ),
-    font-weight: 500,
-    line-height: 1.2),
   // ← 這裡加逗號
-  "subheader-3": (property: font-size,
-    class: subheader-3,
-    values: (null: 1rem //16px
+  "subheader-3":
+    (
+      property: font-size,
+      class: subheader-3,
+      values: (
+        null: 1rem //16px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+      ),
+      font-weight: 500,
+      line-height: 1.2,
     ),
-    font-weight: 500,
-    line-height: 1.2),
   // ← 這裡加逗號
-  "subheader-4": (property: font-size,
-    class: subheader-4,
-    values: (null: 0.875rem //14px
+  "subheader-4":
+    (
+      property: font-size,
+      class: subheader-4,
+      values: (
+        null: 0.875rem //14px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+      ),
+      font-weight: 500,
+      line-height: 1.2,
     ),
-    font-weight: 500,
-    line-height: 1.2),
   // ← 這裡加逗號
-  "body-1": (property: font-size,
-    class: body-1,
-    values: (null: 1rem //16px
+  "body-1":
+    (
+      property: font-size,
+      class: body-1,
+      values: (
+        null: 1rem //16px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+      ),
+      font-weight: 400,
+      line-height: 1.5,
     ),
-    font-weight: 400,
-    line-height: 1.5),
   // ← 這裡加逗號
-  "body-2": (property: font-size,
-    class: body-2,
-    values: (null: 0.875rem //14px
+  "body-2":
+    (
+      property: font-size,
+      class: body-2,
+      values: (
+        null: 0.875rem //14px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+      ),
+      font-weight: 400,
+      line-height: 1.5,
     ),
-    font-weight: 400,
-    line-height: 1.5),
   // ← 這裡加逗號
-  "body-3": (property: font-size,
-    class: body-3,
-    values: (null: 0.75rem //12px
+  "body-3":
+    (
+      property: font-size,
+      class: body-3,
+      values: (
+        null: 0.75rem //12px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+      ),
+      font-weight: 400,
+      line-height: 1.5,
     ),
-    font-weight: 400,
-    line-height: 1.5),
   // ← 這裡加逗號
-  "caption": (property: font-size,
-    class: caption,
-    values: (null: 0.75rem //12px
-    ),
-    font-weight: 400,
-    line-height: 1.5)
+  "caption":
+    (
+      property: font-size,
+      class: caption,
+      values: (
+        null: 0.75rem //12px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+      ),
+      font-weight: 400,
+      line-height: 1.5,
+    )
 );
 
 @each $key, $item in $utilities {
   .#{map-get($item, class)} {
     font-size: map-get(map-get($item, values), null);
-    font-weight: if(map-has-key($item, font-weight), map-get($item, font-weight), null);
-    line-height: if(map-has-key($item, line-height), map-get($item, line-height), null);
+    font-weight: if(
+      map-has-key($item, font-weight),
+      map-get($item, font-weight),
+      null
+    );
+    line-height: if(
+      map-has-key($item, line-height),
+      map-get($item, line-height),
+      null
+    );
   }
 }
 
@@ -132,9 +172,8 @@ h6 {
   line-height: 1.5; // 自訂數值
 }
 
-
 // 額外新增自訂圓角
-$border-radius-m: .75rem;
+$border-radius-m: 0.75rem;
 $border-radius-l: 1.25rem;
 $border-radius-rounded: 100rem;
 
@@ -153,14 +192,13 @@ $border-radius-rounded: 100rem;
 
 /* 垂直漸層 */
 .bg-gradient-vertical {
-  background: linear-gradient(to bottom, #FFF3DE, #D6F1ED);
+  background: linear-gradient(to bottom, #fff3de, #d6f1ed);
 }
 
 /* 水平漸層 */
 .bg-gradient-horizontal {
-  background: linear-gradient(to right, #FFF3DE, #D6F1ED);
+  background: linear-gradient(to right, #fff3de, #d6f1ed);
 }
-
 
 // gutter 預設值
 $grid-gutter-width: 12px;
@@ -170,31 +208,87 @@ $grid-gutter-y: 12px;
   --bs-gutter-y: #{$grid-gutter-y};
 }
 
+.input-select::placeholder,
+.calc-input::placeholder,
+.calc-input:read-only::placeholder {
+  color: #888888;
+  opacity: 1;
+  font-weight: 500;
+}
+
+input.form-control:active {
+  border-color: #ef6400;
+  box-shadow: 0 0 1.3px 1px #ffc56d;
+  color: #888888;
+  outline: none;
+}
 
 /*input外框效果*/
 input.input-select:focus,
 textarea.input-select:focus,
 input.focused,
 textarea.focused {
-  border-color: #EF6400;
-  box-shadow: 0 0 1.3px 1px #FFC56D;
+  border-color: #ef6400;
+  box-shadow: 0 0 1.3px 1px #ffc56d;
+  outline: none;
+}
+input.input-select:active,
+textarea.input-select:active,
+input:active,
+textarea:active {
+  border-color: #ef6400;
+  box-shadow: 0 0 1.3px 1px #ffc56d;
+  outline: none;
+  color: #888888;
+}
+
+input.form-control:active {
+  border-color: #ef6400;
+  box-shadow: 0 0 1.3px 1px #ffc56d;
+  color: #888888;
+  outline: none;
+}
+/*文字方框樣式設定*/
+.form-floating label {
+  top: 0;
+  left: 0rem;
+  font-size: 1rem;
+  transform: none !important;
+}
+/* 可選：textarea 裡的 placeholder 隱藏，避免重疊 */
+.form-floating.no-float textarea::placeholder {
+  color: transparent;
+}
+.form-floating label {
+  color: #1a1a1a; /* 一般文字顏色 */
+}
+.form-floating .form-control:focus ~ label {
+  color: #888888; /* focus 顏色 */
+}
+textarea.form-control:active {
+  border-color: #ef6400;
+  box-shadow: 0 0 1.3px 1px #ffc56d;
   outline: none;
 }
 
-textarea.form-control:focus {
-  border-color: #EF6400;
-  box-shadow: 0 0 1.3px 1px #FFC56D;
-  outline: none;
-}
+/* 灰色圓型虛線 */
+.custom-dashed-border-button {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
+  /* 使用 SVG 作為背景圖片來產生虛線邊框 */
+  background-image: url("data:image/svg+xml,%3Csvg width='44' height='44' viewBox='0 0 44 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='22' cy='22' r='21' stroke='%23CCC' stroke-width='1.5' stroke-dasharray='4 4' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
 
-
-/*灰色虛線*/
-.border-dashed-neutral {
-  border: 1px dashed $neutral-300;
+  /* 移除舊的 border 樣式 */
+  border: none;
 }
 /*灰色線*/
-.border-solid-neutral-100{
+.border-solid-neutral-100 {
   border-bottom: 1px solid $neutral-100;
 }
 
@@ -202,6 +296,7 @@ textarea.form-control:focus {
 .h-44 {
   height: 44px;
 }
+
 .h-38{
   height: 38px;
 }
@@ -215,3 +310,4 @@ textarea.form-control:focus {
         -webkit-box-orient: vertical;
         line-clamp: 2;
 }
+
