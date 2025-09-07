@@ -297,4 +297,17 @@ textarea.form-control:active {
   height: 44px;
 }
 
-//
+.h-38{
+  height: 38px;
+}
+
+// 
+.text-hidden {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        line-clamp: 2;
+}
+

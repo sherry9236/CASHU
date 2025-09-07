@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>任務牆</title>
+  </head>
+  <body>
+    <div class="container-fluid px-0 mobile-frame  position-relative overflow-y-auto bg-white vh-100 scroll-hidden"> 
+      <%- include('./layout/header'); -%>
+    <div class="fixed mt-9"> 
+    <nav class="navbar sticky-top ">
+      <div class="container-fluid">
+        
+        <a class="navbar-brand m-0 h2 " href="#">任務牆</a>
+       
+      </div>
+    </nav>
+    </div>
+    <div class="container">
+            <ul class="nav nav-underline gap-0  border-bottom border-2" id="myTab" role="tablist">
+                <li class="nav-item col-4 px-0  " role="presentation">
+                  <a class="nav-link button-notyet active text-center " id="notyet-tab" data-bs-toggle="tab" data-bs-target="#notyet" type="button" role="tab" aria-controls="notyet" aria-selected="true"><span class="pe-3">未開始</span><span>8</span></a>
+                </li>
+                <li class="nav-item col-4 px-0 " role="presentation">
+                  <a class="nav-link button-conduct text-center  " id="conduct-tab" data-bs-toggle="tab" data-bs-target="#conduct" type="button" role="tab" aria-controls="conduct" aria-selected="false"><span class="pe-3">進行中</span><span>13</span></a>
+                </li>
+                <li class="nav-item col-4 px-0 " role="presentation">
+                  <a class="nav-link button-finish text-center " id="finish-tab" data-bs-toggle="tab" data-bs-target="#finish" type="button" role="tab" aria-controls="finish" aria-selected="false"><span class="pe-3">已結束</span><span>3</span></a>
+                </li>
+            </ul>
+             </div>
+           
+            <div class="tab-content " id="myTabContent">
+              <div class="tab-pane fade show active " id="notyet" role="tabpanel" aria-labelledby="notyet">
+                     <div class="container  bg-primary-50 ">
+                      <div class="container d-flex h-38 align-items-center justify-content-between">
+                        <h4 class="subheader-4">挑戰時間</h4>
+                        <a href=""><p class="body-2 text-neutral-500">全部</p></a>
+                      </div>
+                      </div>
+                      <div class="container my-5">
+                        <!-- 卡片區 -->
+                        <div class="card shadow border-0 mb-5">
+                          <div class="card-body ">
+                            <h5 class="card-title h4 mb-2">手搖飲戒斷</h5>
+                            <p class="body-2 text-neutral-400 mb-3">2025/07/07 - 2026/07/08 23:59</p>
+                            <p class="card-text body-2 mb-4 text-neutral-900 text-hidden">放下身為台灣人的驕傲，每日拒絕手搖飲，沒事多喝水，省下銅板又存了健康！小小改變累積大成果，讓我們從今天開始，一起用行動愛自己、愛地球，也為荷包加分！</p>
+                            <div class="d-flex justify-content-between ">
+                              <div class="d-flex justify-content-center align-items-center">
+                                <img  class="reward" src="/assets/images/adorn/Reward.png" alt="Reward">
+                                <p class="h4 mb-0 text-secondary"><span class="p-1">+</span><span>100</span></p>
+                              </div>
+                            <button class="btn btn-outline-primary rounded-pill btn-sm-padding subheader-4">參加挑戰</button>
+                          </div>
+                          </div>  
+                        </div>
+                        <!-- 2 -->
+                          <div class="card shadow border-0 mb-5">
+                          <div class="card-body  ">
+                            <h5 class="card-title h4 mb-3">成為語音記帳者</h5>
+                            <p class="card-text body-2 mb-6 text-neutral-900 ">成功使用語音記帳 5 次</p>
+                            <div class="d-flex justify-content-between ">
+                              <div class="d-flex justify-content-center align-items-center">
+                                <img  class="reward" src="/assets/images/adorn/Reward.png" alt="Reward">
+                                <p class="h4 mb-0 text-secondary"><span class="p-1">+</span><span>500</span></p>
+                              </div>
+                            <button class="btn btn-outline-primary rounded-pill btn-sm-padding subheader-4">參加挑戰</button>
+                          </div>
+                          </div>  
+                        </div>
+                          <!-- 3 -->
+                          <div class="card shadow border-0 mb-5">
+                          <div class="card-body  ">
+                            <h5 class="card-title h4 mb-3">設定每月預算上限</h5>
+                            <p class="card-text body-2 mb-4 text-neutral-900">幫某一類支出（如美食、娛樂）設定預算上限，幫助你理性消費不爆預算，Cashu 幫你把關！</p>
+                            <div class="d-flex justify-content-between ">
+                              <div class="d-flex justify-content-center align-items-center">
+                                <img  class="reward" src="/assets/images/adorn/Reward.png" alt="Reward">
+                                <p class="h4 mb-0 text-secondary"><span class="p-1">+</span><span>200</span></p>
+                              </div>
+                            <button class="btn btn-outline-primary rounded-pill btn-sm-padding subheader-4">參加挑戰</button>
+                          </div>
+                          </div>  
+                        </div>
+                        <!-- 4 -->
+                           <div class="card shadow border-0 mb-5">
+                          <div class="card-body  ">
+                            <h5 class="card-title h4 mb-3">月底大掃帳計畫</h5>
+                            <p class="body-2 text-neutral-400 mb-3">2025/07/01 - 2025/07/31 23:59</p>
+                            <p class="card-text body-2 mb-4 text-neutral-900 text-hidden">月底快到了，幫帳本做個大掃除！刪掉錯誤記錄、補齊分類或備註三筆以上，讓帳本乾淨清爽，Cashu 才能舒服打滾～</p>
+                            <div class="d-flex justify-content-between ">
+                              <div class="d-flex justify-content-center align-items-center">
+                                <img  class="reward" src="/assets/images/adorn/Reward.png" alt="Reward">
+                                <p class="h4 mb-0 text-secondary"><span class="p-1">+</span><span>200</span></p>
+                              </div>
+                            <button class="btn btn-outline-primary rounded-pill btn-sm-padding subheader-4">參加挑戰</button>
+                          </div>
+                          </div>  
+                        </div>
+                        <!-- 5 -->
+                           <div class="card shadow border-0 mb-5">
+                          <div class="card-body ">
+                            <h5 class="card-title h4 mb-3">Cashu 的神秘消費偵探</h5>
+                            <p class="body-2 text-neutral-400 mb-3">2025/07/20 ~ 2025/07/24 23:59</p>
+                            <p class="card-text body-2 mb-4 text-neutral-900 text-hidden">今天來當一次小偵探！找出一筆「奇怪」或「意外」的消費，幫它補上備註，Cashu 要追查你錢包裡的小祕密！</p>
+                            <div class="d-flex justify-content-between ">
+                              <div class="d-flex justify-content-center align-items-center">
+                                <img  class="reward" src="/assets/images/adorn/Reward.png" alt="Reward">
+                                <p class="h4 mb-0 text-secondary"><span class="p-1">+</span><span>200</span></p>
+                              </div>
+                            <button class="btn btn-outline-primary rounded-pill btn-sm-padding subheader-4">參加挑戰</button>
+                          </div>
+                          </div>  
+                        </div>
+
+                </div>
+              </div>
+              <div class="tab-pane fade" id="conduct" role="tabpanel" aria-labelledby="conduct-tab">
+                <div class="container  bg-primary-50 ">
+                      <div class="container d-flex h-38 align-items-center justify-content-between">
+                        <h4 class="subheader-4">挑戰時間</h4>
+                        <p class="body-2 text-neutral-500">進行中</p>
+                      </div>
+                      </div>
+              </div>
+              <div class="tab-pane fade" id="finish" role="tabpanel" aria-labelledby="finish-tab">
+                <div class="container  bg-primary-50 ">
+                      <div class="container d-flex h-38 align-items-center justify-content-between">
+                        <h4 class="subheader-4">挑戰時間</h4>
+                        <p class="body-2">已結束</p>
+                      </div>
+                </div>
+              </div>
+            </div>
+ 
+    
+
+
+
+    <%- include('./layout/footer'); -%>
+    
+    </div>
+  
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
