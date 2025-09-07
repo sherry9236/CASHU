@@ -34,11 +34,15 @@
               <h1 class="mb-4">結婚基金</h1>
               <div>
                 <div class="mb-2">
-                  <span class="subheader-3 me-3">目標金額</span>
+                  <span class="subheader-3 me-3 text-neutral-400"
+                    >目標金額</span
+                  >
                   <span class="h4">$ 200,000</span>
                 </div>
                 <div>
-                  <span class="subheader-3 me-3">目前存入</span>
+                  <span class="subheader-3 me-3 text-neutral-400"
+                    >目前存入</span
+                  >
                   <span class="h4 text-secondary-600">$ 46,700</span>
                 </div>
               </div>
@@ -72,10 +76,10 @@
                     <div class="d-flex justify-content-between mb-6">
                       <div>
                         <p class="body-2 text-neutral-400">已存</p>
-                        <p class="h4 text-secondary-600">6209天</p>
+                        <p class="h4 text-secondary-600">$ 46,700</p>
                       </div>
                       <div>
-                        <p class="body-2 text-neutral-400">已存</p>
+                        <p class="body-2 text-neutral-400 text-end">目標</p>
                         <p class="h4">$ 200,000</p>
                       </div>
                     </div>
@@ -114,16 +118,20 @@
           <section class="py-5">
             <h4 class="mb-6">存錢紀錄</h4>
             <ul>
-              <li class="d-flex align-items-center justify-content-between">
+              <li
+                class="d-flex align-items-center justify-content-between mb-5"
+              >
                 <div class="d-flex flex-column">
                   <time datetime="2025-07-18" class="body-1 mb-2"
                     >2025/07/18</time
                   >
                   <p class="body-2 text-neutral-600">手動轉出至現金帳戶</p>
                 </div>
-                <p class="text-state-negative-500 subheader-3">-500</p>
+                <p class="text-state-negative-500 subheader-3">-$ 500</p>
               </li>
-              <li class="d-flex align-items-center justify-content-between">
+              <li
+                class="d-flex align-items-center justify-content-between mb-5"
+              >
                 <div class="d-flex flex-column">
                   <time datetime="2025-07-14" class="body-1 mb-2"
                     >2025/07/14</time
@@ -149,11 +157,15 @@
         </main>
 
         <!-- 按鈕 -->
-
+        <div class="calc-backdrop" id="calcBackdrop"></div>
         <!--底部彈開按鈕+計算機-->
         <div class="mobile-frame-container">
           <!-- 新計算機 -->
-          <div class="mobile-calculator" id="calculatorContainer">
+          <div
+            class="mobile-calculator"
+            id="calculatorContainer"
+            style="display: none"
+          >
             <div class="calculator-full">
               <div
                 class="d-flex justify-content-between align-items-center mb-6"
@@ -173,15 +185,16 @@
                     <input
                       type="text"
                       id="consult_datetime"
-                      class="form-control py-4 px-5 h-44"
+                      class="form-control py-4 px-5 h-44 subheader-3"
                       readonly
+                      inputmode="none"
                     />
                     <span
                       id="calendar_icon"
-                      class="calendar_icon position-absolute top-50 end-0 translate-middle-y me-5 d-flex align-items-center justify-content-start"
+                      class="calendar_icon position-absolute top-50 end-0 translate-middle-y me-5"
                       style="cursor: pointer"
                     >
-                      <i data-lucide="calendar"></i>
+                      <i data-lucide="calendar" class="text-neutral-300"></i>
                     </span>
                   </div>
                 </div>
@@ -194,7 +207,7 @@
                       data-bs-target="#offcanvasRight"
                       aria-controls="offcanvasRight"
                     >
-                      轉出帳號
+                      轉出帳戶
                       <span
                         class="position-absolute top-50 end-0 translate-middle-y me-5"
                         style="cursor: pointer"
@@ -207,7 +220,7 @@
                 <div class="col-6">
                   <input
                     type="text"
-                    class="form-control h-44 calc-input text-end"
+                    class="form-control h-44 calc-input text-end text-neutral-400"
                     inputmode="none"
                     placeholder="$0"
                     readonly
@@ -286,7 +299,7 @@
                 <button class="calc-btn number" onclick="inputNumber('0')">
                   0
                 </button>
-                <button class="calc-btn operator" onclick="inputOperator('.')">
+                <button class="calc-btn number" onclick="inputOperator('.')">
                   .
                 </button>
                 <button class="calc-btn operator" onclick="inputOperator('+')">
@@ -303,6 +316,7 @@
             </div>
           </div>
         </div>
+
         <div class="side">
           <div
             class="offcanvas offcanvas-end"
@@ -341,7 +355,11 @@
                 </p>
                 <ul class="m-0">
                   <li class="add-item">
-                    <a href="#" class="d-block py-3 px-5 active">
+                    <a
+                      class="d-block py-3 px-5 active"
+                      data-bs-dismiss="offcanvas"
+                      aria-label="Close"
+                    >
                       <div class="d-flex align-items-center">
                         <span
                           class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
@@ -368,7 +386,11 @@
                 </p>
                 <ul class="m-0">
                   <li class="add-item mb-2">
-                    <a href="#" class="d-block py-3 px-5">
+                    <a
+                      class="d-block py-3 px-5"
+                      data-bs-dismiss="offcanvas"
+                      aria-label="Close"
+                    >
                       <div class="d-flex align-items-center">
                         <span
                           class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
@@ -387,7 +409,11 @@
                     </a>
                   </li>
                   <li class="add-item mb-2">
-                    <a href="#" class="d-block py-3 px-5">
+                    <a
+                      class="d-block py-3 px-5"
+                      data-bs-dismiss="offcanvas"
+                      aria-label="Close"
+                    >
                       <div class="d-flex align-items-center">
                         <span
                           class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
@@ -406,7 +432,11 @@
                     </a>
                   </li>
                   <li class="add-item">
-                    <a href="#" class="d-block py-3 px-5">
+                    <a
+                      class="d-block py-3 px-5"
+                      data-bs-dismiss="offcanvas"
+                      aria-label="Close"
+                    >
                       <div class="d-flex align-items-center">
                         <span
                           class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
@@ -427,12 +457,40 @@
                 </ul>
               </div>
               <a href="#" class="d-flex align-items-center py-3">
-                <span
-                  class="border-dashed-neutral rounded-circle d-inline-flex justify-content-center align-items-center me-4"
-                  style="width: 44px; height: 44px"
+                <svg
+                  width="44"
+                  height="44"
+                  viewBox="0 0 44 44"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="me-4"
                 >
-                  <i data-lucide="plus" class="icon-16"></i> </span
-                >新增類別
+                  <circle
+                    cx="22"
+                    cy="22"
+                    r="21"
+                    stroke="#B0B0B0"
+                    stroke-width="1"
+                    stroke-dasharray="4 4"
+                  />
+                  <foreignObject x="0" y="0" width="44" height="44">
+                    <div
+                      style="
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                      "
+                    >
+                      <i
+                        data-lucide="plus"
+                        class="icon-16 text-neutral-600"
+                      ></i>
+                    </div>
+                  </foreignObject>
+                </svg>
+                新增帳戶
               </a>
             </div>
           </div>
@@ -487,42 +545,90 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
+        // 初始化 Lucide icon
         lucide.createIcons();
 
+        // 取得今天日期
         const today = new Date();
         const yyyy = today.getFullYear();
-        const mm = String(today.getMonth() + 1);
-        const dd = String(today.getDate());
+        const mm = String(today.getMonth() + 1).padStart(2, "0");
+        const dd = String(today.getDate()).padStart(2, "0");
         const todayFormatted = `${yyyy}/${mm}/${dd}`;
 
+        // 初始化 flatpickr
         const fp = flatpickr("#consult_datetime", {
           dateFormat: "Y/m/d",
           defaultDate: todayFormatted,
           allowInput: false,
+          disableMobile: true,
+          clickOpens: false, // ❌ 禁止點 input 自動打開
         });
 
-        document.querySelectorAll(".calendar_icon").forEach((el) => {
-          el.addEventListener("click", () => {
+        // 移除 Flatpickr 插入的 icon
+        const autoIcon = document.querySelector(
+          ".flatpickr-input ~ .flatpickr-icon, .flatpickr-calendar-button"
+        );
+        if (autoIcon) autoIcon.remove();
+
+        // 點擊 input 或 icon 開關日曆
+        const toggleCalendar = (e) => {
+          e.preventDefault(); // 防止 input focus
+          if (fp.isOpen) {
+            fp.close();
+          } else {
             fp.open();
-          });
-        });
+          }
+        };
+
+        // 綁定事件
+        const inputEl = document.querySelector("#consult_datetime");
+        const iconEls = document.querySelectorAll(".calendar_icon");
+
+        inputEl.addEventListener("mousedown", toggleCalendar); // 用 mousedown 防止 focus
+        inputEl.addEventListener("focus", (e) => e.target.blur()); // 強制 blur，避免鍵盤彈出
+        iconEls.forEach((el) => el.addEventListener("click", toggleCalendar));
+      });
+      const inputEl = document.querySelector("#consult_datetime");
+
+      inputEl.addEventListener("mousedown", (e) => {
+        e.preventDefault();
+        inputEl.classList.add("is-active");
+        setTimeout(() => inputEl.classList.remove("is-active"), 200); // 點擊後0.2秒移除
+        toggleCalendar(e);
       });
     </script>
     <!-- 月曆的js -->
 
     <!--計算機-->
     <script>
-      // ======= 新計算機展開/收合 =======
+      // ======= 新計算機展開/收合 + 遮罩 =======
+      const calculator = document.getElementById("calculatorContainer");
+
+      // 如果沒有遮罩就建立一個
+      let backdrop = document.getElementById("calcBackdrop");
+      if (!backdrop) {
+        backdrop = document.createElement("div");
+        backdrop.id = "calcBackdrop";
+        backdrop.className = "calc-backdrop";
+        document.body.appendChild(backdrop);
+      }
+
       document.querySelectorAll(".open-calculator-btn").forEach((btn) => {
         btn.addEventListener("click", () => {
-          const container = document.getElementById("calculatorContainer");
-          container.classList.toggle("active"); // 滑入滑出
-
-          const fullCalc = container.querySelector(".calculator-full");
-          fullCalc.classList.toggle("active"); // 顯示內容
+          calculator.classList.add("active"); // 滑出
+          calculator.querySelector(".calculator-full").classList.add("active"); // 顯示內容
+          backdrop.classList.add("active"); // 顯示遮罩
         });
       });
 
+      // 點擊遮罩關閉計算機
+      backdrop.addEventListener("click", closeCalculator);
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const calculator = document.getElementById("calculatorContainer");
+        // 等 DOM 載入後移除 display:none
+        calculator.style.display = "block";
+      });
       // ======= 計算機功能 =======
       let currentInput = ""; // 儲存完整算式
       let displayValue = ""; // 儲存顯示在 input 的值
@@ -530,14 +636,14 @@
 
       function inputNumber(num) {
         currentInput += num;
-        displayValue += num; // 只把數字顯示在 input
+        displayValue += num;
         updateDisplay();
       }
 
       function inputOperator(op) {
         if (currentInput === "" && op !== "-") return;
         currentInput += op;
-        displayValue = ""; // 清空，等待下一個數字顯示
+        displayValue = "";
       }
 
       function clearAll() {
@@ -558,8 +664,8 @@
         try {
           const expression = currentInput.replace(/×/g, "*").replace(/÷/g, "/");
           const result = eval(expression);
-          currentInput = result.toString(); // 算完更新算式
-          displayValue = result.toString(); // 結果顯示在 input
+          currentInput = result.toString();
+          displayValue = result.toString();
           updateDisplay();
         } catch (err) {
           displayValue = "錯誤";
@@ -578,37 +684,30 @@
       function updateDisplay() {
         const display = document.querySelector(".calc-input");
         if (display) {
-          if (displayValue === "") {
-            display.value = "$0";
-          } else {
-            display.value = "$" + displayValue;
-          }
+          display.value = displayValue === "" ? "$0" : "$" + displayValue;
         }
         console.log("算式:", currentInput, "顯示:", displayValue);
       }
 
       // ======= 點擊外面關閉計算機 =======
       document.addEventListener("click", (e) => {
-        const container = document.getElementById("calculatorContainer");
         const btn = document.querySelector(".open-calculator-btn");
-        const offcanvas = document.getElementById("offcanvasRight"); // 取得 offcanvas
+        const offcanvas = document.getElementById("offcanvasRight");
 
         if (
-          !container.contains(e.target) &&
-          !btn.contains(e.target) &&
-          !(offcanvas && offcanvas.contains(e.target)) // 如果點擊在 offcanvas 就不要收起
+          !calculator.contains(e.target) &&
+          !(btn && btn.contains(e.target)) &&
+          !(offcanvas && offcanvas.contains(e.target))
         ) {
-          container.classList.remove("active");
-          container
-            .querySelector(".calculator-full")
-            .classList.remove("active");
+          closeCalculator();
         }
       });
 
+      // ======= 關閉計算機 =======
       function closeCalculator() {
-        const container = document.getElementById("calculatorContainer");
-        container.classList.remove("active");
-        container.querySelector(".calculator-full").classList.remove("active");
+        calculator.classList.remove("active");
+        calculator.querySelector(".calculator-full").classList.remove("active");
+        backdrop.classList.remove("active");
       }
 
       // 初始顯示 $0
