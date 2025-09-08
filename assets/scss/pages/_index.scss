@@ -23,7 +23,7 @@
 }
 
 .user-nav{
-  margin-top: 50px;
+  padding-top: 100px;
 }
 
 .lodding{ 
@@ -43,13 +43,15 @@
 }
 
 // 提醒
+
 .logo {
     width: 113px;
     height: 29px;
 }
 
 .fixed-height {
-    height: 258px;
+    margin-top:-50px;
+    height: 358px;
 }
 
 .user-img {
@@ -57,7 +59,7 @@
 }
 
 .diamondcollect {
-    padding: 10px 12px;
+    padding: 8px 10px;
 }
 
 .Speech-bubble {
@@ -145,5 +147,6 @@
 .reward {
     padding-right: 1px;
 }
+
 
 
