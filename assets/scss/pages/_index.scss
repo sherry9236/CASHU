@@ -23,7 +23,7 @@
 }
 
 .user-nav{
-  margin-top: 50px;
+  padding-top: 100px;
 }
 
 .lodding{ 
@@ -43,13 +43,15 @@
 }
 
 // 提醒
+
 .logo {
     width: 113px;
     height: 29px;
 }
 
 .fixed-height {
-    height: 258px;
+    margin-top:-50px;
+    height: 358px;
 }
 
 .user-img {
@@ -57,7 +59,7 @@
 }
 
 .diamondcollect {
-    padding: 10px 12px;
+    padding: 8px 10px;
 }
 
 .Speech-bubble {
@@ -70,11 +72,13 @@
     .top-p {
         padding-top: 12px;
         padding-left: 16px;
+        padding-right: 16px;
     }
 
     .buttom-p {
         padding-bottom: 12px;
         padding-left: 16px;
+        padding-right: 16px;
     }
 }
 
@@ -88,7 +92,7 @@
     }
     .accordion-button::after{
     background-size: 2.25rem  !important;
-    margin-top: -20px;
+    margin-top: -12px;
     background-image: url(/assets/images/index-img/Button.png) !important;
     width: 36px !important;
     height: 36px !important;
@@ -98,9 +102,7 @@
     }
 }
 
-.monthly-expenses{
-    padding-right: 39.5px;
-}
+
 .carousel-indicators [data-bs-target] {
     width: 8px;
     height: 8px;
@@ -136,14 +138,16 @@
     background-image: none;
 }
 
-// 右下左陰影
-.shadow-3sides {
-    box-shadow: 1px 5px 6px -1px rgba(0, 0, 0, 0.15);
-}
 
 //  今日任務
 .reward {
     padding-right: 1px;
 }
 
-
+.box-pay{
+  width: 147.5px;
+  flex-shrink:0;
+}
+.number{
+  width: 99.5px;
+}
