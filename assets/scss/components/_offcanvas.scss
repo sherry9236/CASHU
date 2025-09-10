@@ -1,26 +1,31 @@
-  @include media-breakpoint-up(md) {
-/* 初始狀態 */
 .side .offcanvas {
-  position: absolute;     /* 限制在 .mobile-frame 裡 */
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;           /* 確保佔滿 mobile-frame 高度 */
-  background: #fff;
-  box-shadow: -2px 0 6px rgba(0, 0, 0, 0.15);
-  transform: translateX(100%);
-  transition: transform 0.35s ease-in-out;
-  will-change: transform;
-  visibility: hidden;
-}
-.side .offcanvas.show {
-  transform: translateX(0);
-  visibility: visible;
+  z-index: 2500;
 }
 
-.side .offcanvas.hiding {
-  transform: translateX(100%);
-  visibility: visible;
-}
-
+@include media-breakpoint-up(md) {
+  /* 初始狀態 */
+  .side .offcanvas {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%; /* 撐滿 .mobile-frame */
+    background: #fff;
+    box-shadow: -2px 0 6px rgba(0, 0, 0, 0.15);
+    transform: translateX(100%); /* 初始藏起來 */
+    transition: transform 0.35s ease-in-out;
+    will-change: transform;
+    visibility: hidden;
+    z-index: 2500;
   }
+
+  .side .offcanvas.show {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  .side .offcanvas.hiding {
+    transform: translateX(100%);
+    visibility: visible;
+  }
+}

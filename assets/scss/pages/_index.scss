@@ -1,8 +1,30 @@
-.mobile-frame {
-  overflow-x: hidden;
-  position: relative;
+#preloader {
+  position: fixed;
+//   inset: 0; /* top, right, bottom, left = 0 */
+  top: 0;
+  bottom: 0;
+  width: 375px;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;      /* 背景白色 */
+  transition: opacity 2s ease, visibility 2s ease;
 }
 
+#preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+.scroll-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.user-nav{
+  margin-top: 50px;
+}
 
 .lodding{ 
    position: relative;
@@ -26,8 +48,8 @@
     height: 29px;
 }
 
-.fixed-height-308 {
-    height: 308px;
+.fixed-height {
+    height: 258px;
 }
 
 .user-img {
@@ -74,6 +96,7 @@
     .accordion-button:not(.collapsed) {
       --bs-accordion-active-color: none;
     }
+}
 
 .monthly-expenses{
     padding-right: 39.5px;
@@ -91,7 +114,19 @@
   margin-bottom: 0 !important;
   margin-left: 0 !important;
 }}
-}
+
+
+
+  // 移除點擊後（active）的背景色 
+  .accordion-button:not(.collapsed) {
+      background-color: transparent !important;
+        box-shadow: none !important;
+    }
+
+//  移除 focus 後的外框 
+    .accordion-button:focus {
+        box-shadow: none;
+    }   
 
 .carousel-control-next-icon {
     background-image: none;
@@ -110,76 +145,5 @@
 .reward {
     padding-right: 1px;
 }
-.nav-bottom{
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: 1001;
- // .nav-item{
-    //     width: 64px;
-    // }
-    // .item-home{
-    //     margin-right: 3.5px;
-    // }
-    // .home{
-    //     padding-left: 10px;
-    //     padding-right: 10px;
-    // }
-    // .item-plan{
-    //     margin-right: 8px;
-    // }
-    // .plan{
-    //     padding-left: 10px;
-    //     padding-right: 10px;
-    // }
-    // .item-State{
-    //     margin-right: 8px;
-        
-// }
-    // .ledger{
-    //     padding-left: 10px;
-    //     padding-right: 10px;
-    // }
-    // .item-ledger{
-    //     margin-right: 3.5px;
-    // }
-    // .assets{
-    //     padding-left: 10px;
-    //     padding-right: 10px;
-       
-    // }
-    }
-:root {
-  --neutral-200: #{$neutral-200};
-  --neutral-300: #{$neutral-300};
-}
-.nav-link .assets {
-  --icon-200: var(--neutral-200);
-  --icon-300: var(--neutral-300);
-}
-.nav-link.assets:hover {
-  --icon-200: var(--bs-primary) ; // primary 正常色
-  --icon-300: var(--bs-primary-300); 
-  // primary 的深一點顏色 (需現代瀏覽器)
-}
-.assets-icon {
-  display: inline-block;
-   width: 44px;
-  height: 43px;
-  background: url("/assets/images/index-img/Icon-assets.png") no-repeat center/contain;
-  transition: background 0.3s ease;
-}
-.nav-link .assets-icon:hover {
-  background: url("/assets/images/index-img/Icon-assets-active.png") no-repeat center/contain;
-}
-.nav-bottom{
-  position: fixed;
-  left: 50%; 
-  bottom: 0;
-  width: 376px;
-  background-color: #FFF8EC;
-  transform: translateX(-50%);
-  color: white;
-}
+
+

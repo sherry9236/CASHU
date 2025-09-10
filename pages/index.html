@@ -10,34 +10,39 @@
 </head>
 
 <body>
-  <div class="container-fluid px-0 mobile-frame bg-white vh-100 ">
-       
-    <div class="fixed-height-308 bg-gradient-vertical"> 
+  <div class="container-fluid px-0 mobile-frame position-relative overflow-y-auto bg-white vh-100 scroll-hidden">
+    <div class="fixed-height bg-gradient-vertical"> 
+     
       <!-- 載入畫面 -->
-     <!-- <section id="preloader" class="bg-white"> -->
-         <%- include('./layout/header'); -%>
-        <!-- <div class="lodding d-flex flex-column justify-content-center align-items-center  "> 
+     <section id="preloader" class="bg-white">
+        <div class="lodding d-flex flex-column justify-content-center align-items-center  "> 
           <img class="splash-screen " src="/assets/images/gif/splash-screen.gif" alt="">
           <img class="logo" src="/assets/images/Logo/CASHU.png" alt="">
         </div>
-      </section>--> 
+     </section> 
       <!-- 階段二 Lodding-->
-       <!-- 上方nav -->
+      <!-- 上方nav -->
 
       <!-- 階段三 進入首頁 -->
-
       <section>
-        <nav class="navbar py-0">
-        <div class="container ">
-        <span class="diamondcollect rounded-pill bg-white neutral-900 border subheader-3 ">
-        <img class="pe-2 " src="/assets/images/adorn/Reward.png" alt=""> 9999</span>
-        <a class="navbar-brand me-0 py-2" href="#">
-        <img class="user-img rounded-circle border" src="/assets/images/user/2a6563ff68ae9c4e0a318c9dd97fa59388893096.png" alt="user" width="44" height="44" >
-        </a>
-        </div>
-        </nav>
-        <!-- 主要區塊 -->
-        <main>
+        <img
+        src="/assets/images/mobile-frame/Status bar.svg"
+        alt="statusbar"
+        class="object-fit-cover fixed-top top-0 start-50 translate-middle-x"
+        style="background-color: #FFF3DE"/>
+      </section>
+      <section>
+      <nav class="navbar user-nav py-0">
+  <div class="container ">
+    <span class="diamondcollect rounded-pill bg-white neutral-900 border subheader-3 ">
+      <img class="pe-2 " src="/assets/images/adorn/Reward.png" alt=""> 9999</span>
+    <a class="navbar-brand me-0 py-2" href="#">
+      <img class="user-img rounded-circle border" src="/assets/images/user/2a6563ff68ae9c4e0a318c9dd97fa59388893096.png" alt="user" width="44" height="44" >
+    </a>
+  </div>
+      </nav>
+      <!-- 主要區塊 -->
+      <main>
         <!-- 提醒 -->
          <section>
           <div class="container d-flex align-items-center py-6">
@@ -52,13 +57,13 @@
          </section>
          <!-- 價格圓餅圖 -->
          <section>
-          <div class="container">
+          <div class="container ">
             <div class="price">
           <div class="accordion border-radius-xl" id="accordionExample">
             <!-- 頂 -->
             <div class="accordion-item shadow ">
             <h2 class="accordion-header p-5">
-              <button class="accordion-button border-0 py-0" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+              <button class="accordion-button border-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
                 <div>
                 <p class="subheader-4 text-neutral-400">本月結餘</p>
                 <h1 class="h1 text-eutral-950">$ 45,500</h1>
@@ -68,24 +73,24 @@
             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse  container">
               <div  class="accordion-body d-flex justify-content-center container flex-column">
               <div id="carouselExampleIndicators" class="carousel ">
-  <div class="carousel-inner ">
-    <div class="carousel-item active d-flex justify-content-center">
-      <img src="/assets/images/index-img/Pie-chart.png" class="d-block " alt="Pie-chart">
-    </div>
-    <div class="carousel-item d-flex justify-content-center">
-      <img src="/assets/images/index-img/Pie-chart.png" class="d-block" alt="Pie-chart">
-    </div>
-  </div>
-</div>
-  <div class="carousel-indicators">
-    <button type="button " data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button " data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-  </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active d-flex justify-content-center">
+                    <img src="/assets/images/index-img/Pie-chart.png" class="d-block " alt="Pie-chart">
+                  </div>
+                  <div class="carousel-item d-flex justify-content-center">
+                    <img src="/assets/images/index-img/Pie-chart.png" class="d-block" alt="Pie-chart">
+                  </div>
+                </div>
+              </div>
+                <div class="carousel-indicators">
+                  <button type="button " data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button " data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
     
+              </div>
             </div>
-          </div>
           <!--  -->
-          <div class="accordion-item shadow-3sides container">
+          <div class="accordion-item shadow-3sides container bg-white">
             <p class="accordion-header ">
               <div class=" d-flex  py-5 border-top">
                <div class="d-flex monthly-expenses border-end">
@@ -105,19 +110,19 @@
                 </div>
               </p>
             <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-              
+
             </div>
           </div>
         </div>
         </div>
         </div>
-        </section>
+         </section>
         <!-- 今日任務 -->
-        <section>
-          <div class="container py-6 ">
+         <section>
+          <div class="container py-6  ">
             <div class="d-flex justify-content-between mb-5 ">
             <h2 class="h4 mb-0">今日任務</h2>
-            <a class="body-2 d-flex align-items-center " href="#">查看更多 <img src="/assets/images/index-img/next-Icon.png" alt=""></a>
+            <a class="body-2 d-flex align-items-center text-neutral-500 " href="#">查看更多 <img src="/assets/images/index-img/next-Icon.png" alt=""></a>
             </div>
           <div class="card shadow border-0 mb-5">
   <div class="card-body  ">
@@ -147,7 +152,7 @@
   </div>  
 </div>
 
-<div class="card shadow border-0 ">
+<div class="card shadow border-0 mb-13">
   <div class="card-body  ">
     <h5 class="card-title h4">連續記帳挑戰第 365 天</h5>
     <p class="card-text body-2 mb-4 text-neutral-900">達成連續記帳挑戰第 365 天！再 15 天即可解鎖專屬勳章！🏅</p>
@@ -164,47 +169,59 @@
 
 
 </div>
-        </section>
-        </main>
-        <!-- nav -->
-         <nav>
-          <div class="nav-bottom ">
-            <ul class="nav justify-content-center  ">
-                <li class="nav-item item-home">
-                  <a class="nav-link active p-0 text-center"  href="#">
-                   <img class="home d-block" src="/assets/images/index-img/Icon-home.png" alt="home"> 首頁
-                  </a>
-                  <span class="ledger-icon">首頁</span></a>  
-                </li>
-                <li class="nav-item item-plan">
-                  <a class="nav-link p-0 text-center" href="#">
-                     <img class="plan d-block" src="/assets/images/index-img/Icon-plan.png" alt="plan">計畫</a>
-                     <span class="ledger-icon">計畫</span></a>  
-                </li>
-                <li class="nav-item item-State">
-                  <a class="nav-link p-0 " href="#">
-                     <img class="d-block" src="/assets/images/index-img/State-Default.png" alt="State-Default"></a>
-                </li>
-                <li class="nav-item item-ledger">
-                  <a class="nav-link p-0 text-center" href="#">
-                  <span class="ledger-icon">帳本</span></a>  
-                </li>
-                <li class="nav-item item-assets">
-                  <a class="nav-link p-0 text-center" href="#">
-                  <span class="assets-icon"></span><span class="d-block">資產</span></a>
-                </li>
-              </ul>
-          </div>
-         </nav>
-
-         </div>
-
+         </section>
+      </main>
+      <!-- nav -->
+        <nav>
+      <div class="nav-bottom pt-3 ">
+        <ul class="nav justify-content-center pb-4">
+          <li class="nav-item item-home">
+            <a class="nav-link p-0 text-center" href="index.html">
+              <span class="Icon-home"></span
+              ><span class="d-block body-2 home">首頁</span></a
+            >
+          </li>
+          <li class="nav-item item-plan">
+            <a
+              class="nav-link p-0 text-center"
+              href="plan-save-detail.html"
+            >
+              <span class="Icon-plan"></span
+              ><span class="d-block body-2 plan">計畫</span></a
+            >
+          </li>
+          <li class="nav-item item-State">
+            <a class="nav-link p-0" href="log-add.html">
+              <img
+                class="d-block"
+                src="/assets/images/index-img/State-Default.png"
+                alt="State-Default"
+            /></a>
+          </li>
+          <li class="nav-item item-ledger">
+            <a class="nav-link p-0 text-center" href="book.html">
+              <span class="ledger-icon"></span
+              ><span class="d-block body-2 ledger">帳本</span></a
+            >
+          </li>
+          <li class="nav-item item-assets">
+            <a class="nav-link p-0 text-center" href="#">
+              <span class="assets-icon"></span
+              ><span class="d-block body-2 assets">資產</span></a
+            >
+          </li>
+        </ul>
+      </div>
+        </nav>
        </section>
 
-      </div>
-      </div>
+    </div>
+  </div>
+       
       <%- include('./layout/footer'); -%>
-  </div>ˋ
+  </div>
+ 
+ 
 
 
   <script type="module" src="../main.js"></script>
@@ -212,6 +229,50 @@
   <script>
     lucide.createIcons();
   </script>
+  <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const currentPath = window.location.pathname; // 取得目前網址路徑
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        navLinks.forEach((link) => {
+          // 如果 a 的 href 包含目前的 path，就加 active
+          if (currentPath.includes(link.getAttribute("href"))) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
+
+     <script>
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+
+    // 先加淡出 class
+    preloader.classList.add("fade-out");
+
+    // 動畫結束後移除元素（避免佔 DOM）
+    preloader.addEventListener("transitionend", () => {
+      preloader.remove();
+    });
+  });
+</script> 
+<script>
+  window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+
+  // 延遲 3 秒後執行淡出
+  setTimeout(() => {
+    preloader.classList.add("fade-out");
+
+    // 等淡出動畫結束再移除
+    preloader.addEventListener("transitionend", () => {
+      preloader.remove();
+    });
+  }, 2000); // 2000 毫秒 = 2 秒
+});
+</script>
+
+
 </body>
 
 </html>
