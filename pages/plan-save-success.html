@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>成功存入一筆！</title>
+  </head>
+  <body>
+    <div
+      class="container-fluid px-0 mobile-frame position-relative overflow-y-auto bg-white vh-100 scroll-hidden"
+    >
+      <%- include('./layout/header'); -%>
+      <section
+        class="d-flex flex-column justify-content-center bg-Deco-confetti -13"
+      >
+        <div
+          class="d-flex flex-column justify-content-center align-items-center px-6"
+        >
+          <img
+            class="splash-screen"
+            src="/assets/images/gif/splash-screen.gif"
+            alt=""
+          />
+          <h2 class="text-center mb-3 text-neutral-950">🎉 成功存入一筆！</h2>
+          <p class="text-center body-2 text-neutral-500">
+            Cashu 恭喜你離目標又更進一步了～
+            <br />
+            別小瞧日積月累的力量，<br />
+            每天小額存、一樣輕鬆達標！
+          </p>
+        </div>
+      </section>
+
+      <div
+        class="container fixed-bottom pt-6 bg-white"
+        style="padding-bottom: 34px; width: 375px"
+      >
+        <%- include('./layout/footer'); -%>
+        <div class="row">
+          <div class="col-6">
+            <button
+              type="button"
+              class="btn btn-outline-primary rounded-pill fw-bold w-100 h-44 d-flex align-items-center justify-content-center"
+            >
+              <a href="plan-save-detail.html">回計畫</a>
+            </button>
+          </div>
+          <div class="col-6">
+            <button
+              type="button"
+              class="col-6 btn btn-primary rounded-pill fw-bold w-100 h-44 d-flex align-items-center justify-content-center"
+            >
+              <a href="plan-save-detail.html">再存一筆</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
