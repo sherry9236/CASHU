@@ -9,10 +9,10 @@
 }
 
 /* 滑鼠移入就變橘色 */
-.nav-link:hover {
-    color: $primary-600;
-    font-weight: 700;
-}
+// .nav-link:hover {
+//     color: $primary-600;
+//     font-weight: 700;
+// }
 
 /* 當前 active 狀態 */
 .nav-underline .nav-link.active {
@@ -36,11 +36,11 @@
     /* 滑鼠移入有點動畫感 */
 }
 
-/* 滑鼠移入就變橘色 */
-.nav-link:hover {
-    color: $primary-600;
-    font-weight: 700;
-}
+// /* 滑鼠移入就變橘色 */
+// .nav-link:hover {
+//     color: $primary-600;
+//     font-weight: 700;
+// }
 
 /* 當前 active 狀態 */
 .nav-underline .nav-link.active {
@@ -56,3 +56,6 @@
     outline: none !important;
     box-shadow: none !important;
 }}
+.nav-bottom .nav-link.active .d-block {
+  color: var(--bs-primary); /* Bootstrap $primary-600 對應的變數 */
+}

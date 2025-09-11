@@ -13,120 +13,162 @@
 
   <body>
     <div
-      class="mobile-frame bg-white position-relative"
-      style="min-height: 100vh"
+      class="mobile-frame bg-white position-relative" style="min-height: 100vh;"
     >
       <%- include('./layout/header'); -%>
-      <div class="container-fluid" style="padding-bottom: 34px">
-        <main>
-          <div class="py-4 d-flex justify-content-between align-items-center">
-            <a href="plan-save-detail.html"
-              ><i
-                data-lucide="chevron-left"
-                class="icon-24 text-neutral-600"
-              ></i
-            ></a>
-            <span class="h2 fw-bold">選擇帳戶</span>
-            <i data-lucide="chevron-right" class="icon-24 icon-transparent"></i>
-          </div>
-          <div class="mb-4">
-            <p
-              class="text-neutral-500 body-2 border-solid-neutral-100 mb-3"
-              style="padding: 5.5px 0"
+      <div class="container-fluid" style="padding-bottom: 34px; padding-top: 50px">
+       <main>
+              <div
+                class="py-4 d-flex justify-content-between align-items-center"
+              >
+              <!--  <button
+                  type="button"
+                  class="btn p-0"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>-->
+                <a href="plan-save-detail.html">
+                  <i
+                    data-lucide="chevron-left"
+                    class="icon-24 text-neutral-600"
+                  ></i>
+                </a>
+
+                <span class="h2 fw-bold">選擇帳戶</span>
+                <i
+                  data-lucide="chevron-right"
+                  class="icon-24 icon-transparent"
+                ></i>
+              </div>
+              <div class="mb-4">
+                <p
+                  class="text-neutral-500 body-2 border-solid-neutral-100 mb-3"
+                  style="padding: 5.5px 0"
+                >
+                  現金
+                </p>
+                <ul class="m-0">
+                  <li class="add-item">
+                    <a href="#" class="d-block py-3 px-5 active">
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                        >
+                          <img
+                            src="/assets/images/Category/icon-payment-cash-24.svg"
+                            alt="現金icon"
+                            class="text-neutral-950"
+                          />
+                        </span>
+                        <p class="mb-3">現金</p>
+                        <p class="ms-auto line-height-sm fw-medium">$ 20,000</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="mb-4">
+                <p
+                  class="text-neutral-500 body-2 border-solid-neutral-100 mb-3"
+                  style="padding: 5.5px 0"
+                >
+                  銀行
+                </p>
+                <ul class="m-0">
+                  <li class="add-item mb-2">
+                    <a href="#" class="d-block py-3 px-5">
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                        >
+                          <img
+                            src="/assets/images/Category/icon-payment-bank-24.svg"
+                            alt="銀行icon"
+                            class="text-neutral-950"
+                          />
+                        </span>
+                        <p class="mb-3">台新銀行</p>
+                        <p class="ms-auto line-height-sm fw-medium">
+                          $ 100,000
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="add-item mb-2">
+                    <a href="#" class="d-block py-3 px-5">
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                        >
+                          <img
+                            src="/assets/images/Category/icon-payment-bank-24.svg"
+                            alt="銀行icon"
+                            class="text-neutral-950"
+                          />
+                        </span>
+                        <p class="mb-3">富邦銀行</p>
+                        <p class="ms-auto line-height-sm fw-medium">
+                          $ 100,000
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="add-item">
+                    <a href="#" class="d-block py-3 px-5">
+                      <div class="d-flex align-items-center">
+                        <span
+                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
+                        >
+                          <img
+                            src="/assets/images/Category/icon-payment-bank-24.svg"
+                            alt="銀行icon"
+                            class="text-neutral-950"
+                          />
+                        </span>
+                        <p class="mb-3">玉山銀行</p>
+                        <p class="ms-auto line-height-sm fw-medium">
+                          $ 100,000
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+             <a href="#" class="d-flex align-items-center py-3">
+            <svg
+              width="44"
+              height="44"
+              viewBox="0 0 44 44"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="me-4"
             >
-              現金
-            </p>
-            <ul class="m-0">
-              <li class="add-item">
-                <a href="#" class="d-block py-3 px-5 active">
-                  <div class="d-flex align-items-center">
-                    <sapn
-                      class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
-                    >
-                      <img
-                        src="/assets/images/Category/icon-payment-cash-24.svg"
-                        alt="現金icon"
-                        class="text-neutral-950"
-                      />
-                    </sapn>
-                    <p class="mb-3">現金</p>
-                    <p class="ms-auto line-height-sm fw-medium">$ 20,000</p>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="mb-4">
-            <p
-              class="text-neutral-500 body-2 border-solid-neutral-100 mb-3"
-              style="padding: 5.5px 0"
-            >
-              銀行
-            </p>
-            <ul class="m-0">
-              <li class="add-item mb-2">
-                <a href="#" class="d-block py-3 px-5">
-                  <div class="d-flex align-items-center">
-                    <sapn
-                      class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
-                    >
-                      <img
-                        src="/assets/images/Category/icon-payment-bank-24.svg"
-                        alt="銀行icon"
-                        class="text-neutral-950"
-                      />
-                    </sapn>
-                    <p class="mb-3">台新銀行</p>
-                    <p class="ms-auto line-height-sm fw-medium">$ 100,000</p>
-                  </div>
-                </a>
-              </li>
-              <li class="add-item mb-2">
-                <a href="#" class="d-block py-3 px-5">
-                  <div class="d-flex align-items-center">
-                    <sapn
-                      class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
-                    >
-                      <img
-                        src="/assets/images/Category/icon-payment-bank-24.svg"
-                        alt="銀行icon"
-                        class="text-neutral-950"
-                      />
-                    </sapn>
-                    <p class="mb-3">富邦銀行</p>
-                    <p class="ms-auto line-height-sm fw-medium">$ 100,000</p>
-                  </div>
-                </a>
-              </li>
-              <li class="add-item">
-                <a href="#" class="d-block py-3 px-5">
-                  <div class="d-flex align-items-center">
-                    <sapn
-                      class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
-                    >
-                      <img
-                        src="/assets/images/Category/icon-payment-bank-24.svg"
-                        alt="銀行icon"
-                        class="text-neutral-950"
-                      />
-                    </sapn>
-                    <p class="mb-3">玉山銀行</p>
-                    <p class="ms-auto line-height-sm fw-medium">$ 100,000</p>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <a href="#" class="d-flex align-items-center py-3">
-            <span
-              class="border-dashed-neutral rounded-circle d-inline-flex justify-content-center align-items-center me-4"
-              style="width: 44px; height: 44px"
-            >
-              <i data-lucide="plus" class="icon-16"></i> </span
-            >新增類別
+              <circle
+                cx="22"
+                cy="22"
+                r="21"
+                stroke="#B0B0B0"
+                stroke-width="1"
+                stroke-dasharray="4 4"
+              />
+              <foreignObject x="0" y="0" width="44" height="44">
+                <div
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                >
+                  <i data-lucide="plus" class="icon-16 text-neutral-600"></i>
+                </div>
+              </foreignObject>
+            </svg>
+            新增帳戶
           </a>
-        </main>
-      </div>
+            </div>
+      </main>
       <%- include('./layout/footer'); -%>
     </div>
     <script type="module" src="../main.js"></script>
