@@ -1,29 +1,10 @@
-#preloader {
-  position: fixed;
-//   inset: 0; /* top, right, bottom, left = 0 */
-  top: 0;
-  bottom: 0;
-  width: 375px;
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #fff;      /* 背景白色 */
-  transition: opacity 2s ease, visibility 2s ease;
-}
-
-#preloader.fade-out {
-  opacity: 0;
-  visibility: hidden;
-}
-
-
-.scroll-hidden::-webkit-scrollbar {
-  display: none;
+.mobile-frame {
+  overflow-y: auto;
+  position: relative;
 }
 
 .user-nav{
-  padding-top: 100px;
+  margin-top: 50px;
 }
 
 .lodding{ 
@@ -43,15 +24,13 @@
 }
 
 // 提醒
-
 .logo {
     width: 113px;
     height: 29px;
 }
 
 .fixed-height {
-    margin-top:-50px;
-    height: 358px;
+    height: 258px;
 }
 
 .user-img {
@@ -59,7 +38,7 @@
 }
 
 .diamondcollect {
-    padding: 8px 10px;
+    padding: 10px 12px;
 }
 
 .Speech-bubble {
@@ -72,13 +51,11 @@
     .top-p {
         padding-top: 12px;
         padding-left: 16px;
-        padding-right: 16px;
     }
 
     .buttom-p {
         padding-bottom: 12px;
         padding-left: 16px;
-        padding-right: 16px;
     }
 }
 
@@ -92,7 +69,7 @@
     }
     .accordion-button::after{
     background-size: 2.25rem  !important;
-    margin-top: -12px;
+    margin-top: -20px;
     background-image: url(/assets/images/index-img/Button.png) !important;
     width: 36px !important;
     height: 36px !important;
@@ -102,7 +79,9 @@
     }
 }
 
-
+.monthly-expenses{
+    padding-right: 39.5px;
+}
 .carousel-indicators [data-bs-target] {
     width: 8px;
     height: 8px;
@@ -138,16 +117,132 @@
     background-image: none;
 }
 
+// 右下左陰影
+.shadow-3sides {
+    box-shadow: 1px 5px 6px -1px rgba(0, 0, 0, 0.15);
+}
 
 //  今日任務
 .reward {
     padding-right: 1px;
 }
+.nav-bottom{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1001;
+  .nav-link {
+    color: $neutral-500;   // 預設文字顏色
+    transition: color 0.3s ease;
 
-.box-pay{
-  width: 147.5px;
-  flex-shrink:0;
+    &:hover {
+      color: $primary-600; // hover 文字顏色
+    }
+  }
+ .nav-item{
+        width: 64px;
+    }
+    .item-home{
+        margin-right: 3.5px;
+    }
+    .Icon-home{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .item-plan{
+        margin-right: 8px;
+    }
+    .Icon-plan{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .item-State{
+        margin-right: 8px;
+        
 }
-.number{
-  width: 99.5px;
+    .ledger-icon{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .item-ledger{
+        margin-right: 3.5px;
+    }
+    .assets-icon{
+        padding-left: 10px;
+        padding-right: 10px;
+       
+    }
+    }
+:root {
+  --neutral-200: #{$neutral-200};
+  --neutral-300: #{$neutral-300};
 }
+.nav-link .assets {
+  --icon-200: var(--neutral-200);
+  --icon-300: var(--neutral-300);
+}
+.nav-link.assets:hover {
+  --icon-200: var(--bs-primary) ; // primary 正常色
+  --icon-300: var(--bs-primary-300); 
+  // primary 的深一點顏色 (需現代瀏覽器)
+}
+.Icon-home {
+  display: inline-block;
+   width: 44px;
+  height: 43px;
+  background: url("/assets/images/index-img/Icon-home.png") no-repeat center/contain;
+  transition: background 0.3s ease;
+}
+.nav-link .Icon-home:hover {
+  background: url("/assets/images/index-img/Icon-home-active.png") no-repeat center/contain;
+}
+.Icon-plan {
+  display: inline-block;
+   width: 44px;
+  height: 43px;
+  background: url("/assets/images/index-img/Icon-plan.png") no-repeat center/contain;
+  transition: background 0.3s ease;
+}
+.nav-link .Icon-plan:hover {
+  background: url("/assets/images/index-img/Icon-plan-active.png") no-repeat center/contain;
+}
+.ledger-icon {
+  display: inline-block;
+   width: 44px;
+  height: 43px;
+  background: url("/assets/images/index-img/Icon-ledger.png") no-repeat center/contain;
+  transition: background 0.3s ease;
+}
+.nav-link .ledger-icon:hover {
+  background: url("/assets/images/index-img/Icon-ledger-active.png") no-repeat center/contain;
+}
+.assets-icon {
+  display: inline-block;
+   width: 44px;
+  height: 43px;
+  background: url("/assets/images/index-img/Icon-assets.png") no-repeat center/contain;
+  transition: background 0.3s ease;
+}
+.nav-link .assets-icon:hover {
+  background: url("/assets/images/index-img/Icon-assets-active.png") no-repeat center/contain;
+}
+.nav-bottom{
+  position: fixed;
+  left: 50%; 
+  bottom: 0;
+  width: 375px;
+  background-color: #FFF8EC;
+  transform: translateX(-50%);
+  color: white;
+  padding-bottom: 21px;
+  .home,
+  .plan,
+  .ledger,
+  .assets {
+    margin-top: -7px;
+  }
+}
+
+
