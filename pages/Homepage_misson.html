@@ -7,14 +7,14 @@
     <title>任務牆</title>
   </head>
   <body>
-    <div class="container-fluid px-0 mobile-frame  position-relative overflow-y-auto bg-white vh-100 scroll-hidden"> 
+    <div class="container-fluid px-0 mobile-frame  position-relative overflow-y-auto bg-white vh-100 scroll-hidden custom-backdrop " id="customBackdrop"> 
       <%- include('./layout/header'); -%>
     <div class="fixed mt-9"> 
     <nav class="navbar sticky-top ">
       <div class="container-fluid">
-        
+        <a href="mission-complete.html"><img src="/assets/images/adorn/Button-area4.png" alt="Previous-page"></a>
         <a class="navbar-brand m-0 h2 " href="#">任務牆</a>
-       
+        <a href=""><img src="/assets/images/adorn/Button-area5.png" alt="task"></a>
       </div>
     </nav>
     </div>
@@ -37,7 +37,7 @@
                      <div class="container  bg-primary-50 ">
                       <div class="container d-flex h-38 align-items-center justify-content-between">
                         <h4 class="subheader-4">挑戰時間</h4>
-                        <a href=""><p class="body-2 text-neutral-500">全部</p></a>
+                        <a class="d-flex align-items-center" href=""><p class="body-2 text-neutral-500 me-2">全部</p><img src="/assets/images/adorn/Icon-down.png" alt=""></a>
                       </div>
                       </div>
                       <div class="container my-5">
@@ -52,7 +52,7 @@
                                 <img  class="reward" src="/assets/images/adorn/Reward.png" alt="Reward">
                                 <p class="h4 mb-0 text-secondary"><span class="p-1">+</span><span>100</span></p>
                               </div>
-                            <button class="btn btn-outline-primary rounded-pill btn-sm-padding subheader-4">參加挑戰</button>
+                              <button class="btn btn-outline-primary rounded-pill btn-sm-padding subheader-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasTop">參加挑戰</button>
                           </div>
                           </div>  
                         </div>
@@ -134,16 +134,31 @@
                 </div>
               </div>
             </div>
- 
-    
+        
 
+        <div class="offcanvas offcanvasBottom rounded-top" style="width: 375px;" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+          <div class="offcanvas-header pt-4 pb-0" >
+            <h5 class="offcanvas-title h2" style="padding: 12.5px 0px 12.5px 0px;" id="offcanvasTopLabel">手搖飲戒斷</h5>
+            <button type="button" class="btn-close p-12 " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body task pt-0">
+            <p class=" body-2 pt-1 text-neutral-400">2025/07/07 - 2026/07/08 23:59</p>
+            <p class="body-2 pt-3 text-neutral-900">放下身為台灣人的驕傲，每日拒絕手搖飲，改喝白開水或自帶飲品，不僅為身體減糖、減熱量，更為荷包省下銅板。透過這個任務，養成節制消費與健康飲食的雙重習慣，讓你在不知不覺中存到錢，也存回健康。完成任務還可拿到鑽石作為獎勵！</p>
+            <div class="py-4 px-5 my-6 bg-secondary-50 rounded-4">
+              <p class="body-3 text-center text-neutral-900 mb-3">任務達成獎勵</p>
+              <div class="  d-flex align-items-center justify-content-center "><img class="pe-2" src="/assets/images/adorn/Reward.png" alt=""><span class="h4 text-secondary-600 pe-2">+</span><span class="h4 text-secondary-600">200</span></div>
+            </div>
+            <div class="btn btn-primary rounded-pill" style="width: 100%; margin-bottom:36px;">參加挑戰</div>
+          </div>
+        </div>    
 
-
-    <%- include('./layout/footer'); -%>
+<%- include('./layout/footer'); -%>
     
     </div>
+    
   
 
     <script type="module" src="../main.js"></script>
+   
   </body>
 </html>

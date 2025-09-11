@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>完成任務</title>
+  </head>
+  <body>
+    <div class="container-fluid px-0 mobile-frame position-relative overflow-y-auto bg-white vh-100 scroll-hidden">
+    <%- include('./layout/header'); -%>
+    <section class="  d-flex flex-column justify-content-center  bg-Deco-confetti -13 " >
+        <div class="d-flex flex-column justify-content-center align-items-center px-6 "> 
+          <img class="splash-screen " src="/assets/images/gif/splash-screen.gif" alt="" >
+          <h2 class="text-center mb-3 text-neutral-950">🎉 嘟—任務完成！</h2>
+          <p class="text-center body-2 text-neutral-500">恭喜你完成今天的記帳任務！<br>
+              Cashu 表示欣慰，持之以恆，財務自由不是夢～<br>
+              記得明天也要回來喔～</p>
+        </div>
+        
+     </section> 
+    
+    <div
+        class="container fixed-bottom  pt-6 bg-white"
+        style="padding-bottom: 34px; width: 375px;"
+      >
+      <%- include('./layout/footer'); -%>
+        <div class="row">
+          <div class="col-6">
+            <button
+              type="button"
+              class="btn btn-outline-primary rounded-pill fw-bold w-100 h-44 d-flex align-items-center justify-content-center"
+            >
+              <a href="mission-complete.html">回首頁</a>
+            </button>
+          </div>
+          <div class="col-6">
+            <button
+              type="button"
+              class="col-6 btn btn-primary rounded-pill fw-bold w-100 h-44 d-flex align-items-center justify-content-center"
+            >
+              <a href="Homepage_misson.html">前往更多挑戰</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
