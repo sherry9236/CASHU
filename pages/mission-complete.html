@@ -11,28 +11,31 @@
 
 <body>
   <div class="container-fluid px-0 mobile-frame position-relative overflow-y-auto bg-white vh-100 scroll-hidden">
-       
     <div class="fixed-height bg-gradient-vertical"> 
-        <section>
-        <img
-        src="/assets/images/mobile-frame/Status bar.svg"
-        alt="statusbar"
-        class="object-fit-cover fixed-top top-0 start-50 translate-middle-x"
-        style="background-color: #FFF3DE"
-         /></section>
-      <section >
-        
-        <nav class="navbar user-nav py-0">
-  <div class="container ">
-    <span class="diamondcollect rounded-pill bg-white neutral-900 border subheader-3 ">
+     
+      <!-- 載入畫面 -->
+      <!-- 階段二 Lodding-->
+      <!-- 上方nav -->
+
+      <!-- 階段三 進入首頁 -->
+       <img
+  src="/assets/images/mobile-frame/Status bar.svg"
+  alt="statusbar"
+  class="object-fit-cover fixed-top top-0 start-50 translate-middle-x"
+  style="background-color: rgba(255, 255, 255, 0)"
+/>
+      <section>
+      <nav class="navbar user-nav pb-0">
+  <div class="container">
+    <span class="diamondcollect rounded-pill bg-white neutral-900 border subheader-3 d-flex align-items-center">
       <img class="pe-2 " src="/assets/images/adorn/Reward.png" alt=""> 9999</span>
     <a class="navbar-brand me-0 py-2" href="#">
       <img class="user-img rounded-circle border" src="/assets/images/user/2a6563ff68ae9c4e0a318c9dd97fa59388893096.png" alt="user" width="44" height="44" >
     </a>
   </div>
-        </nav>
-        <!-- 主要區塊 -->
-        <main>
+      </nav>
+      <!-- 主要區塊 -->
+      <main>
         <!-- 提醒 -->
          <section>
           <div class="container d-flex align-items-center py-6">
@@ -55,66 +58,75 @@
             <h2 class="accordion-header p-5">
               <button class="accordion-button border-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
                 <div>
-                <p class="subheader-4 text-neutral-400">本月結餘</p>
+                <p class="subheader-4 text-neutral-400 mb-2">本月結餘</p>
                 <h1 class="h1 text-eutral-950">$ 45,500</h1>
                 </div>
               </button>
             </h2>
             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse  container">
               <div  class="accordion-body d-flex justify-content-center container flex-column">
-              <div id="carouselExampleIndicators" class="carousel ">
-  <div class="carousel-inner  ">
-    <div class="carousel-item active d-flex justify-content-center">
-      <img src="/assets/images/index-img/Pie-chart.png" class="d-block " alt="Pie-chart">
-    </div>
-    <div class="carousel-item d-flex justify-content-center">
-      <img src="/assets/images/index-img/Pie-chart.png" class="d-block" alt="Pie-chart">
-    </div>
-  </div>
-</div>
-  <div class="carousel-indicators">
-    <button type="button " data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button " data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-  </div>
+              <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block" src="/assets/images/index-img/Pie-chart.png" class="d-block " alt="Pie-chart">
+                  </div>
+                  <div class="carousel-item ">
+                    <img class="d-block" src="/assets/images/index-img/Pie-chart-2.png" class="d-block" alt="Pie-chart">
+                  </div>
+                </div>
+              
+                <div class="carousel-indicators">
+                  <button type="button " data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button " data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                      </button>
+                </div>
     
+              </div>
             </div>
-          </div>
           <!--  -->
           <div class="accordion-item shadow-3sides container bg-white">
             <p class="accordion-header ">
               <div class=" d-flex  py-5 border-top">
-               <div class="d-flex monthly-expenses border-end">
+               <div class="d-flex  border-end box-pay">
               <img class="me-3" src="/assets/images/index-img/moneyout-Icon.png" alt="本月總支出">
                  <div >
-                <p class="body-3 text-neutral-400">本月總支出</p>
-                <p class="h4 text-eutral-950">$ 7,500</p>
+                <p class="body-3 text-neutral-400 ">本月總支出</p>
+                <p class="h4 text-eutral-950 number text-truncate">$ 7,500</p>
                 </div>
                 </div>
-                 <div class="d-flex ps-5">
+                 <div class="d-flex ps-5 box-pay">
               <img class="me-3" src="/assets/images/index-img/money-in-Icon.png" alt="本月總收入">
                  <div>
                 <p class="body-3 text-neutral-400">本月總收入</p>
-                <p class="h4 text-eutral-950">$ 54,000</p>
+                <p class="h4 text-eutral-950 text-truncate number">$ 54,000</p>
                 </div>
                 </div>
                 </div>
               </p>
             <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-              
+
             </div>
           </div>
         </div>
         </div>
         </div>
-        </section>
+         </section>
         <!-- 今日任務 -->
-        <section>
-          <div class="container py-6  mb-11">
+         <section>
+          <div class="container py-6  ">
             <div class="d-flex justify-content-between mb-5 ">
-              <h2 class="h4 mb-0">今日任務</h2>
-              <a class="body-2 d-flex align-items-center text-neutral-500" href="#">查看更多 <img src="/assets/images/index-img/next-Icon.png" alt=""></a>
+            <h2 class="h4 mb-0">今日任務</h2>
+            <a class="body-2 d-flex align-items-center text-neutral-500 gap-2 " href="Homepage_misson.html">查看更多 <img src="/assets/images/index-img/next-Icon.png" alt=""></a>
             </div>
-            <div class="card shadow border-0 mb-11">
+              <div class="card shadow border-0 mb-13">
                 <div class="card-body row my-6 py-0">
                   <div class="card-finish py-12 m-0">
                     <h5 class="card-title h2 text-center mb-3 text-neutral-950">今日任務全數完成 <img src="/assets/images/adorn/Vector.png" alt=""></h5>
@@ -123,56 +135,101 @@
                     <span>別忘了明天繼續打卡任務！</span></p>
                   </div>
                   <div class="d-flex justify-content-between p-0">
-                    <button class="btn col-12 btn-outline-primary rounded-pill btn-sm-padding h4 px-0 pt-4 ">前往更多挑戰</button>
+                    <a class="btn col-12 btn-outline-primary rounded-pill btn-sm-padding h4 px-0 pt-4 " href="Homepage_misson.html">前往更多挑戰</a>
                   </div>
                 </div>  
             </div>
-          </div>
-        </section>
-        </main>
-        <!-- nav -->
-         <nav>
-          <div class="nav-bottom pt-3">
-            <ul class="nav justify-content-center pb-4">
-                <li class="nav-item item-home">
-                  <a class="nav-link active p-0 text-center "  href="#">
-                  <span class="Icon-home"></span><span class="d-block body-2 home ">首頁</span></a>  
-                </li>
-                <li class="nav-item item-plan">
-                  <a class="nav-link p-0 text-center" href="#">
-                  <span class="Icon-plan"></span><span class="d-block body-2 plan ">計畫</span></a>  
-                </li>
-                <li class="nav-item item-State">
-                  <a class="nav-link p-0 " href="#">
-                     <img class="d-block" src="/assets/images/index-img/State-Default.png" alt="State-Default"></a>
-                </li>
-                <li class="nav-item item-ledger">
-                  <a class="nav-link p-0 text-center" href="#">
-                  <span class="ledger-icon"></span><span class="d-block body-2 ledger">帳本</span></a>  
-                </li>
-                <li class="nav-item item-assets">
-                  <a class="nav-link p-0 text-center" href="#">
-                  <span class="assets-icon"></span><span class="d-block body-2 assets">資產</span></a>
-                </li>
-              </ul>
-          </div>
-         </nav>
 
-         </div>
 
+
+          </div>
+         </section>
+      </main>
+      <!-- nav -->
+        <nav>
+      <div class="nav-bottom pt-3 ">
+        <ul class="nav justify-content-center pb-4">
+          <li class="nav-item item-home">
+            <a class="nav-link p-0 text-center" href="index.html">
+              <span class="Icon-home"></span
+              ><span class="d-block body-2 home">首頁</span></a
+            >
+          </li>
+          <li class="nav-item item-plan">
+            <a
+              class="nav-link p-0 text-center"
+              href="plan-save-detail.html"
+            >
+              <span class="Icon-plan"></span
+              ><span class="d-block body-2 plan">計畫</span></a
+            >
+          </li>
+          <li class="nav-item item-State">
+            <a class="nav-link p-0" href="log-add.html">
+              <img
+                class="d-block"
+                src="/assets/images/index-img/State-Default.png"
+                alt="State-Default"
+            /></a>
+          </li>
+          <li class="nav-item item-ledger">
+            <a class="nav-link p-0 text-center" href="book.html">
+              <span class="ledger-icon"></span
+              ><span class="d-block body-2 ledger">帳本</span></a
+            >
+          </li>
+          <li class="nav-item item-assets">
+            <a class="nav-link p-0 text-center" href="#">
+              <span class="assets-icon"></span
+              ><span class="d-block body-2 assets">資產</span></a
+            >
+          </li>
+        </ul>
+      </div>
+        </nav>
        </section>
 
-      </div>
-      </div>
+    </div>
+  </div>
+       
       <%- include('./layout/footer'); -%>
   </div>
-
-
   <script type="module" src="../main.js"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>
     lucide.createIcons();
   </script>
+  <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const currentPath = window.location.pathname; // 取得目前網址路徑
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        navLinks.forEach((link) => {
+          // 如果 a 的 href 包含目前的 path，就加 active
+          if (currentPath.includes(link.getAttribute("href"))) {
+            link.classList.add("active");
+          }
+        });
+      });
+      
+    </script>
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll(".nav-bottom .nav-link");
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", (e) => {
+        // 先清掉全部 active
+        navLinks.forEach(l => l.classList.remove("active"));
+        
+        // 再加到被點擊的 link
+        link.classList.add("active");
+      });
+    });
+  });
+</script>
+
+    
 </body>
 
 </html>
