@@ -284,7 +284,7 @@
   window.addEventListener("load", () => {
   const preloader = document.getElementById("preloader");
 
-  // 延遲 3 秒後執行淡出
+  // 延遲 7 秒後執行淡出
   setTimeout(() => {
     preloader.classList.add("fade-out");
 
@@ -292,7 +292,7 @@
     preloader.addEventListener("transitionend", () => {
       preloader.remove();
     });
-  }, 2000); // 2000 毫秒 = 2 秒
+  }, 7000); // 7000 毫秒 = 7 秒
 });
 </script>
 
