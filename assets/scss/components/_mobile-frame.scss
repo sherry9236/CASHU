@@ -1,5 +1,12 @@
 .mobile-frame {
   max-width: 375px;
   margin: 0 auto;
-  overflow: hidden;    
+  overflow: hidden; 
+ 
+}
+
+.fixed-btn {
+  position: fixed;
+  inset-inline-end: max(calc((100% - 375px) / 2 + 1rem), 1rem);
+  z-index: 1000;
 }
