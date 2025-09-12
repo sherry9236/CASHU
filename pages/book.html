@@ -16,7 +16,6 @@
                 <main class="book">
                     <div>
                         <div class="py-4 d-flex justify-content-center align-items-center">
-
                             <h2 class="header-2 fw-bold line-height-sm">帳本</h2>
                         </div>
                         <div class="d-flex justify-content-center align-items-center mt-5 mb-3">
@@ -41,8 +40,10 @@
                                     <p class="body-2 text-neutral-400 mb-3">本月結餘</p>
                                     <p class="subheader-1 text-neutral-950">$ 45,500</p>
                                 </div>
-                                <button
-                                    class="btn btn-lg-padding subheader-3 text-secondary-600 px-5 fw-bold">查看趨勢</button>
+                                <button class="btn btn-lg-padding subheader-3 text-secondary-600 px-5 fw-bold"
+                                    type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
+                                    aria-controls="offcanvasTop">查看趨勢</button>
+                                
                             </div>
                         </div>
                         <div class="mb-5 d-flex">
@@ -91,8 +92,10 @@
                                                         <p class="mb-3">麵包</p>
                                                         <span>
                                                             <span
-                                                                class="badge rounded-pill bg-primary-200 py-2 px-3 me-3 text-neutral-950 body-2 fw-normal">現金</span><span
-                                                                class="badge rounded-pill bg-primary-200 py-2 px-3 text-neutral-950 body-2 fw-normal">生活開銷</span></span>
+                                                                class="badge rounded-pill bg-primary-200 py-2 px-3 me-3 text-neutral-950 body-2 fw-normal">現金</span>
+                                                            <span
+                                                                class="badge rounded-pill bg-primary-200 py-2 px-3 text-neutral-950 body-2 fw-normal">生活開銷</span>
+                                                        </span>
                                                     </div>
                                                     <p class=" ms-auto line-height-sm fw-medium">$ 200</p>
                                                 </div>
@@ -110,8 +113,10 @@
                                                         <p class="mb-3">藏壽司</p>
                                                         <span>
                                                             <span
-                                                                class="badge rounded-pill bg-primary-200 py-2 px-3 me-3 text-neutral-950 body-2 fw-normal">現金</span><span
-                                                                class="badge rounded-pill bg-primary-200 py-2 px-3 text-neutral-950 body-2 fw-normal">生活開銷</span></span>
+                                                                class="badge rounded-pill bg-primary-200 py-2 px-3 me-3 text-neutral-950 body-2 fw-normal">現金</span>
+                                                            <span
+                                                                class="badge rounded-pill bg-primary-200 py-2 px-3 text-neutral-950 body-2 fw-normal">生活開銷</span>
+                                                        </span>
                                                     </div>
                                                     <p class=" ms-auto line-height-sm fw-medium">$ 800</p>
                                                 </div>
@@ -129,8 +134,10 @@
                                                         <p class="mb-3">麻古茶坊</p>
                                                         <span>
                                                             <span
-                                                                class="badge rounded-pill bg-primary-200 py-2 px-3 me-3 text-neutral-950 body-2 fw-normal">FlyGo</span><span
-                                                                class="badge rounded-pill bg-primary-200 py-2 px-3 text-neutral-950 body-2 fw-normal">生活開銷</span></span>
+                                                                class="badge rounded-pill bg-primary-200 py-2 px-3 me-3 text-neutral-950 body-2 fw-normal">FlyGo</span>
+                                                            <span
+                                                                class="badge rounded-pill bg-primary-200 py-2 px-3 text-neutral-950 body-2 fw-normal">生活開銷</span>
+                                                        </span>
                                                     </div>
                                                     <p class=" ms-auto line-height-sm fw-medium">$ 200</p>
                                                 </div>
@@ -152,8 +159,10 @@
                                                         <span>
                                                             <span
                                                                 class="badge rounded-pill bg-primary-200 py-2 px-3 me-3 text-neutral-950 body-2 fw-normal">富邦
-                                                                J 卡</span><span
-                                                                class="badge rounded-pill bg-primary-200 py-2 px-3 text-neutral-950 body-2 fw-normal">生活開銷</span></span>
+                                                                J 卡</span>
+                                                            <span
+                                                                class="badge rounded-pill bg-primary-200 py-2 px-3 text-neutral-950 body-2 fw-normal">生活開銷</span>
+                                                        </span>
                                                     </div>
                                                     <p class=" ms-auto line-height-sm fw-medium">$ 3,000</p>
                                                 </div>
@@ -161,48 +170,146 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="tab-pane fade" id="income" role="tabpanel" aria-labelledby="income-tab"
-                                    tabindex="0">
+                                <div class="tab-pane fade" id="income" role="tabpanel" aria-labelledby="income-tab" tabindex="0">
+                                    <ul class=" mt-2 ">
+                                        <li class=" mb-3 shadow book-cote-item">
+                                            <a href="#" class="d-block active">
+                                                <div class="d-flex align-items-center">
+                                                    <sapn
+                                                        class="categoy-icon categoy-icon-m me-4 d-flex align-items-center justify-content-center">
+                                                        <img src="/assets/images/Category/icon-category-learning-32.svg"
+                                                            alt="早餐icon" class="text-neutral-950" />
+                                                    </sapn>
+                                                    <div>
+                                                        <p class="mb-3 body-1 text-neutral-950">學習</p>
+                                                        <span>
+                                                            <span
+                                                                class="text-neutral-600 body-2 fw-normal">1 筆</span>
+                                                        </span>
+                                                    </div>
+                                                    <p class=" ms-auto line-height-sm fw-medium">$ 4,000</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class=" mb-3 shadow book-cote-item">
+                                            <a href="#" class="d-block">
+                                                <div class="d-flex align-items-center">
+                                                    <sapn
+                                                        class="categoy-icon categoy-icon-m me-4 d-flex align-items-center justify-content-center">
+                                                        <img src="/assets/images/book/icon-shopping-32.svg"
+                                                            alt="早餐icon" class="text-neutral-950" />
+                                                    </sapn>
+                                                    <div>
+                                                        <p class="mb-3 body-1 text-neutral-950">購物</p>
+                                                        <span>
+                                                            <span
+                                                                class="text-neutral-600 body-2 fw-normal">1 筆</span>
+                                                        </span>
+                                                    </div>
+                                                    <p class=" ms-auto line-height-sm fw-medium">$ 2,000</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class=" mb-3 shadow book-cote-item">
+                                            <a href="#" class="d-block">
+                                                <div class="d-flex align-items-center">
+                                                    <sapn
+                                                        class="categoy-icon categoy-icon-m me-4 d-flex align-items-center justify-content-center">
+                                                        <img src="/assets/images/book/icon-category-food-32.svg"
+                                                            alt="麻古茶坊icon" class="text-neutral-950" />
+                                                    </sapn>
+                                                    <div>
+                                                        <p class="mb-3 body-1 text-neutral-950">購物</p>
+                                                        <span>
+                                                            <span
+                                                                class="text-neutral-600 body-2 fw-normal">1 筆</span>
+                                                        </span>
+                                                    </div>
+                                                    <p class=" ms-auto line-height-sm fw-medium">$ 1,500</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
                                 <div class="tab-pane fade" id="transfer-money" role="tabpanel"
-                                    aria-labelledby="income-tab" tabindex="0">
-                                </div>
+                                    aria-labelledby="income-tab" tabindex="0"></div>
                             </div>
                         </div>
                 </main>
                 <nav>
                     <div class="nav-bottom pt-3">
-                        <ul class="nav justify-content-center">
+                        <ul class="nav justify-content-center pb-4">
                             <li class="nav-item item-home">
-                                <a class="nav-link active p-0 text-center " href="index.html">
-                                    <span class="Icon-home"></span><span class="d-block body-2 home ">首頁</span></a>
+                                <a class="nav-link p-0 text-center" href="index.html">
+                                    <span class="Icon-home"></span><span class="d-block body-2 home">首頁</span>
+                                </a>
                             </li>
                             <li class="nav-item item-plan">
-                                <a class="nav-link p-0 text-center" href="#">
-                                    <span class="Icon-plan"></span><span class="d-block body-2 plan ">計畫</span></a>
+                                <a class="nav-link p-0 text-center" href="plan-save-detail.html">
+                                    <span class="Icon-plan"></span><span class="d-block body-2 plan">計畫</span>
+                                </a>
                             </li>
                             <li class="nav-item item-State">
-                                <a class="nav-link p-0 " href="log-add.html">
+                                <a class="nav-link p-0" href="log-add.html">
                                     <img class="d-block" src="/assets/images/index-img/State-Default.png"
-                                        alt="State-Default"></a>
+                                        alt="State-Default" />
+                                </a>
                             </li>
                             <li class="nav-item item-ledger">
-                                <a class="nav-link p-0 text-center" href="#">
-                                    <span class="ledger-icon"></span><span class="d-block body-2 ledger">帳本</span></a>
+                                <a class="nav-link p-0 text-center" href="book.html">
+                                    <span class="ledger-icon"></span><span class="d-block body-2 ledger">帳本</span>
+                                </a>
                             </li>
                             <li class="nav-item item-assets">
                                 <a class="nav-link p-0 text-center" href="#">
-                                    <span class="assets-icon"></span><span class="d-block body-2 assets">資產</span></a>
+                                    <span class="assets-icon"></span><span class="d-block body-2 assets">資產</span>
+                                </a>
                             </li>
                         </ul>
                     </div>
-                    <%- include('./layout/footer'); -%>
                 </nav>
+
             </div>
+            <div class="offcanvas offcanvasBottom rounded-top" style="width: 375px;" tabindex="-1"
+                    id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+                    <div class="offcanvas-header pt-4 pb-0 mb-3">
+                        <h5 class="offcanvas-title h4 fw-bold" style="padding: 12.5px 0px 12.5px 0px;" id="offcanvasTopLabel">
+                            結餘趨勢</h5>
+                        <button type="button" class="btn-close p-12 " data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body task pt-0">
+                        <div class="offcanvas1 shadow">
+                            <div class="align-items-center book-offcanvas-title bg-secondary-100">
+                                <span class=" body-2 text-neutral-950 me-2">本月結餘比上個月增加</span>
+                                <span class="subheader-4 text-secondary-700">$ 28,000</span>
+                            </div>
+                            <img src="/assets/images/book/offcanvas.png" alt="offcanvas">
+                        </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            <%- include('./layout/footer'); -%>
+                
     </div>
+
     <script type="module" src="../main.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         lucide.createIcons();
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const currentPath = window.location.pathname; // 取得目前網址路徑
+            const navLinks = document.querySelectorAll(".nav-link");
+
+            navLinks.forEach((link) => {
+                // 如果 a 的 href 包含目前的 path，就加 active
+                if (currentPath.includes(link.getAttribute("href"))) {
+                    link.classList.add("active");
+                }
+            });
+        });
     </script>
 </body>
