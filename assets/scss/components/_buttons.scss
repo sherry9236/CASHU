@@ -50,6 +50,24 @@
   --bs-btn-disabled-border-color: transparent; //邊框設為透明
 }
 
+.btn-white {
+  --bs-btn-color: #2A7775; // 預設字色
+  --bs-btn-hover-color: #fff; // hover 字色
+  --bs-btn-active-color: #fff; // active 字色
+  --bs-btn-disabled-color: #fff; // disabled 字色
+  --bs-btn-bg: #fff;
+  --bs-btn-border-color: transparent; //邊框設為透明
+  box-shadow: var(--bs-btn-shadow);
+  --bs-btn-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  --bs-btn-hover-bg: #2A7775; // hover 背景色
+  --bs-btn-active-bg: #25605F; // active 背景色
+  --bs-btn-disabled-bg: #2A777560; // disabled 背景色
+  --bs-btn-hover-border-color: transparent; //邊框設為透明
+  --bs-btn-active-border-color: transparent; // 邊框設為透明
+  --bs-btn-disabled-border-color: transparent; //邊框設為透明
+}
+
+
 /*.btn-outline-neutral-300*/
 .btn-outline-neutral-300 {
   color: #888888;
@@ -58,28 +76,29 @@
 
 .btn-outline-neutral-300:hover {
   color: #888888;
-  background-color: #e7e7e7;
+  background-color: #ffffff;
   border-color: #b0b0b0;
 }
 
 .btn-outline-neutral-300:active {
-  color: #888888;
+  color: #3D3D3D;
   background-color: #ffffff;
 }
-.btn-check:checked + .btn,
-:not(.btn-check) + .btn:active,
-.btn:first-child:active,
-.btn.active,
-.btn.show {
-  color: #888888;
-  background-color: #e7e7e7;
-  border-color: #b0b0b0;
+
+.btn-outline-neutral-300.btn-check:checked + .btn-outline-neutral-300.btn,
+:not(.btn-outline-neutral-300.btn-check) + .btn-outline-neutral-300.btn:active,
+.btn-outline-neutral-300.btn:first-child:active,
+.btn-outline-neutral-300.btn.active,
+.btn-outline-neutral-300.btn.show {
+  color: #3D3D3D;
+  background-color: #ffffff;
+  border-color: #B0B0B0;
 }
 
 .btn-outline-neutral-300:focus {
-  color: #888888;
+  color: #3D3D3D;
   background-color: #ffffff;
-  border-color: #b0b0b0;
+  border-color: #B0B0B0;
 }
 
 .btn-outline-neutral-300:disabled {
