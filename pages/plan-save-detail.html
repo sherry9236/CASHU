@@ -1,503 +1,374 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
-    />
-    <title>存錢計畫-CASHU</title>
-  </head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    <title>帳本</title>
+</head>
 
-  <body>
+<body>
     <div class="mobile-frame bg-white position-relative">
-      <%- include('./layout/header'); -%>
-      <div class="container-fluid" style="margin-bottom: 106px">
-        <main style="padding-top: 50px">
-          <div class="py-4 d-flex justify-content-between align-items-center">
-            <i data-lucide="chevron-left" class="icon-24 text-neutral-600"></i>
-            <span class="h2 fw-bold">存錢計畫</span>
-            <i data-lucide="pencil" class="icon-24 text-neutral-600"></i>
+        <%- include('./layout/header'); -%>
+            <div class="container-fluid" style="padding-bottom: 105px; padding-top: 50px">
+                <main class="plan-save">
+                    <div>
+                         <div class="py-4 d-flex justify-content-between align-items-center">
+             <i data-lucide="chevron-left" class="icon-24 icon-transparent"></i>
+            <span class="h2 fw-bold">計畫</span>
+            <i data-lucide="history" class="icon-24 text-neutral-600"></i>
           </div>
-          <section class="d-flex align-items-center py-5 px-6">
-            <span
-              class="icon-120 secondary-icon d-flex justify-content-center align-items-center me-6"
+                        
+                        <div class="d-flex justify-content-center align-items-center mt-5 mb-3">
+                            <span class="badge rounded-pill bg-inactive-background py-2 px-2">
+                                <span
+                                    class="badge rounded-pill bg-inactive-background text-neutral-500 book-date fs-5 me-3">日</span>
+                                <span class="badge rounded-pill bg-white text-neutral-950 book-mouth fs-5 me-3">月</span>
+                                <span
+                                    class="badge rounded-pill bg-inactive-background text-neutral-500 book-year fs-5 me-3">年</span>
+                                <span
+                                    class="badge rounded-pill bg-inactive-background text-neutral-500 book-mine fs-5">自訂</span>
+                            </span>
+                        </div>
+                        <div class="py-4 mb-4 d-flex justify-content-between align-items-center">
+                            <i data-lucide="chevron-left" class="icon-40 p-3 text-neutral-600 font-weight-normal"></i>
+                            <span class="text-neutral-950 subheader-3">2025/07</span>
+                            <i data-lucide="chevron-right" class="icon-40 p-3 text-neutral-600"></i>
+                        </div>
+                        <div class="addrecord">
+                            <ul class="nav nav-underline border-bottom text-center d-flex justify-content-center" id="account-tab" role="tablist">
+                                <li class="nav-item tab-two">
+                                    <a class="nav-link active line-height-sm"  id="tab-saving" data-bs-toggle="tab" href="#pane-saving" role="tab"
+           aria-controls="pane-saving" aria-selected="true">存錢計畫</a>
+                                </li>
+                                <li class="nav-item tab-two">
+                                    <a class="nav-link line-height-sm" id="tab-budget" data-bs-toggle="tab" href="#pane-budget" role="tab"
+           aria-controls="pane-budget" aria-selected="false">支出預算</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content py-6" id="nav-tabContent">
+                                <div class="tab-pane fade show active"  id="pane-saving" role="tabpanel" aria-labelledby="tab-saving" tabindex="0">
+                                 
+                                <!--東京自由行-->
+                                 <div class="card shadow border-0 mb-4">
+   <div class="card-body p-6">
+<div class="d-flex">
+  <div class="me-8 text-center">
+      <span
+              class="icon-48 secondary-icon d-flex justify-content-center align-items-center mb-3"
             >
               <img
-                src="/assets/images/Plan/icon-plan-wedding-70.svg"
-                alt="wedding-icon"
+                src="/assets/images/Plan/icon-plan-travel-34.svg"
+                alt="travel-icon"
               />
             </span>
-            <div>
-              <h1 class="mb-4">結婚基金</h1>
-              <div>
-                <div class="mb-2">
-                  <span class="subheader-3 me-3 text-neutral-400"
-                    >目標金額</span
-                  >
-                  <span class="h4">$ 200,000</span>
-                </div>
-                <div>
-                  <span class="subheader-3 me-3 text-neutral-400"
-                    >目前存入</span
-                  >
-                  <span class="h4 text-secondary-600">$ 46,700</span>
-                </div>
-              </div>
-            </div>
-          </section>
-          <div class="py-6">
-            <div class="card rounded-m overflow-hidden border-0 shadow d-flex">
-              <div
-                class="bg-gradient-horizontal p-5 d-flex justify-content-between align-items-center"
-              >
-                <div class="d-flex align-items-center">
-                  <span
-                    class="me-4 icon-48 rounded-circle bg-white d-flex align-items-center justify-content-center"
-                    ><img
-                      src="/assets/images/Plan/icon-plan-calender-24.svg"
-                      alt="calender-icon"
-                  /></span>
-                  <div>
-                    <p class="body-3 mb-2 text-neutral-400">預計完成日</p>
-                    <p class="subheader-4">2028/08/20</p>
-                  </div>
-                </div>
-                <div>
-                  <p class="body-3 mb-2 text-neutral-400">距結束剩</p>
-                  <p class="subheader-4">6209天</p>
-                </div>
-              </div>
-              <div class="card-body py-7 p-6">
-                <div class="card-text">
-                  <div class="mb-8">
-                    <div class="d-flex justify-content-between mb-6">
-                      <div>
-                        <p class="body-2 text-neutral-400">已存</p>
-                        <p class="h4 text-secondary-600">$ 46,700</p>
-                      </div>
-                      <div>
-                        <p class="body-2 text-neutral-400 text-end">目標</p>
-                        <p class="h4">$ 200,000</p>
-                      </div>
+            <p class="body-2">距結束</p>
+            <p class="h5">59 天</p>
+          </div>
+    <div class="flex-grow-1">
+    <h4 class="card-title h4 mb-3 text-neutral-950">東京自由行</h4>
+        <div class="d-flex justify-content-between mb-3">
+                        <p class="h5 text-secondary-600">$ 46,700</p>
+                        <p class="body-2 text-neutral-400">$ 200,000</p>
                     </div>
-                    <div class="progress rounded-pill" style="height: 12px">
+
+                         <div class="progress rounded-pill mb-3" style="height: 8px">
                       <div
                         class="progress-bar bg-success"
                         role="progressbar"
-                        style="width: 7%"
+                        style="width: 50%"
                         aria-valuenow=" 7"
                         aria-valuemin="0"
                         aria-valuemax="100"
                       ></div>
                     </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-6">
-                      <a
-                        href="#"
-                        class="btn btn-outline-primary h-44 d-flex align-items-center justify-content-center rounded-pill h4"
-                        >取用</a
-                      >
-                    </div>
-                    <div class="col-6">
-                      <button
-                        type="button"
-                        class="btn btn-primary h-44 d-flex align-items-center justify-content-center rounded-pill h4 open-calculator-btn w-100"
-                      >
-                        存入
-                      </button>
-                    </div>
+                    <p class="body-3 text-neutral-400">2025/03/08 - 2025/09/30</p>
                   </div>
                 </div>
-              </div>
-            </div>
+  </div>  </div>
+                                  <!--新沙發-->
+                                   <div class="card shadow border-0 mb-4">
+   <div class="card-body p-6">
+<div class="d-flex">
+  <div class="me-8 text-center">
+      <span
+              class="icon-48 secondary-icon d-flex justify-content-center align-items-center mb-3"
+            >
+              <img
+                src="/assets/images/Plan/icon-plan-home-34.svg"
+                alt="home-icon"
+              />
+            </span>
+            <p class="body-2">距結束</p>
+            <p class="h5">60 天</p>
           </div>
-          <section class="py-5">
-            <h4 class="mb-6">存錢紀錄</h4>
-            <ul>
-              <li
-                class="d-flex align-items-center justify-content-between mb-5"
-              >
-                <div class="d-flex flex-column">
-                  <time datetime="2025-07-18" class="body-1 mb-2"
-                    >2025/07/18</time
-                  >
-                  <p class="body-2 text-neutral-600">手動轉出至現金帳戶</p>
-                </div>
-                <p class="text-state-negative-500 subheader-3">-$ 500</p>
-              </li>
-              <li
-                class="d-flex align-items-center justify-content-between mb-5"
-              >
-                <div class="d-flex flex-column">
-                  <time datetime="2025-07-14" class="body-1 mb-2"
-                    >2025/07/14</time
-                  >
-                  <p class="body-2 text-neutral-600">手動從台新帳戶存入</p>
-                </div>
-                <p class="subheader-3">$ 22,200</p>
-              </li>
-              <li class="d-flex align-items-center justify-content-between">
-                <div class="d-flex flex-column">
-                  <time datetime="2025-07-10" class="body-1 mb-2"
-                    >2025/07/10</time
-                  >
-                  <p class="body-2 text-neutral-600">
-                    每月10日從台新帳戶定期存入
-                  </p>
-                </div>
-                <p class="subheader-3">$ 25,000</p>
-              </li>
-            </ul>
-          </section>
-          <%- include('./layout/footer'); -%>
-        </main>
-
-        <!-- 按鈕 -->
-        <div class="calc-backdrop" id="calcBackdrop"></div>
-        <!--底部彈開按鈕+計算機-->
-        <div class="mobile-frame-container">
-          <!-- 新計算機 -->
-          <div
-            class="mobile-calculator"
-            id="calculatorContainer"
-            style="display: none"
-          >
-            <div class="calculator-full">
-              <div
-                class="d-flex justify-content-between align-items-center mb-6"
-              >
-                <h4>存入結婚基金</h4>
-                <span class="close-calculator" onclick="closeCalculator()">
-                  <i
-                    data-lucide="x"
-                    class="icon-44 text-neutral-600"
-                    style="padding: 10px"
-                  ></i>
-                </span>
-              </div>
-              <div class="calculator-header row mb-4">
-                <div class="col-12">
-                  <div class="position-relative">
-                    <input
-                      type="text"
-                      id="consult_datetime"
-                      class="form-control py-4 px-5 h-44 subheader-3"
-                      readonly
-                      inputmode="none"
-                    />
-                    <span
-                      id="calendar_icon"
-                      class="calendar_icon position-absolute top-50 end-0 translate-middle-y me-5"
-                      style="cursor: pointer"
-                    >
-                      <i data-lucide="calendar" class="text-neutral-300"></i>
-                    </span>
-                  </div>
-                </div>
-                <div class="col-6">
-                  <div class="position-relative">
-                    <button
-                      type="button"
-                      class="btn btn-outline-neutral-300 input-select w-100 text-start rounded-m d-flex align-items-center h-44 fw-medium"
-                      data-bs-toggle="offcanvas"
-                      data-bs-target="#offcanvasRight"
-                      aria-controls="offcanvasRight"
-                    >
-                      轉出帳戶
-                      <span
-                        class="position-absolute top-50 end-0 translate-middle-y me-5"
-                        style="cursor: pointer"
-                      >
-                        <i data-lucide="chevron-right"></i>
-                      </span>
-                    </button>
-                  </div>
-                </div>
-                <div class="col-6">
-                  <input
-                    type="text"
-                    class="form-control h-44 calc-input text-end text-neutral-400"
-                    inputmode="none"
-                    placeholder="$0"
-                    readonly
-                  />
-                </div>
-              </div>
-
-              <div class="calculator-grid">
-                <button class="calc-btn number" onclick="inputNumber('7')">
-                  7
-                </button>
-                <button class="calc-btn number" onclick="inputNumber('8')">
-                  8
-                </button>
-                <button class="calc-btn number" onclick="inputNumber('9')">
-                  9
-                </button>
-                <button class="calc-btn operator" onclick="inputOperator('÷')">
-                  <img
-                    src="/assets/images/keyboard/Type=Divide.svg"
-                    alt="Divide"
-                    class="object-fit-cover"
-                  />
-                </button>
-                <button class="calc-btn function" onclick="clearAll()">
-                  AC
-                </button>
-                <button class="calc-btn number" onclick="inputNumber('4')">
-                  4
-                </button>
-                <button class="calc-btn number" onclick="inputNumber('5')">
-                  5
-                </button>
-                <button class="calc-btn number" onclick="inputNumber('6')">
-                  6
-                </button>
-                <button class="calc-btn operator" onclick="inputOperator('×')">
-                  <img
-                    src="/assets/images/keyboard/Type=Multiply.svg"
-                    alt="Multiply"
-                    class="object-fit-cover"
-                  />
-                </button>
-                <button class="calc-btn function" onclick="backspace()">
-                  <img
-                    src="/assets/images/keyboard/Type=Backspace.svg"
-                    alt="Backspace"
-                    class="object-fit-cover"
-                  />
-                </button>
-                <button class="calc-btn number" onclick="inputNumber('1')">
-                  1
-                </button>
-                <button class="calc-btn number" onclick="inputNumber('2')">
-                  2
-                </button>
-                <button class="calc-btn number" onclick="inputNumber('3')">
-                  3
-                </button>
-                <button class="calc-btn operator" onclick="inputOperator('-')">
-                  <img
-                    src="/assets/images/keyboard/Type=Minus.svg"
-                    alt="Minus"
-                    class="object-fit-cover"
-                  />
-                </button>
-                <button
-                  class="calc-btn function subheader-4"
-                  onclick="memory()"
-                >
-                  再存
-                </button>
-                <button class="calc-btn number" onclick="inputNumber('00')">
-                  00
-                </button>
-                <button class="calc-btn number" onclick="inputNumber('0')">
-                  0
-                </button>
-                <button class="calc-btn number" onclick="inputOperator('.')">
-                  .
-                </button>
-                <button class="calc-btn operator" onclick="inputOperator('+')">
-                  <img
-                    src="/assets/images/keyboard/Type=Plus.svg"
-                    alt="Plus"
-                    class="object-fit-cover"
-                  />
-                </button>
-                <button class="calc-btn equals" onclick="calculate()">
-                  <a href="#"> <i data-lucide="check"></i></a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="side">
-          <div
-            class="offcanvas offcanvas-end"
-            tabindex="-1"
-            id="offcanvasRight"
-            aria-labelledby="offcanvasRightLabel"
-          >
-            <div class="offcanvas-body">
-              <div
-                class="py-4 d-flex justify-content-between align-items-center"
-              >
-                <button
-                  type="button"
-                  class="btn p-0"
-                  data-bs-dismiss="offcanvas"
-                  aria-label="Close"
-                >
-                  <i
-                    data-lucide="chevron-left"
-                    class="icon-24 text-neutral-600"
-                  ></i>
-                </button>
-
-                <span class="h2 fw-bold">選擇帳戶</span>
-                <i
-                  data-lucide="chevron-right"
-                  class="icon-24 icon-transparent"
-                ></i>
-              </div>
-              <div class="mb-4">
-                <p
-                  class="text-neutral-500 body-2 border-solid-neutral-100 mb-3"
-                  style="padding: 5.5px 0"
-                >
-                  現金
-                </p>
-                <ul class="m-0">
-                  <li class="add-item">
-                    <a
-                      class="d-block py-3 px-5 active"
-                      data-bs-dismiss="offcanvas"
-                      aria-label="Close"
-                    >
-                      <div class="d-flex align-items-center">
-                        <span
-                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
-                        >
-                          <img
-                            src="/assets/images/Category/icon-payment-cash-24.svg"
-                            alt="現金icon"
-                            class="text-neutral-950"
-                          />
-                        </span>
-                        <p class="mb-3">現金</p>
-                        <p class="ms-auto line-height-sm fw-medium">$ 20,000</p>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="mb-4">
-                <p
-                  class="text-neutral-500 body-2 border-solid-neutral-100 mb-3"
-                  style="padding: 5.5px 0"
-                >
-                  銀行
-                </p>
-                <ul class="m-0">
-                  <li class="add-item mb-2">
-                    <a
-                      class="d-block py-3 px-5"
-                      data-bs-dismiss="offcanvas"
-                      aria-label="Close"
-                    >
-                      <div class="d-flex align-items-center">
-                        <span
-                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
-                        >
-                          <img
-                            src="/assets/images/Category/icon-payment-bank-24.svg"
-                            alt="銀行icon"
-                            class="text-neutral-950"
-                          />
-                        </span>
-                        <p class="mb-3">台新銀行</p>
-                        <p class="ms-auto line-height-sm fw-medium">
-                          $ 100,000
-                        </p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="add-item mb-2">
-                    <a
-                      class="d-block py-3 px-5"
-                      data-bs-dismiss="offcanvas"
-                      aria-label="Close"
-                    >
-                      <div class="d-flex align-items-center">
-                        <span
-                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
-                        >
-                          <img
-                            src="/assets/images/Category/icon-payment-bank-24.svg"
-                            alt="銀行icon"
-                            class="text-neutral-950"
-                          />
-                        </span>
-                        <p class="mb-3">富邦銀行</p>
-                        <p class="ms-auto line-height-sm fw-medium">
-                          $ 100,000
-                        </p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="add-item">
-                    <a
-                      class="d-block py-3 px-5"
-                      data-bs-dismiss="offcanvas"
-                      aria-label="Close"
-                    >
-                      <div class="d-flex align-items-center">
-                        <span
-                          class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
-                        >
-                          <img
-                            src="/assets/images/Category/icon-payment-bank-24.svg"
-                            alt="銀行icon"
-                            class="text-neutral-950"
-                          />
-                        </span>
-                        <p class="mb-3">玉山銀行</p>
-                        <p class="ms-auto line-height-sm fw-medium">
-                          $ 100,000
-                        </p>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <a href="#" class="d-flex align-items-center py-3">
-                <svg
-                  width="44"
-                  height="44"
-                  viewBox="0 0 44 44"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="me-4"
-                >
-                  <circle
-                    cx="22"
-                    cy="22"
-                    r="21"
-                    stroke="#B0B0B0"
-                    stroke-width="1"
-                    stroke-dasharray="4 4"
-                  />
-                  <foreignObject x="0" y="0" width="44" height="44">
-                    <div
-                      style="
-                        width: 100%;
-                        height: 100%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                      "
-                    >
-                      <i
-                        data-lucide="plus"
-                        class="icon-16 text-neutral-600"
-                      ></i>
+    <div class="flex-grow-1">
+    <h4 class="card-title h4 mb-3 text-neutral-950">新沙發</h4>
+        <div class="d-flex justify-content-between mb-3">
+                        <p class="h5 text-secondary-600">$1,200</p>
+                        <p class="body-2 text-neutral-400">$30,000</p>
                     </div>
-                  </foreignObject>
-                </svg>
-                新增帳戶
-              </a>
-            </div>
+
+                         <div class="progress rounded-pill mb-3" style="height: 8px">
+                      <div
+                        class="progress-bar bg-success"
+                        role="progressbar"
+                        style="width: 10%"
+                        aria-valuenow=" 7"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <p class="body-3 text-neutral-400">2025/01/01 - 2025/10/01</p>
+                  </div>
+                </div>
+  </div>  </div>
+                                 <!--冬季歐洲旅遊-->
+                                  <div class="card shadow border-0 mb-4">
+   <div class="card-body p-6">
+<div class="d-flex">
+  <div class="me-8 text-center">
+      <span
+              class="icon-48 secondary-icon d-flex justify-content-center align-items-center mb-3"
+            >
+              <img
+                src="/assets/images/Plan/icon-plan-trip-34.svg"
+                alt="trip-icon"
+              />
+            </span>
+            <p class="body-2">距結束</p>
+            <p class="h5">165 天</p>
           </div>
-        </div>
-      </div>
-    </div>
-    <nav>
+    <div class="flex-grow-1">
+    <h4 class="card-title h4 mb-3 text-neutral-950">冬季歐洲旅遊</h4>
+        <div class="d-flex justify-content-between mb-3">
+                        <p class="h5 text-secondary-600">$ 70,000</p>
+                        <p class="body-2 text-neutral-400">$ 80,000</p>
+                    </div>
+
+                         <div class="progress rounded-pill mb-3" style="height: 8px">
+                      <div
+                        class="progress-bar bg-success"
+                        role="progressbar"
+                        style="width: 76%"
+                        aria-valuenow=" 7"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <p class="body-3 text-neutral-400">2025/07/06 - 2025/12/31</p>
+                  </div>
+                </div>
+  </div>  
+</div>
+                                 <!--結婚基金-->
+                                 <a href="plan-save.html" style="display: block;">
+                                  <div class="card shadow border-0">
+   <div class="card-body p-6">
+<div class="d-flex">
+  <div class="me-8 text-center">
+      <span
+              class="icon-48 secondary-icon d-flex justify-content-center align-items-center mb-3"
+            >
+              <img
+                src="/assets/images/Plan/icon-plan-wedding-34.svg"
+                alt="wedding-icon"
+              />
+            </span>
+            <p class="body-2">距結束</p>
+            <p class="h5">6209 天</p>
+          </div>
+    <div class="flex-grow-1">
+    <h4 class="card-title h4 mb-3 text-neutral-950">結婚基金</h4>
+        <div class="d-flex justify-content-between mb-3">
+                        <p class="h5 text-secondary-600">$ 46,700</p>
+                        <p class="body-2 text-neutral-400">$ 200,000</p>
+                    </div>
+
+                         <div class="progress rounded-pill mb-3" style="height: 8px">
+                      <div
+                        class="progress-bar bg-success"
+                        role="progressbar"
+                        style="width: 10%"
+                        aria-valuenow=" 7"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <p class="body-3 text-neutral-400">2025/07/06 - 2028/08/20</p>
+                  </div>
+                </div>
+  </div>  
+</div></a>
+
+                                </div>
+                                <div class="tab-pane fade " id="pane-budget" role="tabpanel" aria-labelledby="tab-budget"
+                                    tabindex="0">
+                                      <!--東京自由行-->
+                                 <div class="card shadow border-0 mb-4">
+   <div class="card-body p-6">
+<div class="d-flex">
+  <div class="me-8 text-center">
+      <span
+              class="icon-48 secondary-icon d-flex justify-content-center align-items-center mb-3"
+            >
+              <img
+                src="/assets/images/Plan/icon-plan-travel-34.svg"
+                alt="travel-icon"
+              />
+            </span>
+            <p class="body-2">距結束</p>
+            <p class="h5">59 天</p>
+          </div>
+    <div class="flex-grow-1">
+    <h4 class="card-title h4 mb-3 text-neutral-950">東京自由行</h4>
+        <div class="d-flex justify-content-between mb-3">
+                        <p class="h5 text-secondary-600">$ 46,700</p>
+                        <p class="body-2 text-neutral-400">$ 200,000</p>
+                    </div>
+
+                         <div class="progress rounded-pill mb-3" style="height: 8px">
+                      <div
+                        class="progress-bar bg-success"
+                        role="progressbar"
+                        style="width: 50%"
+                        aria-valuenow=" 7"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <p class="body-3 text-neutral-400">2025/03/08 - 2025/09/30</p>
+                  </div>
+                </div>
+  </div>  </div>
+                                  <!--新沙發-->
+                                   <div class="card shadow border-0 mb-4">
+   <div class="card-body p-6">
+<div class="d-flex">
+  <div class="me-8 text-center">
+      <span
+              class="icon-48 secondary-icon d-flex justify-content-center align-items-center mb-3"
+            >
+              <img
+                src="/assets/images/Plan/icon-plan-home-34.svg"
+                alt="home-icon"
+              />
+            </span>
+            <p class="body-2">距結束</p>
+            <p class="h5">60 天</p>
+          </div>
+    <div class="flex-grow-1">
+    <h4 class="card-title h4 mb-3 text-neutral-950">新沙發</h4>
+        <div class="d-flex justify-content-between mb-3">
+                        <p class="h5 text-secondary-600">$1,200</p>
+                        <p class="body-2 text-neutral-400">$30,000</p>
+                    </div>
+
+                         <div class="progress rounded-pill mb-3" style="height: 8px">
+                      <div
+                        class="progress-bar bg-success"
+                        role="progressbar"
+                        style="width: 10%"
+                        aria-valuenow=" 7"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <p class="body-3 text-neutral-400">2025/01/01 - 2025/10/01</p>
+                  </div>
+                </div>
+  </div>  </div>
+                                 <!--冬季歐洲旅遊-->
+                                  <div class="card shadow border-0 mb-4">
+   <div class="card-body p-6">
+<div class="d-flex">
+  <div class="me-8 text-center">
+      <span
+              class="icon-48 secondary-icon d-flex justify-content-center align-items-center mb-3"
+            >
+              <img
+                src="/assets/images/Plan/icon-plan-trip-34.svg"
+                alt="trip-icon"
+              />
+            </span>
+            <p class="body-2">距結束</p>
+            <p class="h5">165 天</p>
+          </div>
+    <div class="flex-grow-1">
+    <h4 class="card-title h4 mb-3 text-neutral-950">冬季歐洲旅遊</h4>
+        <div class="d-flex justify-content-between mb-3">
+                        <p class="h5 text-secondary-600">$ 70,000</p>
+                        <p class="body-2 text-neutral-400">$ 80,000</p>
+                    </div>
+
+                         <div class="progress rounded-pill mb-3" style="height: 8px">
+                      <div
+                        class="progress-bar bg-success"
+                        role="progressbar"
+                        style="width: 76%"
+                        aria-valuenow=" 7"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <p class="body-3 text-neutral-400">2025/07/06 - 2025/12/31</p>
+                  </div>
+                </div>
+  </div>  
+</div>
+                                 <!--結婚基金-->
+                                 <a href="plan-save.html" style="display: block;">
+                                  <div class="card shadow border-0">
+   <div class="card-body p-6">
+<div class="d-flex">
+  <div class="me-8 text-center">
+      <span
+              class="icon-48 secondary-icon d-flex justify-content-center align-items-center mb-3"
+            >
+              <img
+                src="/assets/images/Plan/icon-plan-wedding-34.svg"
+                alt="wedding-icon"
+              />
+            </span>
+            <p class="body-2">距結束</p>
+            <p class="h5">6209 天</p>
+          </div>
+    <div class="flex-grow-1">
+    <h4 class="card-title h4 mb-3 text-neutral-950">結婚基金</h4>
+        <div class="d-flex justify-content-between mb-3">
+                        <p class="h5 text-secondary-600">$ 46,700</p>
+                        <p class="body-2 text-neutral-400">$ 200,000</p>
+                    </div>
+
+                         <div class="progress rounded-pill mb-3" style="height: 8px">
+                      <div
+                        class="progress-bar bg-success"
+                        role="progressbar"
+                        style="width: 10%"
+                        aria-valuenow=" 7"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <p class="body-3 text-neutral-400">2025/07/06 - 2028/08/20</p>
+                  </div>
+                </div>
+  </div>  
+</div></a>
+                                </div>
+                              
+                            </div>
+                        </div>
+                        <div class="position-fixed  end-0 bottom-0 w-100">
+                          <div class=" fixed-btn ">
+                        <a href="#"  class="d-block btn btn-white position-absolute  end-0 rounded-5 shadow-lg d-flex align-items-center justify-content-center " style="bottom: 115px; width:160px; height: 52px;">   <i data-lucide="plus" class="icon-24  " style="margin-right: 2.5px;"></i><span class="h4">新增計畫</span></a>
+                        </div>
+                        </div>
+                </main>
+     <nav>
       <div class="nav-bottom pt-3">
         <ul class="nav justify-content-center pb-4">
           <li class="nav-item item-home">
@@ -508,7 +379,7 @@
           </li>
           <li class="nav-item item-plan">
             <a
-              class="nav-link p-0 text-center active current-page"
+              class="nav-link p-0 text-center"
               href="plan-save-detail.html"
             >
               <span class="Icon-plan"></span
@@ -538,238 +409,15 @@
         </ul>
       </div>
     </nav>
+                <%- include('./layout/footer'); -%>
+            </div>
+    </div>
     <script type="module" src="../main.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-
-    <!-- 月曆的js -->
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // 初始化 Lucide icon
         lucide.createIcons();
-
-        // 取得今天日期
-        const today = new Date();
-        const yyyy = today.getFullYear();
-        const mm = String(today.getMonth() + 1).padStart(2, "0");
-        const dd = String(today.getDate()).padStart(2, "0");
-        const todayFormatted = `${yyyy}/${mm}/${dd}`;
-
-        // 初始化 flatpickr
-        const fp = flatpickr("#consult_datetime", {
-          dateFormat: "Y/m/d",
-          defaultDate: todayFormatted,
-          allowInput: false,
-          disableMobile: true,
-          clickOpens: false, // ❌ 禁止點 input 自動打開
-        });
-
-        // 移除 Flatpickr 插入的 icon
-        const autoIcon = document.querySelector(
-          ".flatpickr-input ~ .flatpickr-icon, .flatpickr-calendar-button"
-        );
-        if (autoIcon) autoIcon.remove();
-
-        // 點擊 input 或 icon 開關日曆
-        const toggleCalendar = (e) => {
-          e.preventDefault(); // 防止 input focus
-          if (fp.isOpen) {
-            fp.close();
-          } else {
-            fp.open();
-          }
-        };
-
-        // 綁定事件
-        const inputEl = document.querySelector("#consult_datetime");
-        const iconEls = document.querySelectorAll(".calendar_icon");
-
-        inputEl.addEventListener("mousedown", toggleCalendar); // 用 mousedown 防止 focus
-        inputEl.addEventListener("focus", (e) => e.target.blur()); // 強制 blur，避免鍵盤彈出
-        iconEls.forEach((el) => el.addEventListener("click", toggleCalendar));
-      });
-      const inputEl = document.querySelector("#consult_datetime");
-
-      inputEl.addEventListener("mousedown", (e) => {
-        e.preventDefault();
-        inputEl.classList.add("is-active");
-        setTimeout(() => inputEl.classList.remove("is-active"), 200); // 點擊後0.2秒移除
-        toggleCalendar(e);
-      });
     </script>
-    <!-- 月曆的js -->
-
-    <!--計算機-->
-    <script>
-      // ======= 新計算機展開/收合 + 遮罩 =======
-      const calculator = document.getElementById("calculatorContainer");
-
-      // 如果沒有遮罩就建立一個
-      let backdrop = document.getElementById("calcBackdrop");
-      if (!backdrop) {
-        backdrop = document.createElement("div");
-        backdrop.id = "calcBackdrop";
-        backdrop.className = "calc-backdrop";
-        document.body.appendChild(backdrop);
-      }
-
-      document.querySelectorAll(".open-calculator-btn").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          calculator.classList.add("active"); // 滑出
-          calculator.querySelector(".calculator-full").classList.add("active"); // 顯示內容
-          backdrop.classList.add("active"); // 顯示遮罩
-        });
-      });
-
-      // 點擊遮罩關閉計算機
-      backdrop.addEventListener("click", closeCalculator);
-
-      document.addEventListener("DOMContentLoaded", () => {
-        const calculator = document.getElementById("calculatorContainer");
-        // 等 DOM 載入後移除 display:none
-        calculator.style.display = "block";
-      });
-      // ======= 計算機功能 =======
-      let currentInput = ""; // 儲存完整算式
-      let displayValue = ""; // 儲存顯示在 input 的值
-      let memoryValue = 0;
-
-      function inputNumber(num) {
-        currentInput += num;
-        displayValue += num;
-        updateDisplay();
-      }
-
-      function inputOperator(op) {
-        if (currentInput === "" && op !== "-") return;
-        currentInput += op;
-        displayValue = "";
-      }
-
-      function clearAll() {
-        currentInput = "";
-        displayValue = "";
-        updateDisplay();
-      }
-
-      function backspace() {
-        if (displayValue !== "") {
-          displayValue = displayValue.slice(0, -1);
-          currentInput = currentInput.slice(0, -1);
-        }
-        updateDisplay();
-      }
-
-      function calculate() {
-        try {
-          const expression = currentInput.replace(/×/g, "*").replace(/÷/g, "/");
-          const result = eval(expression);
-          currentInput = result.toString();
-          displayValue = result.toString();
-          updateDisplay();
-        } catch (err) {
-          displayValue = "錯誤";
-          updateDisplay();
-          currentInput = "";
-          displayValue = "";
-        }
-      }
-
-      function memory() {
-        memoryValue = displayValue;
-        alert("已記錄: " + memoryValue);
-      }
-
-      // ======= 更新顯示區 (只顯示數字，加上 $) =======
-      function updateDisplay() {
-        const display = document.querySelector(".calc-input");
-        if (display) {
-          display.value = displayValue === "" ? "$0" : "$" + displayValue;
-        }
-        console.log("算式:", currentInput, "顯示:", displayValue);
-      }
-
-      // ======= 點擊外面關閉計算機 =======
-      document.addEventListener("click", (e) => {
-        const btn = document.querySelector(".open-calculator-btn");
-        const offcanvas = document.getElementById("offcanvasRight");
-
-        if (
-          !calculator.contains(e.target) &&
-          !(btn && btn.contains(e.target)) &&
-          !(offcanvas && offcanvas.contains(e.target))
-        ) {
-          closeCalculator();
-        }
-      });
-
-      // ======= 關閉計算機 =======
-      function closeCalculator() {
-        calculator.classList.remove("active");
-        calculator.querySelector(".calculator-full").classList.remove("active");
-        backdrop.classList.remove("active");
-      }
-
-      // 初始顯示 $0
-      updateDisplay();
-    </script>
-    <!--測欄展開-->
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const sideOffcanvasEl = document.querySelector(".side .offcanvas");
-        if (!sideOffcanvasEl) return;
-
-        const bsSideOffcanvas = new bootstrap.Offcanvas(sideOffcanvasEl);
-
-        // 展開動畫 + scrollTop
-        sideOffcanvasEl.addEventListener("show.bs.offcanvas", () => {
-          sideOffcanvasEl.classList.add("show");
-
-          const mobileFrame = document.querySelector(".mobile-frame");
-          if (mobileFrame) mobileFrame.scrollTop = 0;
-
-          if (!document.querySelector(".offcanvas-backdrop")) {
-            const backdrop = document.createElement("div");
-            backdrop.className = "offcanvas-backdrop fade show";
-            document.body.appendChild(backdrop);
-          }
-        });
-
-        // 關閉動畫
-        sideOffcanvasEl.addEventListener("hide.bs.offcanvas", (e) => {
-          e.preventDefault();
-
-          sideOffcanvasEl.classList.add("hiding");
-          sideOffcanvasEl.classList.remove("show");
-
-          const backdrop = document.querySelector(".offcanvas-backdrop");
-          if (backdrop) backdrop.classList.remove("show");
-
-          setTimeout(() => {
-            sideOffcanvasEl.classList.remove("hiding");
-            sideOffcanvasEl.style.display = "none";
-            sideOffcanvasEl.setAttribute("aria-hidden", "true");
-
-            if (backdrop) backdrop.remove();
-            bsSideOffcanvas._isShown = false;
-          }, 350);
-        });
-      });
-    </script>
-
-    <!--測欄展開項目active-->
-    <script>
-      document.querySelectorAll(".offcanvas-body a").forEach((item) => {
-        item.addEventListener("click", (e) => {
-          e.preventDefault(); // 避免 href="#" 讓頁面跳動
-          document
-            .querySelectorAll(".offcanvas-body a")
-            .forEach((i) => i.classList.remove("active"));
-          item.classList.add("active");
-        });
-      });
-    </script>
-    <script>
+        <script>
       document.addEventListener("DOMContentLoaded", () => {
         const currentPath = window.location.pathname; // 取得目前網址路徑
         const navLinks = document.querySelectorAll(".nav-link");
@@ -782,5 +430,4 @@
         });
       });
     </script>
-  </body>
-</html>
+</body>
