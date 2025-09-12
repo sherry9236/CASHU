@@ -84,11 +84,12 @@
   color: #3D3D3D;
   background-color: #ffffff;
 }
-.btn-check:checked + .btn,
-:not(.btn-check) + .btn:active,
-.btn:first-child:active,
-.btn.active,
-.btn.show {
+
+.btn-outline-neutral-300.btn-check:checked + .btn-outline-neutral-300.btn,
+:not(.btn-outline-neutral-300.btn-check) + .btn-outline-neutral-300.btn:active,
+.btn-outline-neutral-300.btn:first-child:active,
+.btn-outline-neutral-300.btn.active,
+.btn-outline-neutral-300.btn.show {
   color: #3D3D3D;
   background-color: #ffffff;
   border-color: #B0B0B0;
