@@ -76,12 +76,12 @@
 
 .btn-outline-neutral-300:hover {
   color: #888888;
-  background-color: #e7e7e7;
+  background-color: #ffffff;
   border-color: #b0b0b0;
 }
 
 .btn-outline-neutral-300:active {
-  color: #888888;
+  color: #3D3D3D;
   background-color: #ffffff;
 }
 .btn-check:checked + .btn,
@@ -89,15 +89,15 @@
 .btn:first-child:active,
 .btn.active,
 .btn.show {
-  color: #888888;
-  background-color: #e7e7e7;
-  border-color: #b0b0b0;
+  color: #3D3D3D;
+  background-color: #ffffff;
+  border-color: #B0B0B0;
 }
 
 .btn-outline-neutral-300:focus {
-  color: #888888;
+  color: #3D3D3D;
   background-color: #ffffff;
-  border-color: #b0b0b0;
+  border-color: #B0B0B0;
 }
 
 .btn-outline-neutral-300:disabled {
