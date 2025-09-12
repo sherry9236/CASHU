@@ -9,8 +9,8 @@
       href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
     />
     <title>成功新增紀錄-CASHU</title>
-    <script type="module" crossorigin src="/CASHU/assets/main-BFmZJG7h.js"></script>
-    <link rel="stylesheet" crossorigin href="/CASHU/assets/main-CRH-wc-6.css">
+    <script type="module" crossorigin src="/CASHU/assets/main-CBCu1aFo.js"></script>
+    <link rel="stylesheet" crossorigin href="/CASHU/assets/main-KMwf-Owh.css">
   </head>
 
   <body>
@@ -163,7 +163,7 @@
   src="data:image/svg+xml,%3csvg%20width='343'%20height='34'%20viewBox='0%200%20343%2034'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20width='144'%20height='5'%20rx='2.5'%20transform='matrix(-1%200%200%201%20244%2021)'%20fill='black'/%3e%3c/svg%3e"
   alt="statusbar"
   class="object-fit-cover fixed-bottom bottom-0 start-50 translate-middle-x"
-  style="z-index: 1003"
+  style="z-index: 1050"
 />
     </div>
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -180,7 +180,16 @@
         setTimeout(() => {
           toast.style.opacity = 0;
         }, 4000);
-      });
+      // 4秒後淡出並跳轉
+    setTimeout(() => {
+      toast.style.opacity = 0;
+
+      // 等待0.3秒過渡效果完成後再跳轉
+      setTimeout(() => {
+        window.location.href = "complete.html";
+      }, 300);
+    }, 4000);
+  });
     </script>
     <script>
       document.querySelectorAll(".add-item a").forEach((link) => {
