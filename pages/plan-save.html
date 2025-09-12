@@ -680,8 +680,18 @@
       }
 
       function memory() {
-        memoryValue = displayValue;
-        alert("已記錄: " + memoryValue);
+        try {
+          const expression = currentInput.replace(/×/g, "*").replace(/÷/g, "/");
+          const result = eval(expression);
+          currentInput = result.toString();
+          displayValue = result.toString();
+          updateDisplay();
+        } catch (err) {
+          displayValue = "錯誤";
+          updateDisplay();
+          currentInput = "";
+          displayValue = "";
+        }
       }
 
       // ======= 更新顯示區 (只顯示數字，加上 $) =======
