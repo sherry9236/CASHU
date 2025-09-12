@@ -11,15 +11,15 @@
 
 <body>
   <div class="container-fluid px-0 mobile-frame position-relative overflow-y-auto bg-white vh-100 scroll-hidden">
-    <div class="fixed-height bg-gradient-vertical"> 
-     
+    <div class="fixed-height bg-gradient-vertical">
+
       <!-- 載入畫面 -->
-     <section id="preloader" class="bg-white">
-        <div class="lodding d-flex flex-column justify-content-center align-items-center  "> 
+      <section id="preloader" class="bg-white">
+        <div class="lodding d-flex flex-column justify-content-center align-items-center  ">
           <img class="splash-screen " src="/assets/images/gif/splash-screen.gif" alt="">
           <img class="logo" src="/assets/images/Logo/CASHU.png" alt="">
         </div>
-     </section> 
+      </section>
       <!-- 階段二 Lodding-->
       <!-- 上方nav -->
 
@@ -47,11 +47,11 @@
           <div class="container d-flex align-items-center py-6">
             <img src="/assets/images/index-img/Static.png" alt="Static">
               <div class="Speech-bubble">
-              <p class="top-p mb-2"><span class="subheader-4 text-primary me-2">連續記帳已經</span>
-                <img class="me-2" src="/assets/images/index-img/Strike.png" alt="">
-                <span class="text-primary h5">365 天</span>
-              </p>
-              <p class="buttom-p body-3">再 15 天即可領取額外獎勵！加油！</p>
+                <p class="top-p mb-2"><span class="subheader-4 text-primary me-2">連續記帳已經</span>
+                  <img class="me-2" src="/assets/images/index-img/Strike.png" alt="">
+                  <span class="text-primary h5">365 天</span>
+                </p>
+                <p class="buttom-p body-3">再 15 天即可領取額外獎勵！加油！</p>
               </div>
          </section>
          <!-- 價格圓餅圖 -->
@@ -176,68 +176,53 @@
 
 
 
-</div>
-         </section>
-      </main>
-      <!-- nav -->
+            </div>
+          </section>
+        </main>
+        <!-- nav -->
         <nav>
-      <div class="nav-bottom pt-3 ">
-        <ul class="nav justify-content-center pb-4">
-          <li class="nav-item item-home">
-            <a class="nav-link p-0 text-center" href="index.html">
-              <span class="Icon-home"></span
-              ><span class="d-block body-2 home">首頁</span></a
-            >
-          </li>
-          <li class="nav-item item-plan">
-            <a
-              class="nav-link p-0 text-center"
-              href="plan-save-detail.html"
-            >
-              <span class="Icon-plan"></span
-              ><span class="d-block body-2 plan">計畫</span></a
-            >
-          </li>
-          <li class="nav-item item-State">
-            <a class="nav-link p-0" href="log-add.html">
-              <img
-                class="d-block"
-                src="/assets/images/index-img/State-Default.png"
-                alt="State-Default"
-            /></a>
-          </li>
-          <li class="nav-item item-ledger">
-            <a class="nav-link p-0 text-center" href="book.html">
-              <span class="ledger-icon"></span
-              ><span class="d-block body-2 ledger">帳本</span></a
-            >
-          </li>
-          <li class="nav-item item-assets">
-            <a class="nav-link p-0 text-center" href="#">
-              <span class="assets-icon"></span
-              ><span class="d-block body-2 assets">資產</span></a
-            >
-          </li>
-        </ul>
-      </div>
+          <div class="nav-bottom pt-3 ">
+            <ul class="nav justify-content-center pb-4">
+              <li class="nav-item item-home">
+                <a class="nav-link p-0 text-center" href="index.html">
+                  <span class="Icon-home"></span><span class="d-block body-2 home">首頁</span></a>
+              </li>
+              <li class="nav-item item-plan">
+                <a class="nav-link p-0 text-center" href="plan-save-detail.html">
+                  <span class="Icon-plan"></span><span class="d-block body-2 plan">計畫</span></a>
+              </li>
+              <li class="nav-item item-State">
+                <a class="nav-link p-0" href="log-add.html">
+                  <img class="d-block" src="/assets/images/index-img/State-Default.png" alt="State-Default" /></a>
+              </li>
+              <li class="nav-item item-ledger">
+                <a class="nav-link p-0 text-center" href="book.html">
+                  <span class="ledger-icon"></span><span class="d-block body-2 ledger">帳本</span></a>
+              </li>
+              <li class="nav-item item-assets">
+                <a class="nav-link p-0 text-center" href="#">
+                  <span class="assets-icon"></span><span class="d-block body-2 assets">資產</span></a>
+              </li>
+            </ul>
+          </div>
         </nav>
-       </section>
+      </section>
 
     </div>
   </div>
-       
-      <%- include('./layout/footer'); -%>
-  </div>
- 
- 
+
+  <%- include('./layout/footer'); -%>
+    </div>
 
 
-  <script type="module" src="../main.js"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script>
-    lucide.createIcons();
-  </script>
-  <script>
+
+
+    <script type="module" src="../main.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script>
       document.addEventListener("DOMContentLoaded", () => {
         const currentPath = window.location.pathname; // 取得目前網址路徑
         const navLinks = document.querySelectorAll(".nav-link");
@@ -267,26 +252,26 @@
   });
 </script>
 
-     <script>
-  window.addEventListener("load", function () {
-    const preloader = document.getElementById("preloader");
+    <script>
+      window.addEventListener("load", function () {
+        const preloader = document.getElementById("preloader");
 
-    // 先加淡出 class
-    preloader.classList.add("fade-out");
+        // 先加淡出 class
+        preloader.classList.add("fade-out");
 
-    // 動畫結束後移除元素（避免佔 DOM）
-    preloader.addEventListener("transitionend", () => {
-      preloader.remove();
-    });
-  });
-</script> 
-<script>
-  window.addEventListener("load", () => {
-  const preloader = document.getElementById("preloader");
+        // 動畫結束後移除元素（避免佔 DOM）
+        preloader.addEventListener("transitionend", () => {
+          preloader.remove();
+        });
+      });
+    </script>
+    <script>
+      window.addEventListener("load", () => {
+        const preloader = document.getElementById("preloader");
 
-  // 延遲 3 秒後執行淡出
-  setTimeout(() => {
-    preloader.classList.add("fade-out");
+        // 延遲 3 秒後執行淡出
+        setTimeout(() => {
+          preloader.classList.add("fade-out");
 
     // 等淡出動畫結束再移除
     preloader.addEventListener("transitionend", () => {
