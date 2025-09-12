@@ -1322,7 +1322,8 @@
         }
 
         function memory() {
-          alert("再記: " + currentInput);
+          if (operator) calculate(); // 如果有運算符號，先算出結果
+          updateInput(); // 直接更新顯示
         }
 
         // --- 全域方法 ---
