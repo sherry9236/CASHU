@@ -9,8 +9,8 @@
       href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
     />
     <title>支出類別-CASHU</title>
-    <script type="module" crossorigin src="/CASHU/assets/main-BxQ8Y1H7.js"></script>
-    <link rel="stylesheet" crossorigin href="/CASHU/assets/main-CuzXOCyC.css">
+    <script type="module" crossorigin src="/CASHU/assets/main-DKZf0DiU.js"></script>
+    <link rel="stylesheet" crossorigin href="/CASHU/assets/main-COe7y4l1.css">
   </head>
 
   <body>
@@ -34,7 +34,7 @@
                   data-bs-dismiss="offcanvas"
                   aria-label="Close"
                 ></button>-->
-                <a href="plan-save-detail.html">
+                <a href="log-add.html">
                   <i
                     data-lucide="chevron-left"
                     class="icon-24 text-neutral-600"
@@ -47,7 +47,7 @@
                   class="icon-24 icon-transparent"
                 ></i>
               </div>
-              <div class="mb-4">
+            <div class="mb-4">
                 <p
                   class="text-neutral-500 body-2 border-solid-neutral-100 mb-3"
                   style="padding: 5.5px 0"
@@ -56,7 +56,10 @@
                 </p>
                 <ul class="m-0">
                   <li class="add-item">
-                    <a href="#" class="d-block py-3 px-5 active">
+                    <a
+                      class="d-block py-3 px-5 active"
+                     href="log-add.html"
+                    >
                       <div class="d-flex align-items-center">
                         <span
                           class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
@@ -83,7 +86,10 @@
                 </p>
                 <ul class="m-0">
                   <li class="add-item mb-2">
-                    <a href="#" class="d-block py-3 px-5">
+                    <a
+                      class="d-block py-3 px-5"
+                       href="log-add.html"
+                    >
                       <div class="d-flex align-items-center">
                         <span
                           class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
@@ -102,7 +108,10 @@
                     </a>
                   </li>
                   <li class="add-item mb-2">
-                    <a href="#" class="d-block py-3 px-5">
+                    <a
+                      class="d-block py-3 px-5"
+                     href="log-add.html"
+                    >
                       <div class="d-flex align-items-center">
                         <span
                           class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
@@ -121,7 +130,10 @@
                     </a>
                   </li>
                   <li class="add-item">
-                    <a href="#" class="d-block py-3 px-5">
+                    <a
+                      class="d-block py-3 px-5"
+                     href="log-add.html"
+                    >
                       <div class="d-flex align-items-center">
                         <span
                           class="categoy-icon categoy-icon-s me-4 d-flex align-items-center justify-content-center"
@@ -141,39 +153,42 @@
                   </li>
                 </ul>
               </div>
-             <a href="#" class="d-flex align-items-center py-3">
-            <svg
-              width="44"
-              height="44"
-              viewBox="0 0 44 44"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="me-4"
-            >
-              <circle
-                cx="22"
-                cy="22"
-                r="21"
-                stroke="#B0B0B0"
-                stroke-width="1"
-                stroke-dasharray="4 4"
-              />
-              <foreignObject x="0" y="0" width="44" height="44">
-                <div
-                  style="
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                  "
+              <a href="#" class="d-flex align-items-center py-3">
+                <svg
+                  width="44"
+                  height="44"
+                  viewBox="0 0 44 44"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="me-4"
                 >
-                  <i data-lucide="plus" class="icon-16 text-neutral-600"></i>
-                </div>
-              </foreignObject>
-            </svg>
-            新增帳戶
-          </a>
+                  <circle
+                    cx="22"
+                    cy="22"
+                    r="21"
+                    stroke="#B0B0B0"
+                    stroke-width="1"
+                    stroke-dasharray="4 4"
+                  />
+                  <foreignObject x="0" y="0" width="44" height="44">
+                    <div
+                      style="
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                      "
+                    >
+                      <i
+                        data-lucide="plus"
+                        class="icon-16 text-neutral-600"
+                      ></i>
+                    </div>
+                  </foreignObject>
+                </svg>
+                新增帳戶
+              </a>
             </div>
       </main>
       <img
@@ -187,18 +202,18 @@
     <script>
       lucide.createIcons();
     </script>
-    <script>
-      document.querySelectorAll(".add-item a").forEach((link) => {
-        link.addEventListener("click", (e) => {
-          e.preventDefault(); // 防止跳頁
-          // 移除其他 active
-          document
-            .querySelectorAll(".add-item a")
-            .forEach((i) => i.classList.remove("active"));
-          // 加上 active
-          link.classList.add("active");
-        });
-      });
-    </script>
+ <script>
+  document.querySelectorAll(".add-item a").forEach((link) => {
+    link.addEventListener("click", (e) => {
+      // 移除其他 active
+      document
+        .querySelectorAll(".add-item a")
+        .forEach((i) => i.classList.remove("active"));
+      // 加上 active
+      link.classList.add("active");
+      // ✅ 不要阻止預設行為，讓瀏覽器照常跳頁
+    });
+  });
+</script>
   </body>
 </html>
