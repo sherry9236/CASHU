@@ -270,6 +270,18 @@ textarea.form-control:active {
   box-shadow: 0 0 1.3px 1px #ffc56d;
   outline: none;
 }
+/* 針對 form-floating 裡的 label 設定字體 */
+.form-floating label {
+  font-size: 16px;
+  color: #888888;
+  font-weight: 500;
+}
+/* 當 textarea 有 focus 或有值時，把 label 隱藏 */
+.form-floating textarea:focus ~ label,
+.form-floating textarea:not(:placeholder-shown) ~ label {
+  opacity: 0;
+  visibility: hidden;
+}
 
 /* 灰色圓型虛線 */
 .custom-dashed-border-button {

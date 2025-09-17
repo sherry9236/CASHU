@@ -23,6 +23,7 @@
 
 .btn-outline-primary {
   --bs-btn-color: #EF6400; // 預設字色（icon 也會跟著這個顏色）
+    --bs-btn-bg: #ffffff; // 預設背景色 
   --bs-btn-hover-color: #EF6400; // hover 字色
   --bs-btn-active-color: #CC4C02; // active 字色
   --bs-btn-active-bg: #ffffff;
