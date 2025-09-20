@@ -180,16 +180,16 @@
         setTimeout(() => {
           toast.style.opacity = 0;
         }, 4000);
-      // 4秒後淡出並跳轉
-    setTimeout(() => {
-      toast.style.opacity = 0;
+        // 4秒後淡出並跳轉
+        setTimeout(() => {
+          toast.style.opacity = 0;
 
-      // 等待0.3秒過渡效果完成後再跳轉
-      setTimeout(() => {
-        window.location.href = "complete.html";
-      }, 300);
-    }, 4000);
-  });
+          // 等待0.3秒過渡效果完成後再跳轉
+          setTimeout(() => {
+            window.location.href = "complete.html";
+          }, 500);
+        }, 4500);
+      });
     </script>
     <script>
       document.querySelectorAll(".add-item a").forEach((link) => {
